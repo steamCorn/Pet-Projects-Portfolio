@@ -16,9 +16,8 @@
 }
 #quote-box{
   max-width: 550px;
+  min-width: 549px;
   width: 100%;
-  max-height: 400px;
-  min-height: 300px;
   margin: auto 10px;
   padding: 40px 0;
   border-radius: 3px;
@@ -31,7 +30,6 @@
   position: relative;
 }
 .context{
-  background-color: rgb(189, 252, 73);
   width: 100%;
   text-align: center;
   position: relative;
@@ -39,22 +37,20 @@
 
 #text{
   width: 80%;
-  height: 129px;
   margin: 21px auto;
   text-align: center;
   font-size: 28px;
   font-weight: 600;
-  background-color: rgb(66, 65, 65);
 }
 #author{
-  width: 450px;
-  height: auto;
-  clear: both;
-  font-size: 1em;
+  width: 90%;
+  position: relative;
+  margin: 20px;
+  font-size: 28px;
   text-align: right;
 }
 .buttons-quote{
-  width: 450px;
+  width: 90%;
   margin: auto;
   display: block;
 }
@@ -66,7 +62,6 @@
   border: 1px solid white;
   border-radius: 3px;
   outline: none;
-  font-size: 1em;
   cursor: pointer;
   }
 .button:hover{
@@ -75,21 +70,26 @@
 #new-quote{
   float: right;
   display: inline;
-  width: 80px;
+  width: 115px;
   border: 0;
-  margin: 20px 40px;
+  font-size: 20px;
 }
 #tweet-quote,
 #git{
+  font-size: 33px;
+  text-align: center;
   float: left;
   width: 40px;
-  background-color: gray;
+  margin-right: 12px;
 }
 
 .footer{
   color: aliceblue;
   width: 100%;
-  height: 50px;
+  font-weight: 400;
   text-align: center;
-  display: flex;
+  margin: 20px auto;
+}
+.footer a{
+  text-decoration: none;
 }
