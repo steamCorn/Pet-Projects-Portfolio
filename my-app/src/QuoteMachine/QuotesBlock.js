@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Button";
+import ColorFile from "./ColorFile";
 
 
 class QuotesBlock extends React.Component{
@@ -7,7 +7,8 @@ class QuotesBlock extends React.Component{
         super(props);
         this.state = {
             quotes: [],
-            quoteShow: {}
+            quoteShow: {},
+            color: ''
         }
         this.selectRandomQuote = this.selectRandomQuote.bind(this);
         this.changeQuote = this.changeQuote.bind(this);
@@ -18,44 +19,57 @@ class QuotesBlock extends React.Component{
             .then( data => data.json())
             .then(data => this.setState({quotes: data.quotes}, ()=>{
                 this.setState({
-                    quoteShow: this.selectRandomQuote()
+                    quoteShow: this.selectRandomQuote(),
+                    color: this.selectRandomColor() 
                 });
             }));
     }
     selectRandomQuote(){
         return  this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)] 
     }
+    selectRandomColor(){
+        return ColorFile[Math.floor(Math.random()* ColorFile.length)]
+    }
     changeQuote(){
         this.setState({
-            quoteShow: this.selectRandomQuote()
+            quoteShow: this.selectRandomQuote(),
+            color: this.selectRandomColor()
         });
     }
-
-   
+    
+       
    
     render(){
         //debugger
-        console.log(this.state.quoteShow.quote + "  " + this.state.quoteShow.author);
+        console.log(ColorFile.length);
+        const stylesObj = {
+            background : this.state.color,
+            color: this.state.color
+        }
 
         return (
-            <div className="pageQuote">
+            <div className="pageQuote" style={stylesObj}>
                 <div id="quote-box">
-                    
-                    <div id="text">{this.state.quoteShow.quote}</div>
-                    
-                    
-                    <div id="author">{this.state.quoteShow.author}</div>
-                    
-                    <div className="quote-button">
-                        <Button id="new-quote" buttonDisplay="Next Quote" clickHandler={this.changeQuote} />
+                    <div className="titel">Start your day with new quote:</div>
+                    <div className="context">
+                        <div id="text" >{this.state.quoteShow.quote}</div>
+                        <div id="author">{this.state.quoteShow.author}</div>
                     </div>
-                    <div className="social-media">
-                        <a id="tweet-quote" href="twitter.com/intent/tweet">
-                            <i className=""></i>
+                   
+                    <div className="buttons-quote">
+                        <a id="tweet-quote" className="button"
+                        href="twitter.com/intent/tweet"
+                        title="Tweet this quote!">
+                            
                         </a>
-                        <a id="git">
-                            <i className=""></i>
+                        <a id="git" className="button"
+                        title="Share this quote in Git!">
+                            <i class="fab fa-github"></i>
                         </a>
+                        <button id="new-quote" className="button"
+                        onClick={this.changeQuote} 
+                        style={{background : this.state.color}}>Next Quote
+                        </button>
                     </div>
                 </div>
                 

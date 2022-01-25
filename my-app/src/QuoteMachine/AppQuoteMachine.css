@@ -3,52 +3,93 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Barlow', sans-serif;
   list-style: none;
   vertical-align: baseline;
 }
 
 .pageQuote{
-  align-items: center;
+  display: grid;
   height: 100vh;
   justify-content: center;
-  font-family:  'Barlow', sans-serif;;
-  background-color: rgb(172, 187, 131);
-    
+  align-content: center;
 }
 #quote-box{
-  width: 500px;
-  min-height: 350px;
-  margin: auto;
-  position: relative;
-  top: 20%;
-  display: table;
+  max-width: 550px;
+  width: 100%;
+  max-height: 400px;
+  min-height: 300px;
+  margin: auto 10px;
+  padding: 40px 0;
   border-radius: 3px;
   background-color: white;
   text-align: center;
 }
-#text{
+#quote-box .titel, 
+.footer{
+  font-size: 24px;
   position: relative;
-  margin: 80px 20px;
+}
+.context{
+  background-color: rgb(189, 252, 73);
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#text{
+  width: 80%;
+  height: 129px;
+  margin: 21px auto;
   text-align: center;
   font-size: 28px;
-  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+  background-color: rgb(66, 65, 65);
 }
 #author{
-  display: inline;
-  position: relative;
-  margin-right: 40px;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-size: 1em;
+  text-align: right;
+}
+.buttons-quote{
+  width: 450px;
+  margin: auto;
+  display: block;
+}
+.button{
+  height: 40px;
+  /*position: absolute;*/
+  right: 0;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1em;
+  cursor: pointer;
+  }
+.button:hover{
+  opacity: 0.8;
 }
 #new-quote{
+  float: right;
   display: inline;
-  position: relative;
-  margin-right: 40px;
+  width: 80px;
+  border: 0;
+  margin: 20px 40px;
 }
+#tweet-quote,
+#git{
+  float: left;
+  width: 40px;
+  background-color: gray;
+}
+
 .footer{
+  color: aliceblue;
   width: 100%;
   height: 50px;
   text-align: center;
-  position: relative;
-  display: block;
-  top: 43%;
-  background-color: rgb(177, 122, 122);
+  display: flex;
 }
