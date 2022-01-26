@@ -1,0 +1,25 @@
+.social-buttons{
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+  .one-social-button{
+    height: 40px;
+    right: 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    }
+  .one-social-button:hover{
+    opacity: 0.8;
+  }
+  #tweet-quote,
+  #git{
+    color: white;
+    font-size: 33px;
+    text-align: center;
+    float: left;
+    width: 40px;
+    margin-right: 12px;
+  }

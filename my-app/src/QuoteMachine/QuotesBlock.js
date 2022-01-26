@@ -1,7 +1,6 @@
 import React from "react";
 import ColorFile from "./ColorFile";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import SocialFollow from "../components/SocialFollow";
 
 class QuotesBlock extends React.Component{
     constructor(props){
@@ -37,13 +36,11 @@ class QuotesBlock extends React.Component{
         });
     }
     render(){
-        //debugger
-        console.log(ColorFile.length);
         const stylesObj = {
             background : this.state.color,
-            color: this.state.color
+            color: this.state.color,
+            transition: "all .9s ease"
         }
-
         return (
             <div className="pageQuote" style={stylesObj}>
                 <div id="quote-box">
@@ -51,19 +48,11 @@ class QuotesBlock extends React.Component{
                     <div className="context">
                         <div id="text" >{this.state.quoteShow.quote}</div>
                         <div id="author">{this.state.quoteShow.author}</div>
-                    </div>                  
-                    <div className="buttons-quote">
-                        <a id="tweet-quote" className="button"
-                        href="twitter.com/intent/tweet"
-                        title="Tweet this quote!"
-                        style={{background : this.state.color}}>
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                        <a id="git" className="button"
-                        title="Share this quote in Git!"
-                        style={{background : this.state.color}}>
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a>
+                    </div>  
+                    <div className="buttons-quote" >
+
+                        <SocialFollow color = {this.state.color}/>
+
                         <button id="new-quote" className="button"
                         onClick={this.changeQuote} 
                         style={{background : this.state.color}}>Next Quote
@@ -71,12 +60,11 @@ class QuotesBlock extends React.Component{
                     </div>
                 </div>
                 <fotter>
-                    <div className="footer">by <a href="https://github.com/steamCorn">Marina</a>
+                    <div className="footer">by <a href="https://www.linkedin.com/in/marina-parinova-205186129/"
+                    target="_blank">Marina</a>
                     </div>
-                </fotter>
-        
+                </fotter>      
             </div>
-        
         )
     }
 }

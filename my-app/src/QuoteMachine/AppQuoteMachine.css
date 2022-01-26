@@ -19,7 +19,7 @@
   min-width: 549px;
   width: 100%;
   margin: auto 10px;
-  padding: 40px 0;
+  padding: 20px 0;
   border-radius: 3px;
   background-color: white;
   text-align: center;
@@ -34,7 +34,6 @@
   text-align: center;
   position: relative;
 }
-
 #text{
   width: 80%;
   margin: 21px auto;
@@ -54,35 +53,23 @@
   margin: auto;
   display: block;
 }
-.button{
-  height: 40px;
-  /*position: absolute;*/
-  right: 0;
-  color: white;
-  border: 1px solid white;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
-  }
-.button:hover{
-  opacity: 0.8;
-}
 #new-quote{
   float: right;
   display: inline;
   width: 115px;
   border: 0;
   font-size: 20px;
+  height: 40px;
+  right: 0;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
 }
-#tweet-quote,
-#git{
-  font-size: 33px;
-  text-align: center;
-  float: left;
-  width: 40px;
-  margin-right: 12px;
+#new-quote:hover{
+  opacity: 0.8;
 }
-
 .footer{
   color: aliceblue;
   width: 100%;
@@ -92,4 +79,6 @@
 }
 .footer a{
   text-decoration: none;
+  color: white;
+  margin-left: 5px;
 }
