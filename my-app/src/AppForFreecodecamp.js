@@ -1,9 +1,8 @@
-import './AppQuoteMachine.css';  
-import QuotesBlock from './QuotesBlock';
+import QuotesBlock from './QuoteMachine/QuotesBlock';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 
-function AppQuoteMachine () {
+function AppForFreecodecamp () {
  
     return (
       <div className="AppQuoteMachine">
@@ -13,4 +12,4 @@ function AppQuoteMachine () {
      
 }
 
-export default AppQuoteMachine;  
+export default AppForFreecodecamp;  
