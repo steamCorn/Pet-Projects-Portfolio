@@ -1,6 +1,9 @@
 import React from "react";
 import ColorFile from "./ColorFile";
 import SocialFollow from "../components/SocialFollow";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+
 
 class QuotesBlock extends React.Component{
     constructor(props){
@@ -41,6 +44,10 @@ class QuotesBlock extends React.Component{
             color: this.state.color,
             transition: "all .9s ease"
         }
+
+        const tweetUrl =   "https://twitter.com/intent/tweet?hashtags=quoteFromMyApp&text="+
+            encodeURIComponent(this.state.quoteShow.quote + "  " + this.state.quoteShow.author);
+
         return (
             <div className="pageQuote" style={stylesObj}>
                 <div id="quote-box">
@@ -51,17 +58,25 @@ class QuotesBlock extends React.Component{
                     </div>  
                     <div className="buttons-quote" >
 
-                        <SocialFollow color = {this.state.color}/>
+                        <a id="tweet-quote" 
+                            className="one-social-button"
+                            href= {tweetUrl}
+                            title="Tweet this quote!"
+                            target="_blank"
+                            style={{background : this.state.color}}>
+                                <span id="twitt-icon"><FontAwesomeIcon icon={faTwitter} /></span> 
+                            Tweet this quote!
+                        </a>
 
-                        <button id="new-quote" className="button"
+                        <button id="new-quote" 
                         onClick={this.changeQuote} 
                         style={{background : this.state.color}}>Next Quote
                         </button>
                     </div>
                 </div>
                 <fotter>
-                    <div className="footer">by <a href="https://www.linkedin.com/in/marina-parinova-205186129/"
-                    target="_blank">Marina</a>
+                    <div className="footer">by Marina
+                        <SocialFollow color = {this.state.color}/>
                     </div>
                 </fotter>      
             </div>

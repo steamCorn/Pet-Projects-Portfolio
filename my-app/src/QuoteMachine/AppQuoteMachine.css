@@ -51,23 +51,35 @@
 .buttons-quote{
   width: 90%;
   margin: auto;
-  display: block;
+  display: inline-block;
+}
+.buttons-quote #tweet-quote,
+ .buttons-quote #new-quote{
+  font-size: 20px;
+  height: 40px;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#twitt-icon{
+  margin-right: 15px;
+}
+
+#tweet-quote{
+  float: left;
+  width: 210px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #new-quote{
   float: right;
-  display: inline;
   width: 115px;
-  border: 0;
-  font-size: 20px;
-  height: 40px;
-  right: 0;
-  color: white;
-  border: 1px solid white;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
 }
-#new-quote:hover{
+#new-quote:hover , 
+#tweet-quote:hover {
   opacity: 0.8;
 }
 .footer{
@@ -76,9 +88,16 @@
   font-weight: 400;
   text-align: center;
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/*  This style will needed if sharing-buttons inside block  */
+/*
 .footer a{
   text-decoration: none;
   color: white;
   margin-left: 5px;
 }
+*/
