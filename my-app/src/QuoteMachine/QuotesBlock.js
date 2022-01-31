@@ -75,11 +75,11 @@ class QuotesBlock extends React.Component{
                         </button>
                     </div>
                 </div>
-                <fotter>
+                <footer>
                     <div className="footer">by Marina
                         <SocialFollow style={{background : this.state.color}}/>
                     </div>
-                </fotter>      
+                </footer>      
             </div>
         )
     }
