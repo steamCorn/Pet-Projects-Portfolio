@@ -1,8 +1,10 @@
-const DefaultText = `
-Hallo! I'm Marina, and I glad to see you here.
-This is my first project about Editer with textarea 
-and Markdown
-This is default text for Editor!
+const DefaultText = `Hello! I'm Marina
+and I am glad to see you here.
+
+This is my first project about 
+Editor with textarea and Markdown.
+
+This is the default text for Editor!
 `;
 
 export default DefaultText;

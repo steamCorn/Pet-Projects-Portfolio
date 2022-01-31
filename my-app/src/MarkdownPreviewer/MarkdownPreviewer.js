@@ -1,5 +1,6 @@
 import React from "react";
 import DefaultText from './DefaultText';
+import './MarkdownPreviewer.css';
 
 class MarkdownPreviewer extends React.Component{
     constructor(props){
@@ -24,7 +25,7 @@ class MarkdownPreviewer extends React.Component{
 
     render(){
         return(
-            <div>
+            <div id="wraperMarkdown">
                 <textarea id="editor">{DefaultText}</textarea>
                 <div id="preview"></div>
             </div>
