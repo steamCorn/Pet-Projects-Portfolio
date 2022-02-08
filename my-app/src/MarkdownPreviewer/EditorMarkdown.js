@@ -2,13 +2,13 @@ import React from "react";
 
 function EditorMarkdown (props) {
     return(
-        <div>
+        <div >
             <textarea 
                 id="editor" 
                 type="text"
+                onChange={props.onChangeEditor}
                 defaultValue={props.defaultText}
-            >   
-            </textarea>
+            />
         </div>
     )
 }

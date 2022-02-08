@@ -5,27 +5,23 @@ import { faWindowMaximize, faWindowMinimize } from '@fortawesome/free-regular-sv
 
 function Buttonbar (props){
     return(
-        
-        <div >
-            <div className="showBlock" >
-                {props.nameBar}
-                <input 
-                    id="windowMinimize"
-                    type="checkbox" 
-                    name="window" 
-                    value={"minimize"}
-                    onClick={props.onClick}
-                    onChange={props.onChange}
-                />
-                <span className="icon-window" id="minimize">
-                    <FontAwesomeIcon icon={faWindowMinimize} />
-                </span>
-                <span className="icon-window" id="maximize">
-                    <FontAwesomeIcon icon={faWindowMaximize} />
-                </span>
-            </div>
+        <div className="buttonbar">
+            <span>{props.nameBar}</span>
+            <input 
+                id="windowMinimize"
+                type="checkbox" 
+                name="window" 
+                value={"minimize"}
+                onClick={props.onClick}
+                onChange={props.onChange}
+            />
+            <span className="icon-window" id="minimize">
+                <FontAwesomeIcon icon={faWindowMinimize} />
+            </span>
+            <span className="icon-window" id="maximize">
+                <FontAwesomeIcon icon={faWindowMaximize} />
+            </span>
         </div>
- 
     )
 };
 

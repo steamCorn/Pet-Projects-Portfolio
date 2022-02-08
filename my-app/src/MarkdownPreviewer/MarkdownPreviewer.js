@@ -9,7 +9,9 @@ class MarkdownPreviewer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            markdown: DefaultText
+            markdown: DefaultText,
+            editorMaximized: false,
+            previewMaximized: false
         }
         this.handlerChange = this.handlerChange.bind(this);
         this.handleEditorMaximize = this.handleEditorMaximize.bind(this);
@@ -17,9 +19,7 @@ class MarkdownPreviewer extends React.Component{
     }
     handlerChange(event){
         this.setState({
-            markdown: event.target.value,
-            editorMaximized: false,
-            previewMaximized: false
+            markdown: event.target.value
         })
     }
     handleEditorMaximize(){
@@ -38,28 +38,25 @@ class MarkdownPreviewer extends React.Component{
 
 
     render(){
-        const show={
-            height: '20vh'
-        }
-        const hideWindow = {
-            height: '3vh',
-            transition: "all .9s ease"
-        }
+
         return(
             <div id="wraperMarkdown">
-                <div className={"navbar-container"}>
+                <div className={"container"}>
                     <Buttonbar 
                         nameBar= "Editor"
                         onClick={this.handleEditorMaximize}
                     />
-                    <EditorMarkdown defaultText={this.state.markdown}/>
+                    <EditorMarkdown 
+                        defaultText={this.state.markdown}
+                        onChangeEditor={this.handlerChange}
+                    />
                 </div>
-                <div className={"navbar-container"}>
+                <div className={"container"}>
                     <Buttonbar 
                         nameBar="Previewer"
                         onClick={this.handlerPreviewMaximized}
                     />
-                    <PreviewMarkdown defaultText={this.state.markdown}/>
+                    <PreviewMarkdown markdown={this.state.markdown}/>
                 </div>
             </div>
         )
