@@ -3,20 +3,13 @@ import { marked } from 'marked';
 
 //How conect MARKED to app
 //https://snyk.io/advisor/npm-package/marked#readme
-
 //https://marked.js.org/using_advanced
 
-
-
+//Markdown previewer interprets carriage returns and renders them as <br> (line break) elements
 marked.setOptions({
     breaks: true
 })
-
-// INSERTS target="_blank" INTO HREF TAGS (required for Codepen links)
 const renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
-  return `<a target="_blank" href="${href}">${text}</a>`;
-};
 
 function PreviewMarkdown(props){
     return(

@@ -25,4 +25,4 @@ function Buttonbar (props){
     )
 };
 
-export default Buttonbar;
+//export default Buttonbar;

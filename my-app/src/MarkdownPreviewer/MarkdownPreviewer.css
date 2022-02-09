@@ -1,94 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
-#wraperMarkdown{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.wraper-markdown{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
     font-family: 'Barlow', sans-serif;
 }
 .container{
-    width: 48%;
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
-    margin: 0 7px;
-    position: relative;
 }
-.buttonbar{
-    position: relative;
-    background: bisque;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 2em;
-}
-#editor, 
-#preview{
-    width: 96%;
-    height: 75vh;
+@media screen and (max-width: 992px){
+    .wraper-markdown {
+        display: grid;
+        gap: 2em;
+        grid-template-rows: 1fr;
+    }    
+
+    #editor, 
+    #preview{
+    width: 100%;
+    height: 50%;
     border: 2px solid gray;
     padding: 9px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+} 
 }
 
+#editor, 
+#preview{
+    width: 100%;
+    height: 93vh;
+    border: 2px solid gray;
+    padding: 9px;
+}
 #editor{ 
     resize: initial;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
+    background-color: bisque;
 }
 #preview{
-    font-size: 21px;
+    font-size: 15px;
     font-weight: 400;
+    padding: 0;
 }
 
-@media screen and (max-width: 992px){
-    .container {
-        width: 48%;
-    }    
+/*  Preview */
+
+#preview blockquote {
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
 }
-@media screen and (max-width: 600px){
-    #wraperMarkdown {
-        flex-direction: column;
-        align-items: center;
-    }    
-    .container {
-        width: 100%;
-        margin-bottom: 16px;
+#preview {
+    h1, h2 , h3 , p{
+        margin: 0;
     } 
+} 
+#preview  p  code {
+    padding: 3px;
 }
 
-.icon-window{
-    color: rgb(38, 42, 58);
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin: 2px 3px 1px 3px;
-    position: absolute;
+#preview  code {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(151, 23, 23);
 }
-.icon-window:hover{
-    opacity: 0.5;
+
+#preview  pre {
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(247, 247, 247);
+    padding: 5px;
+    line-height: 1.2;
 }
-#windowMinimize, 
-#windowMaximize{
-    position: absolute;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    opacity: 1;
-    z-index: 5;
+
+#preview img {
+    display: block;
+    max-width: 50%;
+    margin: 1rem auto;
 }
-#windowMinimize,
-#minimize{
-    top: 0;
-    right: 26px;
-}
-#windowMaximize,
-#maximize{
-    top: 0;
-    right: 0;
-}
+

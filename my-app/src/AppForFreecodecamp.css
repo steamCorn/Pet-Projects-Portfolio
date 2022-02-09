@@ -1,28 +1,22 @@
-/*
-.appsBlockFCC{
-    width: 100vw;
-	//height: 100vh;
-	display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-block{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin: 0;
 	background-color: #f4f4f4;
 }
-.blockWithApps{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-
-}
-.oneApp{
-    margin-right: 15px;
-    float: left;
-    width: 30%;
-    height: 30%;
+.block-with-apps{
     border: 2px solid red;
 }
-*/
+
+
 
 
