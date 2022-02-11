@@ -1,10 +1,15 @@
 
 const DefaultText = `
 # Lorem ipsum dolor sit amet!
+
 [Here](https://loremipsum.io/) you can find **generator _Lorem Ipsum_ placeholder text**
+
 ## Egestas pretium aenean pharetra 
+
 ![Mandalorian](https://i.pinimg.com/originals/ec/f7/bd/ecf7bdb06cf8dd654e04070f5f1cfe85.jpg)
+
 ### elit laoreet id donec ultrices tincidunt arcu non sodales. 
+
 Heres some code, \`<span>My span</span>\`, between 2 backticks.
 \`\`\`
 // this is multi-line code:

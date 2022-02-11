@@ -28,7 +28,7 @@ class MarkdownPreviewer extends React.Component{
                         onChangeEditor={this.handlerChange}
                     />
                 </div>
-                <div className="container">
+                <div className="container previewWrap">
                     <PreviewMarkdown markdown={this.state.markdown}/>
                 </div>
             </div>

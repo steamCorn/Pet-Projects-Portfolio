@@ -2,7 +2,7 @@ import React from "react";
 
 function EditorMarkdown (props) {
     return(
-        <div >
+        <div className="editor-wrap">
             <textarea 
                 id="editor" 
                 type="text"
