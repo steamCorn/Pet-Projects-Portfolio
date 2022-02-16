@@ -1,6 +1,6 @@
 //https://soundscrate.com/search/#!/drum&type=&tabs=1
 
-const firstFile = [
+const firstAudioFile = [
     {
       keyCode: 81,
       keyTrigger: 'Q',
@@ -57,7 +57,7 @@ const firstFile = [
     }
   ];
   
-  const secondFile = [
+  const secondAudioFile = [
     {
       keyCode: 81,
       keyTrigger: 'Q',
@@ -113,3 +113,5 @@ const firstFile = [
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
     }
   ];
+
+export {firstAudioFile, secondAudioFile};  
