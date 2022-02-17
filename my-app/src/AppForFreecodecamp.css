@@ -16,7 +16,10 @@
 .block-with-apps{
     border: 2px solid red;
 }
-
+.container-for-one-app{
+	width: 100%;
+	height: 100vh;
+}
 
 
 

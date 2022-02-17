@@ -1,6 +1,6 @@
 import React from "react";
-//import DrumPad from './DrumPad';
-//import ControlBlock from './ControlBlock';
+import DrumPad from './DrumPad';
+import ControlBlock from './ControlBlock';
 import {firstAudioFile , secondAudioFile } from './sounds-file';
 import './drumMachine.css';
 
@@ -9,7 +9,7 @@ class DrumMachine extends React.Component{
         super(props);
         this.state = {
             pressedButton: '',
-
+            displayHandler: ''
         }
         this.playAudio = this.playAudio.bind(this);
         this.hendlerPressButton = this.hendlerPressButton.bind(this);
@@ -29,49 +29,46 @@ class DrumMachine extends React.Component{
     }
 
     hendlerPressButton(event){
-        this.setState({
-            pressedButton: event.keyCode
-        });
-
         let currentPressAudio = firstAudioFile.find(currentButton => 
             currentButton.keyCode === event.keyCode);
-        console.log(currentPressAudio);
+        //console.log(currentPressAudio);
+        
+        this.setState({
+            pressedButton: currentPressAudio.keyTrigger,
+            displayHandler: currentPressAudio.id
+        });
+        console.log(this.state.pressedButton);
 
         if(event.keyCode === currentPressAudio.keyCode){
             this.playAudio(currentPressAudio.url);
         }
     }
 
-    hendlerClickButton = (e) => {
+    hendlerClickButton = (event) => {
         let currentClickAudio = firstAudioFile.find(currentButton => 
-            currentButton.keyTrigger === e.currentTarget.id);
+            currentButton.keyTrigger === event.currentTarget.id);
 
-        console.log(e.currentTarget.id);
-        if(e.currentTarget.id === currentClickAudio.keyTrigger){
+        this.setState({
+            pressedButton: currentClickAudio.keyTrigger,
+            displayHandler: currentClickAudio.id
+        });
+        //console.log(e.currentTarget.id);
+        if(event.currentTarget.id === currentClickAudio.keyTrigger){
             this.playAudio(currentClickAudio.url);
+            console.log("state of main component  "+ this.state.pressedButton);
         }
+        
     }
-
 
     render(){
         return(
-            <div className="wrapper-drum-machine style-wrapper">
-                {/*<DrumPad /> 
-                <ControlBlock />*/}
-                <div className="drum-pad">
-                    <div className="drum-batton" 
-                        onClick={this.hendlerClickButton}
-                        id="Q">
-                        Q
-                    </div>
-                    <div className="drum-batton" onClick={this.hendlerClickButton} id="W">
-                        W
-                    </div>
-                    <div className="drum-batton" onClick={this.hendlerClickButton} id="E">
-                        E
-                    </div> 
-                </div>
-
+            <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
+                <DrumPad 
+                    onClick={this.hendlerClickButton}
+                /> 
+                <ControlBlock 
+                    display={this.state.displayHandler}
+                /> 
             </div>
         )
     }
