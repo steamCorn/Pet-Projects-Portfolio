@@ -8,8 +8,9 @@ class DrumMachine extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            pressedButton: '',
-            displayHandler: ''
+            currentDrumpButton: '',
+            displayHandler: '',
+            currentSounFile : firstAudioFile
         }
         this.playAudio = this.playAudio.bind(this);
         this.hendlerPressButton = this.hendlerPressButton.bind(this);
@@ -29,35 +30,35 @@ class DrumMachine extends React.Component{
     }
 
     hendlerPressButton(event){
-        let currentPressAudio = firstAudioFile.find(currentButton => 
+        let currentPressAudio = this.state.currentSounFile
+            .find(currentButton => 
             currentButton.keyCode === event.keyCode);
-        //console.log(currentPressAudio);
         
+        if(!currentPressAudio){
+            return
+        }
         this.setState({
-            pressedButton: currentPressAudio.keyTrigger,
+            currentDrumpButton: currentPressAudio.keyTrigger,
             displayHandler: currentPressAudio.id
         });
-        console.log(this.state.pressedButton);
-
-        if(event.keyCode === currentPressAudio.keyCode){
-            this.playAudio(currentPressAudio.url);
-        }
+        this.playAudio(currentPressAudio.url);
+        console.log(currentPressAudio.keyTrigger);
     }
 
     hendlerClickButton = (event) => {
-        let currentClickAudio = firstAudioFile.find(currentButton => 
-            currentButton.keyTrigger === event.currentTarget.id);
+        let currentClickAudio = this.state.currentSounFile
+            .find(currentButton => 
+            currentButton.id === event.currentTarget.id);
 
+        if(!currentClickAudio){
+            return
+        }
         this.setState({
-            pressedButton: currentClickAudio.keyTrigger,
+            currentDrumpButton: currentClickAudio.keyTrigger,
             displayHandler: currentClickAudio.id
         });
-        //console.log(e.currentTarget.id);
-        if(event.currentTarget.id === currentClickAudio.keyTrigger){
-            this.playAudio(currentClickAudio.url);
-            console.log("state of main component  "+ this.state.pressedButton);
-        }
-        
+        this.playAudio(currentClickAudio.url);
+        console.log("state:   " + currentClickAudio.keyTrigger);
     }
 
     render(){
@@ -65,6 +66,7 @@ class DrumMachine extends React.Component{
             <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
                 <DrumPad 
                     onClick={this.hendlerClickButton}
+                    currentSounFile={this.state.currentSounFile}
                 /> 
                 <ControlBlock 
                     display={this.state.displayHandler}

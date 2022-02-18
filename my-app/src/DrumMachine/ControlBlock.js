@@ -8,14 +8,14 @@ class ControlBlock extends React.Component{
                 <div id="display">{this.props.display}</div>
                 <div className="button-changing-audio-files">
                     <p>Style change</p>
-                    <lebel>
-                        <input type="radio" value="First file" name="sound-file" checked/>
+                    <label>
+                        <input type="radio" value="First file" name="sound-file"/>
                         First
-                    </lebel>
-                    <lebel>
+                    </label>
+                    <label>
                         <input type="radio" value="Second file" name="sound-file"/>
                         Second
-                    </lebel>  
+                    </label>  
                 </div>
             </div>
         )

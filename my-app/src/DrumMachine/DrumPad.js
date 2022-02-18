@@ -3,39 +3,26 @@ import React from "react";
 class DrumPad extends React.Component{
 
     render(){
-        
         return(
-            <div className="drum-pad">
-                <div className="drum-batton" id="Q" onClick={this.props.onClick}>
-                    <audio
-                        src={this.props.clip}
-                    />
-                    Q
-                </div>
-                <div className="drum-batton" id="W" onClick={this.props.onClick}>
-                    W
-                </div>
-                <div className="drum-batton" id="E" onClick={this.props.onClick}>
-                    E
-                </div>
-                <div className="drum-batton" id="A" onClick={this.props.onClick}>
-                    A
-                </div>
-                <div className="drum-batton" id="S" onClick={this.props.onClick}>
-                    S
-                </div>
-                <div className="drum-batton" id="D" onClick={this.props.onClick}>
-                    D
-                </div>
-                <div className="drum-batton" id="Z" onClick={this.props.onClick}>
-                    Z
-                </div>
-                <div className="drum-batton" id="X" onClick={this.props.onClick}>
-                    X
-                </div>
-                <div className="drum-batton" id="C" onClick={this.props.onClick}>
-                    C
-                </div>
+            <div className="drum-pad-style" id="drumPad"> 
+                {this.props.currentSounFile.map((sound) => (
+                    <div 
+                        key={sound.keyCode} 
+                        className="drum-pad drum-batton-style"
+                        id={sound.id}
+                        onClick={this.props.onClick}
+                    >
+                        <audio 
+                            className="clip"
+                            src={sound.url}
+                            id={sound.keyTrigger}
+                            onClick={this.props.onClick}
+                        >
+                            Sorry, but your browser doesn't support the audio.
+                        </audio>
+                        {sound.keyTrigger}
+                    </div>
+                ))}
             </div>
         )
     }

@@ -14,6 +14,10 @@
     background-color: rgb(49, 51, 82);
     color: #aaa;
 }
+
+/* Previous my style  */
+
+/*
 .drum-pad, 
 .controls-block{
     border: 2px solid hotpink;
@@ -27,5 +31,25 @@
     padding: 1em;
 }
 .drum-batton{
+    border: 2px solid rgb(190, 190, 190);
+}
+*/
+
+
+/*    Style for tests   */
+
+#drumPad, 
+.controls-block{
+    border: 2px solid hotpink;
+    width: 100%;
+    height: 100%;
+}
+#drumPad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+.drum-pad{
     border: 2px solid rgb(190, 190, 190);
 }
