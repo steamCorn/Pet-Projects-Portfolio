@@ -15,27 +15,6 @@
     color: #aaa;
 }
 
-/* Previous my style  */
-
-/*
-.drum-pad, 
-.controls-block{
-    border: 2px solid hotpink;
-    width: 100%;
-    height: 100%;
-}
-.drum-pad{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    padding: 1em;
-}
-.drum-batton{
-    border: 2px solid rgb(190, 190, 190);
-}
-*/
-
-
 /*    Style for tests   */
 
 #drumPad, 
@@ -53,3 +32,6 @@
 .drum-pad{
     border: 2px solid rgb(190, 190, 190);
 }
+/* .drum_button_style:active{
+    background: linear-gradient(170deg, #359eff 5%, #3a00df 95%);
+} */
