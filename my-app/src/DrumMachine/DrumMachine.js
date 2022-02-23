@@ -8,17 +8,26 @@ class DrumMachine extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            dcurrentDrumpButton: '',
             displayHandler: '',
-            currentSounFile : firstAudioFile
+            currentSoundFile : firstAudioFile
         }
+        this.setDisplay =this.setDisplay.bind(this);
     }
-    //Code about changed sound file
+
+    setDisplay(display){
+        this.setState({
+            displayHandler: display
+        });
+        console.log(this.state.displayHandler);
+    }
     
     render(){
         return(
             <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
                 <DrumPad 
-                    currentSoundFile={this.state.currentSounFile}
+                    currentSoundFile={this.state.currentSoundFile}
+                    setDisplay = {this.setDisplay}
                 />
                 <ControlBlock 
                     display={this.state.displayHandler}
