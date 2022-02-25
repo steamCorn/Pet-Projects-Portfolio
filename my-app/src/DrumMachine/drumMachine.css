@@ -32,6 +32,9 @@
 .drum-pad{
     border: 2px solid rgb(190, 190, 190);
 }
-/* .drum_button_style:active{
+.drum_button_active{
     background: linear-gradient(170deg, #359eff 5%, #3a00df 95%);
-} */
+}
+.pad_active{
+    background: linear-gradient(280deg, #dd35ff 25%, #3a00df 75%);
+}

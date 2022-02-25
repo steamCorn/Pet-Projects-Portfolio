@@ -8,18 +8,18 @@ class DrumMachine extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            dcurrentDrumpButton: '',
             displayHandler: '',
             currentSoundFile : firstAudioFile
         }
         this.setDisplay =this.setDisplay.bind(this);
     }
 
+    // Changing state from child component
     setDisplay(display){
         this.setState({
             displayHandler: display
         });
-        console.log(this.state.displayHandler);
+        // console.log(this.state.displayHandler);
     }
     
     render(){
