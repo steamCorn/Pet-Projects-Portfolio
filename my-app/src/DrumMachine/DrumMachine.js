@@ -9,9 +9,12 @@ class DrumMachine extends React.Component{
         super(props);
         this.state = {
             displayHandler: '',
-            currentSoundFile : firstAudioFile
+            currentSoundFile : firstAudioFile,
+            volumeSliderValue : 0,
+            volumeDisplay: ''
         }
         this.setDisplay =this.setDisplay.bind(this);
+        this.adjustVolume =this.adjustVolume.bind(this);
     }
 
     // Changing state from child component
@@ -19,7 +22,13 @@ class DrumMachine extends React.Component{
         this.setState({
             displayHandler: display
         });
-        // console.log(this.state.displayHandler);
+    }
+    adjustVolume(e){
+        this.setState({
+            volumeSliderValue: e.target.value,
+            volumeDisplay: Math.round(e.target.value * 100)
+        })
+        console.log(this.state.volumeSliderValue);
     }
     
     render(){
@@ -31,6 +40,9 @@ class DrumMachine extends React.Component{
                 />
                 <ControlBlock 
                     display={this.state.displayHandler}
+                    volumeDisplay={this.state.volumeDisplay}
+                    value={this.state.volumeSliderValue}
+                    onChange={this.adjustVolume}
                 /> 
             </div>
         )

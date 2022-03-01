@@ -1,4 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+ --main-bg-color: rgb(49, 51, 82);
+ --inside-border: 2px solid hotpink;
+ --main-color-object: #aaa;
+}
 .wrapper-drum-machine{
     margin: 5rem auto;
     display: grid;
@@ -10,9 +15,10 @@
     justify-content: space-evenly;
 }
 .style-wrapper{
+    font-family: 'Lato', sans-serif;
     border: 3px solid #333;
-    background-color: rgb(49, 51, 82);
-    color: #aaa;
+    background-color: var(--main-bg-color);
+    color: var(--main-color-object);
 }
 
 /*    Style for tests   */
@@ -30,11 +36,50 @@
     padding: 1em;
 }
 .drum-pad{
+    text-align: center;
     border: 2px solid rgb(190, 190, 190);
+    justify-content: center;
+    display: table-row-group;
+    font-size: 28px;
+}
+.letterOnPad{
+    display: block;
+    margin-top: 2rem;
+}
+
+/* Style for pressed button */
+
+@keyframes example {
+    0%  {background-color: #5016f1;}
+    80% {background-color: #d72df7;}
+    100% {background-color: #ffe94e;}
 }
 .drum_button_active{
-    background: linear-gradient(170deg, #359eff 5%, #3a00df 95%);
+    animation-name: example;
+    animation-timing-function: linear;
+    animation-duration: 0.1s;
+    color: transparent;
 }
-.pad_active{
-    background: linear-gradient(280deg, #dd35ff 25%, #3a00df 75%);
+
+/* Style for control block */
+.controls-block{
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 20px 5px;
+}
+#display{
+    border: var(--inside-border);
+    margin: 10px auto;
+    text-align: center;
+    width: 160px;
+    height: 30px;
+}
+#displayVolume{
+    border: var(--inside-border);
+    margin: 10px 5px;
+    font-size: 15px;
+    text-align: center;
+    width: 20px;
+    height: 18px;
 }

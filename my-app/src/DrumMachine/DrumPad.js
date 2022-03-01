@@ -5,14 +5,12 @@ class DrumPad extends React.Component{
         super(props);
         this.state = {
             activeID: '',
-            // buttonclicked: {} 
             isButtonActive: true
         }
         this.playAudio = this.playAudio.bind(this);
         this.makeSoundFunction = this.makeSoundFunction.bind(this)
         this.handlerPressButton = this.handlerPressButton.bind(this);
         this.handlerClickButton = this.handlerClickButton.bind(this);
-        // this.buttonIDsetState = this.buttonIDsetState.bind(this);
     }
 
     // Code about how sound was played
@@ -46,7 +44,6 @@ class DrumPad extends React.Component{
         this.playAudio(trigger);
         this.buttonIDsetState(id);
         setTimeout(() => this.buttonIDsetState(''), 100);
-        //console.log("From makeSoundFunction:    " + trigger);
     }
 
     handlerPressButton(event){
@@ -67,37 +64,11 @@ class DrumPad extends React.Component{
 
     buttonIDsetState(buttonID){
         this.setState({
-            activeID : buttonID,
-            // isButtonActive: !this.state.isButtonActive
+            activeID : buttonID
         });
     }
     
     render(){
-        // let pad_active = !this.state.isButtonActive ? "pad_active" : "";
-
-        // return(
-        //     <div className="drum-pad-style" id="drumPad"> 
-        //         {this.props.currentSoundFile.map((sound) => (
-        //             <div 
-        //                 key={sound.keyCode} 
-        //                 className={"drum-pad"+" "+button_style}
-        //                 id={sound.id}
-        //                 // {sound.id === 1 ? onClick={this.handlerClickButton}}
-        //                 onClick={this.handlerClickButton}
-        //                 //style={this.state.buttonStyle}
-        //             >
-        //             <audio 
-        //                 className="clip"
-        //                 src={sound.url}
-        //                 id={sound.keyTrigger}
-        //             >
-        //                 Sorry, but your browser doesn't support the audio.
-        //             </audio>
-        //             {sound.keyTrigger}
-        //             </div>
-        //         ))}
-        //     </div>    
-        // )
         return(
             <div className="drum-pad-style" id="drumPad"> 
                 {this.props.currentSoundFile.map((sound) => (
@@ -117,16 +88,16 @@ class DrumPad extends React.Component{
                         >
                             Sorry, but your browser doesn't support the audio.
                         </audio>
-                        {sound.keyTrigger}
+                        <div className="letterOnPad">
+                            {sound.keyTrigger}
+                        </div>
                     </div>
                     :
                     <div 
                         key={sound.keyCode} 
                         className={"drum-pad"}
                         id={sound.id}
-                        // {sound.id === 1 ? onClick={this.handlerClickButton}}
                         onClick={this.handlerClickButton}
-                        //style={this.state.buttonStyle}
                     >
                         <audio 
                             className="clip"
@@ -135,7 +106,9 @@ class DrumPad extends React.Component{
                         >
                             Sorry, but your browser doesn't support the audio.
                         </audio>
-                        {sound.keyTrigger}
+                        <div className="letterOnPad">
+                            {sound.keyTrigger}
+                        </div>
                     </div>
                 ))}
             </div> 
