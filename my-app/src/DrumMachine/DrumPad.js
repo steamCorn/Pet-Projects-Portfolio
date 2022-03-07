@@ -24,10 +24,12 @@ class DrumPad extends React.Component{
     playAudio(id){
         let audio = document.getElementById(id)
         audio.currentTime = 0; 
+        audio.volume = this.props.volumeSound;
         audio.play();
     }
 
-    makeSoundFunction(arr, id, trigger){
+
+    makeSoundFunction(arr, id, trigger, url){
         if(!arr){
             return;
         }
@@ -39,8 +41,7 @@ class DrumPad extends React.Component{
         this.setState({
             activeButton: id
         })
-        console.log("State from makeSoundFunction:    " + this.state.activeButton);
-
+        
         this.playAudio(trigger);
         this.buttonIDsetState(id);
         setTimeout(() => this.buttonIDsetState(''), 100);
@@ -51,7 +52,11 @@ class DrumPad extends React.Component{
             .find(currentButton => 
             currentButton.keyCode === event.keyCode);
         
-        this.makeSoundFunction(currentAudio, currentAudio.id, currentAudio.keyTrigger);
+        this.makeSoundFunction(currentAudio, 
+            currentAudio.id, 
+            currentAudio.keyTrigger,
+            currentAudio.url
+            );
     }
 
     handlerClickButton = (event) => {
@@ -59,7 +64,11 @@ class DrumPad extends React.Component{
             .find(currentButton => 
             currentButton.id === event.currentTarget.id);
 
-        this.makeSoundFunction(currentAudio, currentAudio.id, currentAudio.keyTrigger);
+        this.makeSoundFunction(currentAudio, 
+            currentAudio.id, 
+            currentAudio.keyTrigger,
+            currentAudio.url
+            );
     }
 
     buttonIDsetState(buttonID){

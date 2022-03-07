@@ -1,6 +1,7 @@
 import React from "react";
 
 class ControlBlock extends React.Component{
+
     render(){
         return(
             <div className="controls-block">
@@ -9,11 +10,22 @@ class ControlBlock extends React.Component{
                 <div className="button-changing-audio-files">
                     <p>Style change</p>
                     <label>
-                        <input type="radio" value="First-file" name="sound-file"/>
+                        <input 
+                            type="radio" 
+                            value="First-file" 
+                            name="sound-file"
+                            checked
+                            onChange={this.props.changeSoundFile}
+                        />
                         First
                     </label>
                     <label>
-                        <input type="radio" value="Secon-file" name="sound-file"/>
+                        <input 
+                            type="radio" 
+                            value="Secon-file" 
+                            name="sound-file"
+                            onChange={this.props.changeSoundFile}
+                        />
                         Second
                     </label>  
                 </div>
@@ -25,10 +37,9 @@ class ControlBlock extends React.Component{
                         id="volume" 
                         name="volume" 
                         min="0" 
-                        max="10" 
-                        step="10"
-                        value={this.props.value}
-                        adjustVolume={this.props.adjustVolume}
+                        max="100"
+                        value={this.props.volumeValue}
+                        onChange={this.props.adjustVolume}
                         />
                 </div>
             </div>
