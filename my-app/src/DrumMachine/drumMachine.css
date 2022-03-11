@@ -3,6 +3,16 @@
  --main-bg-color: rgb(49, 51, 82);
  --inside-border: 2px solid hotpink;
  --main-color-object: #aaa;
+
+
+ --white: #ffffff;
+ --light: #f0eff3;
+ --black: #000000;
+ --dark-blue: #1f2029;
+ --dark-light: #353746;
+ --red: #da2c4d;
+ --yellow: #f8ab37;
+ --grey: #ecedf3;
 }
 .wrapper-drum-machine{
     margin: 5rem auto;
@@ -49,13 +59,13 @@
 
 /* Style for pressed button */
 
-@keyframes example {
+@keyframes shine {
     0%  {background-color: #5016f1;}
     80% {background-color: #d72df7;}
     100% {background-color: #ffe94e;}
 }
 .drum_button_active{
-    animation-name: example;
+    animation-name: shine;
     animation-timing-function: linear;
     animation-duration: 0.1s;
     color: transparent;
@@ -66,7 +76,9 @@
     display: grid;
     justify-content: space-evenly;
     justify-items: center;
+    align-items: center;
     padding: 20px 5px;
+    font-size: 1.2rem;
 }
 #display{
     border: var(--inside-border);
@@ -83,3 +95,11 @@
     width: 20px;
     height: 18px;
 }
+.block{
+    display: block;
+}
+.block p{
+    margin-bottom: 10px;
+}
+
+/* Style for radio button */

@@ -10,6 +10,7 @@ class DrumMachine extends React.Component{
         this.state = {
             displayHandler: '',
             currentSoundFile : firstAudioFile,
+            soundFileName: 'firstFile',
             volumeValue : 30, 
             volumeSound: 0.3
         }
@@ -19,15 +20,19 @@ class DrumMachine extends React.Component{
     }
 
     changeSoundFile(e){
-        if(e.currentTarget.value === 'Secon-file'){
+        if(e.currentTarget.id === 'firstFile'){
             this.setState({
-                currentSoundFile: secondAudioFile
-            })
-        } else(
-            this.setState({
+                soundFileName: e.currentTarget.id,
                 currentSoundFile: firstAudioFile
             })
-        )
+        } else {
+            this.setState({
+                soundFileName: e.currentTarget.id,
+                currentSoundFile: secondAudioFile
+            })
+        }
+        console.log(e);
+        console.log(this.state.currentSoundFile)
     }
 
     // Changing state from child component
@@ -42,10 +47,10 @@ class DrumMachine extends React.Component{
             volumeValue: e.target.value,
             volumeSound: e.target.value / 100
         })
-        console.log(e.target.value / 100);
     }
-    
+
     render(){
+
         return(
             <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
                 <DrumPad 
@@ -59,6 +64,8 @@ class DrumMachine extends React.Component{
                     changeSoundFile={this.changeSoundFile}
                     adjustVolume={this.adjustVolume}
                     volumeDisplay={this.state.volumeValue}
+
+                    soundFileName={this.state.soundFileName}
                 /> 
             </div>
         )
