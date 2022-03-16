@@ -8,31 +8,44 @@ function ControlBlock (props){
                 <p>Control Block</p>
                 <div id="display">{props.display}</div>
             </div>
+
             <div className="block">
-                <p>Style change</p>
-                <input 
-                    id="firstFile"
-                    // name="sound-file"
-                    type="radio" 
-                    // value="firstAudioFile" 
-                    checked = {props.soundFileName === 'firstFile'}
-                    onChange={props.changeSoundFile}
-                />
-                <label htmlFor='firstFile'>First</label>
-                <input 
-                    id="secondFile"
-                    // name="sound-file"
-                    type="radio" 
-                    // value="secondAudioFile" 
-                    checked = {props.soundFileName === 'secondFile'}
-                    onChange={props.changeSoundFile}
-                />
-                <label htmlFor='secondFile'>Second</label>  
+                <p>Select a instrument:</p>
+                <label htmlFor='firstFile' className="label-button">
+                    <span className="label-text">Guitar</span>
+                    <div className="custom-radio-btn">
+                        <input 
+                            id="firstFile"
+                            name="sound-file"
+                            type="radio" 
+                            value="firstAudioFile" 
+                            checked = {props.soundFileName === 'firstAudioFile'}
+                            onChange={props.changeSoundFile}
+                        />
+                        <span className="checkmark"></span>
+                    </div>
+                </label>
+                <label htmlFor='secondFile' className="label-button">
+                    <span className="label-text">Piano</span>
+                    <div className="custom-radio-btn">
+                        <input 
+                            id="secondFile"
+                            name="sound-file"
+                            type="radio" 
+                            value="secondAudioFile" 
+                            checked = {props.soundFileName === 'secondAudioFile'}
+                            onChange={props.changeSoundFile}
+                        />
+                        <span className="checkmark"></span>
+                    </div>
+                </label>     
             </div>
+
             <div className="block">
-                <p>Volume</p>
-                <div id="displayVolume">{props.volumeDisplay}</div>
+                <p>Volume:</p>
+                <div id="displayVolume">{props.volumeValue}</div>
                 <input 
+                    className="style-range"
                     type="range" 
                     id="volume" 
                     name="volume" 

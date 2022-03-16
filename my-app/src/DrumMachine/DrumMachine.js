@@ -10,9 +10,8 @@ class DrumMachine extends React.Component{
         this.state = {
             displayHandler: '',
             currentSoundFile : firstAudioFile,
-            soundFileName: 'firstFile',
-            volumeValue : 30, 
-            volumeSound: 0.3
+            soundFileName: 'firstAudioFile',
+            volumeValue : 30
         }
         this.setDisplay = this.setDisplay.bind(this);
         this.changeSoundFile = this.changeSoundFile.bind(this);
@@ -20,19 +19,17 @@ class DrumMachine extends React.Component{
     }
 
     changeSoundFile(e){
-        if(e.currentTarget.id === 'firstFile'){
+        if(e.currentTarget.value === 'firstAudioFile'){
             this.setState({
-                soundFileName: e.currentTarget.id,
+                soundFileName: e.currentTarget.value,
                 currentSoundFile: firstAudioFile
             })
         } else {
             this.setState({
-                soundFileName: e.currentTarget.id,
+                soundFileName: e.currentTarget.value,
                 currentSoundFile: secondAudioFile
             })
         }
-        console.log(e);
-        console.log(this.state.currentSoundFile)
     }
 
     // Changing state from child component
@@ -44,27 +41,24 @@ class DrumMachine extends React.Component{
 
     adjustVolume(e){
         this.setState({
-            volumeValue: e.target.value,
-            volumeSound: e.target.value / 100
+            volumeValue: e.target.value
         })
     }
 
     render(){
-
         return(
             <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
                 <DrumPad 
                     currentSoundFile={this.state.currentSoundFile}
                     setDisplay = {this.setDisplay}
                     setVolume = {this.setVolume}
-                    volumeSound={this.state.volumeSound}
+                    volumeSound={this.state.volumeValue /100}
                 />
                 <ControlBlock 
                     display={this.state.displayHandler}
                     changeSoundFile={this.changeSoundFile}
                     adjustVolume={this.adjustVolume}
-                    volumeDisplay={this.state.volumeValue}
-
+                    volumeValue={this.state.volumeValue}
                     soundFileName={this.state.soundFileName}
                 /> 
             </div>
