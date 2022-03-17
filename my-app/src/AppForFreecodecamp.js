@@ -1,6 +1,8 @@
 //import QuotesBlock from './QuoteMachine/QuotesBlock';
 //import MarkdownPreviewer from './MarkdownPreviewer/MarkdownPreviewer.js';
-import DrumMachine from './DrumMachine/DrumMachine';
+//import DrumMachine from './DrumMachine/DrumMachine';
+import Calculator from './Calculator/Calculator';
+
 import './AppForFreecodecamp.css';
 
 function AppForFreecodecamp () {
@@ -19,11 +21,18 @@ function AppForFreecodecamp () {
             <h1>Markdown Previewer</h1>
               <MarkdownPreviewer />
           </div>
-          */}
+          
           <div className="container-for-one-app" id="drum-machine">
             <h1>Drum Machine</h1>
             <DrumMachine />
           </div>
+          */}
+
+          <div className="container-for-one-app" id="">
+            <h1>Calculator</h1>
+            <Calculator />
+          </div>
+
         </div>
         
       </div>
