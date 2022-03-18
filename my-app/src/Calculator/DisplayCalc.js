@@ -11,7 +11,12 @@ class DisplayCalc extends React.Component{
         return(
             <div>
                 <div id="display">
-                    {this.props.display}
+                    <div>
+                        {this.props.display}
+                    </div>
+                    <div>
+                        {this.props.lastSign} 
+                    </div>
                 </div>
             </div>
         )
