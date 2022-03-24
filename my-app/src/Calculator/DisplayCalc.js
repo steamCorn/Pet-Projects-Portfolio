@@ -1,25 +1,18 @@
-import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
 
-class DisplayCalc extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-        }
-    }
-    render(){
-        return(
-            <div>
-                <div id="display">
-                    <div>
-                        {this.props.display}
-                    </div>
-                    <div>
-                        {this.props.lastSign} 
-                    </div>
+export default function DisplayCalc(props) {
+
+    let result = props.result;
+    return(
+        <div>
+            <div id="display">
+                <div>
+                    {result ? <span>({result})</span>  : ""}
+                </div>
+                <div>
+                    {props.calc || "0"}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
-export default DisplayCalc;

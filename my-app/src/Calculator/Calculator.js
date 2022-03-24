@@ -1,47 +1,48 @@
-import React from "react";
+import { useState } from "react";
 import DisplayCalc from './DisplayCalc';
 import ButtonsCalc from './ButtonsCalc';
 import './calculator.css'
 
-class Calculator extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            display: [],
-            lastSign: '0',
-            equals: false
+function Calculator (){
+    const [calc, setCalc] = useState("");
+    const [result, setResult] = useState("");
+
+    const operators = ["/", "*", "-", "+", "."];
+
+    const updateCalc = value => {
+        //manipulation with operators
+        if(
+            operators.includes(value) && calc === '' ||
+            operators.includes(value) && operators.includes(calc.slice(-1))
+        ){
+            return;
         }
-        this.handlerClick = this.handlerClick.bind(this);
-        this.counFormula = this.counFormula.bind(this);
-    }
-    handlerClick(e){
-        this.setState({
-            lastSign: e.target.value,
-            display: [...this.state.display, e.target.value] //showing entered Formula
-        });
-        this.counFormula();
-    }
-    counFormula(){
-        if(this.state.lastSign === "equals"){
-            this.setState({
-                equals: true
-            })
-            let formula = this.state.display;
-            console.log(formula);
+        setCalc(calc + value);
+
+        if(!operators.includes(value)){
+            setResult(eval(calc + value).toString());
         }
     }
 
-
-    render(){
-        return(
-            <div className="wrapper-calculator">
-                <DisplayCalc 
-                display={this.state.display}
-                lastSign={this.state.lastSign}
-                />
-                <ButtonsCalc handlerClick={this.handlerClick}/>
-            </div>
-        )
+    const clickEquals = () => {
+        setCalc(eval(calc).toString());
     }
+    const deleteLastValue = () => {
+        setCalc(calc.slice(0, -1))
+    }
+    return(
+        <div className="wrapper-calculator">
+            <DisplayCalc 
+                calc ={calc}
+                result = {result}
+            />
+            <ButtonsCalc 
+                updateCalc = {updateCalc}
+                clickEquals = {clickEquals}
+                deleteLastValue = {deleteLastValue}
+            />
+        </div>
+    )
 }
+
 export default Calculator;
