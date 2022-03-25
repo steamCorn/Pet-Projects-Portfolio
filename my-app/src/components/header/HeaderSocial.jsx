@@ -6,29 +6,23 @@ import { faTwitter, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-
 function HeaderSocial(){
     
     return(
-        <div className="sharing-buttons">
-            <a id="tweet" 
-                className="one-social-button"
+        <div className="header__socials">
+            <a 
                 href="https://twitter.com/nakukuevo"
                 title="Follow me on twitter!"
-                target="_blank"
-                style={{color: "black"}}>
+                target="_blank">
                 <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a id="git" 
-                className="button"
+            <a  
                 title="This is my Git!"
                 href="https://github.com/steamCorn"
-                target="_blank"
-                style={{color: "black"}}>
+                target="_blank">
                 <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a id="linkedin" 
-                className="button"
+            <a  
                 title="You can find me on LinkedIn!"
                 href="https://www.linkedin.com/in/marina-parinova-205186129/"
-                target="_blank"
-                style={{color: "black"}}>
+                target="_blank">
                 <FontAwesomeIcon icon={faLinkedinIn} />
             </a>    
         </div>
