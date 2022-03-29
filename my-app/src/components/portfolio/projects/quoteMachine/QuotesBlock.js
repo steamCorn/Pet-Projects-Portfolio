@@ -1,7 +1,7 @@
 import React from "react";
 import ColorFile from "./ColorFile";
-import SocialFollow from "../components/SocialFollow";
-import './QuotesBlock.css';  
+// import SocialFollow from "../../../__buttons/SocialFollow";
+import './quotesBlock.css';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -75,11 +75,11 @@ class QuotesBlock extends React.Component{
                         </button>
                     </div>
                 </div>
-                <footer>
+                {/* <footer>
                     <div className="footer">by Marina
                         <SocialFollow style={{background : this.state.color}}/>
                     </div>
-                </footer>      
+                </footer>       */}
             </div>
         )
     }

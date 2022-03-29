@@ -6,7 +6,7 @@
     margin: 1em;
     justify-content: space-evenly;
 }
-.container{
+.container__markdownPreviewer{
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
     min-width: 550px;
@@ -51,7 +51,7 @@
         background-color: rgb(154, 189, 157);
         height: 40vh;
     } 
-    .container{
+    .container__markdownPreviewer{
         background-color: rgb(153, 124, 167);
     }
 }
@@ -68,7 +68,7 @@
         border: 2px solid gray;
         background-color: rgb(158, 190, 160);
     } 
-    .container{
+    .container__markdownPreviewer{
         background-color: rgb(218, 170, 163);
     }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import EditorMarkdown from './EditorMarkdown';
 import PreviewMarkdown from './PreviewMarkdown';
 import DefaultText from './DefaultText';
-import './MarkdownPreviewer.css';
+import './markdownPreviewer.css';
 
 class MarkdownPreviewer extends React.Component{
     constructor(props){
@@ -22,13 +22,13 @@ class MarkdownPreviewer extends React.Component{
 
         return(
             <div className="wraper-markdown">
-                <div className="container">
+                <div className="container__markdownPreviewer">
                     <EditorMarkdown 
                         defaultText={this.state.markdown}
                         onChangeEditor={this.handlerChange}
                     />
                 </div>
-                <div className="container previewWrap">
+                <div className="container__markdownPreviewer previewWrap">
                     <PreviewMarkdown markdown={this.state.markdown}/>
                 </div>
             </div>
