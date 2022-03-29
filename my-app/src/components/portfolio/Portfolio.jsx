@@ -23,7 +23,8 @@ const Portfolio = () => {
                     </div>
                     <h3>Quotes Block</h3>
                     <div className='portfolio__item-cta'>
-                        <a href='' className='btn btn-primar' target='_blank'>Open project</a>
+                        {/* <a href='' className='btn' target='_blank'>Github</a> */}
+                        <a href='' className='btn btn-primary' target='_blank'>Open project</a>
                     </div>
                     {/* <QuotesBlock /> */}
                 </div>
@@ -34,7 +35,8 @@ const Portfolio = () => {
                     </div>
                     <h3>Drum Machine</h3>
                     <div className='portfolio__item-cta'>
-                        <a href='' className='btn btn-primar' target='_blank'>Open project</a>
+                        {/* <a href='' className='btn' target='_blank'>Github</a>    */}
+                        <a href='' className='btn btn-primary' target='_blank'>Open project</a>
                     </div>
                     {/* <DrumMachine /> */}
                 </article>
@@ -45,7 +47,8 @@ const Portfolio = () => {
                     </div>
                     <h3>Markdown Previewer</h3>
                     <div className='portfolio__item-cta'>
-                        <a href='' className='btn btn-primar' target='_blank'>Open project</a>
+                        {/* <a href='' className='btn' target='_blank'>Github</a> */}
+                        <a href='' className='btn btn-primary' target='_blank'>Open project</a>
                     </div>
                     {/* <MarkdownPreviewer /> */}
                 </article>
@@ -56,7 +59,8 @@ const Portfolio = () => {
                     </div>
                     <h3>Calculator</h3>
                     <div className='portfolio__item-cta'>
-                        <a href='' className='btn btn-primar' target='_blank'>Open project</a>
+                        <a href='' className='btn' target='_blank'>Github</a>
+                        <a href='' className='btn btn-primary' target='_blank'>Open project</a>
                     </div>
                          <Calculator /> 
                 </article> */}

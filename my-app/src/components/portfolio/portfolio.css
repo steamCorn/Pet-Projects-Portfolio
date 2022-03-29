@@ -1,6 +1,10 @@
+#portfolio{
+    height: 100vh;
+}
 .portfolio__container{
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 .portfolio__item{
@@ -23,6 +27,30 @@
     margin: 1.2rem 0 2rem;
 }
 .portfolio__item-cta{
-    display: block;
+    display: flex;
+    gap: 1rem;
     margin: 0 auto 1rem;
+    justify-content: center;
+}
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
+
+@media screen and (max-width: 1024px){
+    #portfolio{
+        height: fit-content;
+    }
+    .portfolio__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+/* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+@media screen and (max-width: 600px){
+    #portfolio{
+        height: fit-content;
+    }
+    .portfolio__container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
