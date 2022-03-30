@@ -8,9 +8,6 @@ import QuotesBlock from './projects_pages/quoteMachine/QuotesBlock';
 import IMG1 from '../../files/portfolio_1.png';
 import IMG2 from '../../files/portfolio_2.png';
 import IMG3 from '../../files/portfolio_3.png';
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-
-
 
 const Portfolio = () => {
     return(
