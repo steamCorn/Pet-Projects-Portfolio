@@ -1,17 +1,14 @@
 
 import React from 'react';
 import './portfolio.css';
-import QuotesBlock from './projects_pages/quoteMachine/QuotesBlock';
-// import MarkdownPreviewer from './projects_pages/markdownPreviewer/MarkdownPreviewer';
-// import DrumMachine from './projects_pages/drumMachine/DrumMachine';
-// import Calculator from './projects_pages/calculator/Calculator';
 import IMG1 from '../../files/portfolio_1.png';
 import IMG2 from '../../files/portfolio_2.png';
 import IMG3 from '../../files/portfolio_3.png';
 
+import { Outlet, Link} from 'react-router-dom';
+
 const Portfolio = () => {
     return(
-        
         <section id='portfolio'>
             <h5>My Recent Work</h5>
             <h2>Portfolio</h2>
@@ -25,31 +22,48 @@ const Portfolio = () => {
                         <h3>Quotes Block</h3>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
-                            <a href='' className='btn btn-primary' target='_blank'>Open project</a>
+                            <Link 
+                                id="RouterQBlock" 
+                                className='btn btn-primary' 
+                                to="/quotes_block" 
+                                target='_blank' > 
+                                Open project
+                            </Link>
                         </div>
-                        {/* <QuotesBlock /> */}
                     </div>
 
                     <article className='portfolio__item'>
                         <div className='portfolio__item-image'>
-                            <img src={IMG2} />
+                            <img src={IMG3} />
                         </div>
                         <h3>Drum Machine</h3>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a>    */}
-                            <a href='' className='btn btn-primary' target='_blank'>Open project</a>
+                            <Link 
+                                id="RouterQBlock" 
+                                className='btn btn-primary' 
+                                to="/drum_machine" 
+                                target='_blank' > 
+                                Open project
+                            </Link>
                         </div>
                         {/* <DrumMachine /> */}
                     </article>
 
                     <article className='portfolio__item'>
                         <div className='portfolio__item-image'>
-                            <img src={IMG3} />
+                            <img src={IMG2} />
                         </div>
                         <h3>Markdown Previewer</h3>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
-                            <a href='' className='btn btn-primary' target='_blank'>Open project</a>
+                            <Link 
+                                id="RouterQBlock" 
+                                className='btn btn-primary' 
+                                to="/markdown_previewer" 
+                                target='_blank' > 
+                                Open project
+                            </Link>
                         </div>
                         {/* <MarkdownPreviewer /> */}
                     </article>
@@ -61,15 +75,20 @@ const Portfolio = () => {
                         <h3>Calculator</h3>
                         <div className='portfolio__item-cta'>
                             <a href='' className='btn' target='_blank'>Github</a>
-                            <a href='' className='btn btn-primary' target='_blank'>Open project</a>
+                            <Link 
+                                id="RouterQBlock" 
+                                className='btn btn-primary' 
+                                to="/calculator" 
+                                target='_blank' > 
+                                Open project
+                            </Link>
                         </div>
                             <Calculator /> 
                     </article> */}
                 
             </div>
+            <Outlet />
         </section>
-            
-        
     )
 }
 

@@ -8,7 +8,7 @@ import Portfolio from './components/portfolio/Portfolio';
 
 // import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-function App () {
+function Home () {
  
     return (
       <>
@@ -29,6 +29,7 @@ function App () {
       //     <Route path='/about' element={<About />} />
       //     {/* <Route path='/experience' element={ <Experience /> } /> */}
       //     <Route path='/portfolio' element={<Portfolio />} />
+      
       //     <Route path='/contac' element={<Contact />} />
       //   </Routes>
       //   <Footer />
@@ -39,4 +40,4 @@ function App () {
      
 }
 
-export default App;  
+export default Home; 

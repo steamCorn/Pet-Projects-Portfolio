@@ -1,10 +1,12 @@
 import React from 'react';
-import './nav.css';
+import './navbar.css';
 import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi';
 import { useState } from 'react';
 
-const Nav = () => {
+// import { BrowserRouter, Routes, Link} from 'react-router-dom';
+
+const Navbar = () => {
     const [activNav, setActivNav] = useState('#');
     return(
         <nav>
@@ -29,7 +31,17 @@ const Nav = () => {
                 <BiMessageSquareDetail/>
             </a>
         </nav>
+
+        // <BrowserRouter>
+        //     <nav>
+        //         <Link to="/"> Home </Link>
+        //         <Link to="/about"> About </Link>
+        //         <Link to="/portfolio"> Portfolio </Link>
+        //         <Link to="/contact"> Contact </Link>
+        //     </nav>
+        // </BrowserRouter>
+
     )
 }
 
-export default Nav;
+export default Navbar;
