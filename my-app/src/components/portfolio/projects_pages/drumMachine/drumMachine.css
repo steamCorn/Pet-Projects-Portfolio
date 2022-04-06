@@ -78,12 +78,12 @@
     padding: 20px 10px;
     font-size: 1.2rem;
 }
-#display{
+#display-drum{
     border: var(--inside-border);
     margin: 10px auto;
     text-align: center;
     width: 160px;
-    height: 30px;
+    height: 37px;
 }
 .block{
     display: block;
@@ -132,16 +132,26 @@
 .label-text{
     margin-left: 15px;
 }
-/* Style input range and sound volume*/
+/* ================== Style input range and sound volume ===============*/
+.display-volume{
+    display: grid;
+    grid-column: 2;
+}
 #displayVolume{
     border: var(--inside-border);
     margin: 5px 10px;
     font-size: 21px;
     text-align: center;
     justify-content: center;
-    width: 5rem;
-    height: 2rem;
-    display: inline-block;
+    width: 4rem;
+    height: 37px;
+    /* display: inline-block; */
+}
+.display-volume span {
+    display: grid;
+    width: 4rem;
+    height: 37px;
+    background-color: aliceblue;
 }
 .style-range{
     -webkit-appearance: none;

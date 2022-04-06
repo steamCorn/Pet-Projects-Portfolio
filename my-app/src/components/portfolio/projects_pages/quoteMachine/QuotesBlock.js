@@ -1,9 +1,11 @@
 import React from "react";
 import ColorFile from "./ColorFile";
-// import SocialFollow from "../../../__buttons/SocialFollow";
+import GoBackToPortfolioButton from "../../../__buttons/GoBackToPortfolioButton";
 import './quotesBlock.css';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+
 
 
 class QuotesBlock extends React.Component{
@@ -51,36 +53,41 @@ class QuotesBlock extends React.Component{
 
         return (
             <div className="pageQuote" style={stylesObj}>
-                <div id="quote-box">
-                    <div className="titel">Start your day with new quote:</div>
-                    <div className="context">
-                        <div id="text" >{this.state.quoteShow.quote}</div>
-                        <div id="author">{this.state.quoteShow.author}</div>
-                    </div>  
-                    <div className="buttons-quote" >
+                <GoBackToPortfolioButton />
+                <div className="container-qb">
+                    <h2 id="titel">Start your day with new quote:</h2>
+                    <div id="quote-box" >
+                        {/* <div className="titel">Start your day with new quote:</div> */}
+                        <div className="context">
+                            <div id="text" >{this.state.quoteShow.quote}</div>
+                            <div id="author" >{this.state.quoteShow.author}</div>
+                        </div>  
+                        <div className="buttons-quote" >
 
-                        <a id="tweet-quote" 
-                            className="one-social-button"
-                            href= {tweetUrl}
-                            title="Tweet this quote!"
-                            target="_blank"
-                            style={{background : this.state.color}}>
-                                <span id="twitt-icon"><FontAwesomeIcon icon={faTwitter} /></span> 
-                            Tweet this quote!
-                        </a>
+                            <a id="tweet-quote" 
+                                className="one-social-button"
+                                href= {tweetUrl}
+                                title="Tweet this quote!"
+                                target="_blank"
+                                style={{background : this.state.color}}>
+                                    <span id="twitt-icon"><FontAwesomeIcon icon={faTwitter} /></span> 
+                                Tweet this quote!
+                            </a>
 
-                        <button id="new-quote" 
-                        onClick={this.changeQuote} 
-                        style={{background : this.state.color}}>Next Quote
-                        </button>
+                            <button id="new-quote" 
+                            onClick={this.changeQuote} 
+                            style={{background : this.state.color}}>Next Quote
+                            </button>
+                        </div>
                     </div>
+                    {/* <footer>
+                        <div className="footer">by Marina
+                            <SocialFollow style={{background : this.state.color}}/>
+                        </div>
+                    </footer>       */}
                 </div>
-                {/* <footer>
-                    <div className="footer">by Marina
-                        <SocialFollow style={{background : this.state.color}}/>
-                    </div>
-                </footer>       */}
             </div>
+            
         )
     }
 }

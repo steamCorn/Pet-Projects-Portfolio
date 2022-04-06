@@ -6,7 +6,7 @@ function ControlBlock (props){
         <div className="controls-block">
             <div className="block">
                 <p>Control Block</p>
-                <div id="display">{props.display}</div>
+                <div id="display-drum">{props.display}</div>
             </div>
 
             <div className="block">
@@ -42,8 +42,13 @@ function ControlBlock (props){
             </div>
 
             <div className="block">
-                <p>Volume:</p>
-                <div id="displayVolume">{props.volumeValue}</div>
+                <div className="display-volume">
+                    <span>Volume:</span>
+                    <div id="displayVolume">
+                        <span>{props.volumeValue}</span> 
+                    </div>
+                </div>
+                
                 <input 
                     className="style-range"
                     type="range" 
