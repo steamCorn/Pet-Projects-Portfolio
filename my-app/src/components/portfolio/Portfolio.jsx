@@ -47,7 +47,6 @@ const Portfolio = () => {
                                 Open project
                             </Link>
                         </div>
-                        {/* <DrumMachine /> */}
                     </article>
 
                     <article className='portfolio__item'>
@@ -65,7 +64,6 @@ const Portfolio = () => {
                                 Open project
                             </Link>
                         </div>
-                        {/* <MarkdownPreviewer /> */}
                     </article>
 
                     {/* <article className='portfolio__item'>
@@ -83,7 +81,7 @@ const Portfolio = () => {
                                 Open project
                             </Link>
                         </div>
-                            <Calculator /> 
+                        
                     </article> */}
                 
             </div>

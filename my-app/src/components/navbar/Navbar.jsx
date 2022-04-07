@@ -2,9 +2,9 @@ import React from 'react';
 import './navbar.css';
 import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi';
+import {MdWorkOutline} from 'react-icons/md';
 import { useState } from 'react';
-
-// import { BrowserRouter, Routes, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [activNav, setActivNav] = useState('#');
@@ -20,6 +20,11 @@ const Navbar = () => {
                 className={activNav === 'about' ? '#active' : ''}>
                 <AiOutlineUser/>
             </a>
+            <a href='#experience' 
+                onClick={() => setActivNav('#experience')} 
+                className={activNav === '#experience' ? 'active' : ''}>
+                <MdWorkOutline/>
+            </a>
             <a href='#portfolio' 
                 onClick={() => setActivNav('#portfolio')} 
                 className={activNav === '#portfolio' ? 'active' : ''}>
@@ -30,6 +35,13 @@ const Navbar = () => {
                 className={activNav === '#contact' ? 'active' : ''}>
                 <BiMessageSquareDetail/>
             </a>
+            {/* <Link 
+                to="/contact"
+                onClick={() => setActivNav('/contact')}
+                className={activNav === '/contact' ? 'active' : ''}> 
+                <BiMessageSquareDetail/>
+            </Link> */}
+
         </nav>
 
         // <BrowserRouter>

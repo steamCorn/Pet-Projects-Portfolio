@@ -44,9 +44,9 @@ function ControlBlock (props){
             <div className="block">
                 <div className="display-volume">
                     <span>Volume:</span>
-                    <div id="displayVolume">
+                    <span id="displayVolume">
                         <span>{props.volumeValue}</span> 
-                    </div>
+                    </span>
                 </div>
                 
                 <input 

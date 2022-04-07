@@ -1,16 +1,15 @@
 .wraper-markdown{
+    margin: 6.5em ;
     display: grid;
-    gap: 1em;
+    gap: 2em;
     grid-template-columns: 1fr 1fr;
     font-family: 'Barlow', sans-serif;
-    margin: 1em;
     justify-content: space-evenly;
 }
 .container__markdownPreviewer{
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
-    min-width: 550px;
-    max-width: 700px;
+    /* width: 38rem; */
 }
 .editor-wrap{
     height: 100%;
@@ -41,36 +40,25 @@
     padding: 10px;
 }
 
-@media screen and (max-width: 1150px){
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
+@media screen and (min-width: 1024px){
     .wraper-markdown {
-        grid-template-columns: auto;
-        grid-gap: 1em;
+        gap: 1em;
     } 
- 
-    #editor{
-        background-color: rgb(154, 189, 157);
-        height: 40vh;
-    } 
-    .container__markdownPreviewer{
-        background-color: rgb(153, 124, 167);
-    }
-}
-
-@media screen and (min-width: 1520px){
-    .wraper-markdown {
-        grid-template-columns: 700px 700px;
-        justify-content: center;
-        align-content: stretch;
-        align-items: stretch;
-    } 
- 
+    
     #editor{
         border: 2px solid gray;
         background-color: rgb(158, 190, 160);
     } 
     .container__markdownPreviewer{
         background-color: rgb(218, 170, 163);
+        width: 36rem;
     }
+}
+
+ /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+ @media screen and (max-width: 600px){
+    
 }
 
 /*  Preview */

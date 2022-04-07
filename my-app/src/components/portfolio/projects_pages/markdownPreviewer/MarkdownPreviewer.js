@@ -3,6 +3,8 @@ import EditorMarkdown from './EditorMarkdown';
 import PreviewMarkdown from './PreviewMarkdown';
 import DefaultText from './DefaultText';
 import './markdownPreviewer.css';
+import GoBackToPortfolioButton from "../../../__buttons/GoBackToPortfolioButton";
+
 
 class MarkdownPreviewer extends React.Component{
     constructor(props){
@@ -22,6 +24,7 @@ class MarkdownPreviewer extends React.Component{
 
         return(
             <div className="wraper-markdown">
+                <GoBackToPortfolioButton />
                 <div className="container__markdownPreviewer">
                     <EditorMarkdown 
                         defaultText={this.state.markdown}

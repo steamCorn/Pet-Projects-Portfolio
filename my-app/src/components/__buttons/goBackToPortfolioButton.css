@@ -18,9 +18,32 @@
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px){
-    
+    .btn-go-back{
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        font-weight: 400;
+        padding: 0.3rem 0.5rem;
+    }
+    .icon-style{
+        margin-right: 0.25rem;
+        width: 1.0rem;
+        height: 1.0rem;
+    }
 }
   /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
 @media screen and (max-width: 600px){
-    
+    .btn-go-back{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        padding: 0.3rem 0.5rem;
+    }
+    .icon-style{
+        margin-right: 0.25rem;
+        width: 0.8rem;
+        height: 0.8rem;
+    }
 }

@@ -8,11 +8,15 @@
  --yellow: #ffe94e;
  --hotpurple: #d72df7;
  --purple: #5016f1;
- --amazing-colors: linear-gradient(217deg, var(--yellow), var(--hotpurple), var(--purple)
-)
+ --amazing-colors: linear-gradient(217deg, var(--yellow), var(--hotpurple), var(--purple));
+
+ --conteiner-widht-lg: 75%;
+ --conteiner-widht-md: 86%;
+ --conteiner-widht-sm: 90%;
 }
+
 .wrapper-drum-machine{
-    margin: 5rem auto;
+    margin: 9rem auto;
     display: grid;
     gap: 0.8em;
     grid-template-columns: 480px 200px;
@@ -132,27 +136,22 @@
 .label-text{
     margin-left: 15px;
 }
+
 /* ================== Style input range and sound volume ===============*/
 .display-volume{
-    display: grid;
-    grid-column: 2;
+    display: block;
+    margin: 0.4rem 1rem;
 }
 #displayVolume{
     border: var(--inside-border);
-    margin: 5px 10px;
-    font-size: 21px;
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.2rem;
     text-align: center;
-    justify-content: center;
-    width: 4rem;
-    height: 37px;
-    /* display: inline-block; */
+    width: 2.4rem;
+    height: 2.2rem;
 }
-.display-volume span {
-    display: grid;
-    width: 4rem;
-    height: 37px;
-    background-color: aliceblue;
-}
+
 .style-range{
     -webkit-appearance: none;
     width: 100%;
@@ -181,3 +180,78 @@
     border: var(--border-slider-range);
     border-radius: 4px;
 }
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
+
+@media screen and (max-width: 1024px){
+    /* #drum-machine{
+        
+    } */
+    .wrapper-drum-machine{
+        display: flex;
+        flex-direction: column-reverse;
+        min-width: 480px;
+        max-width: 86%;
+        min-height: 600px;
+        max-height: 755px;
+    }
+    .controls-block{
+        display: flex;
+        padding: 20px 10px;
+        font-size: 1.0rem;
+        height: 200px;
+        align-items: center;
+    }
+    #drumPad{
+        min-height: 36rem;
+    }
+    #display-drum {
+        border: var(--inside-border);
+        margin: 21px 0;
+        text-align: center;
+        width: 125px;
+        height: 31px;
+    }
+    #displayVolume {
+        display: inline-block;
+        margin: 0 0 0 1rem;
+        font-size: 1.0rem;
+        width: 2rem;
+        height: 2.0rem;
+    }
+   
+  }
+  /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+  @media screen and (max-width: 600px){
+    .wrapper-drum-machine{
+        margin: 3.5rem auto;
+        min-width: 355px;
+        width: 66%;
+        height: 300px;
+        max-height: 400px;
+    }
+    .controls-block{
+        display: flex;
+        padding: 20px 10px;
+        font-size: 1.0rem;
+        height: 200px;
+        align-items: center;
+    }
+    #drumPad{
+        min-height: 22rem;
+    }
+    #display-drum {
+        border: var(--inside-border);
+        margin: 21px 0;
+        text-align: center;
+        width: 125px;
+        height: 31px;
+    }
+    #displayVolume {
+        display: inline-block;
+        margin: 0 0 0 1rem;
+        font-size: 1.0rem;
+        width: 2rem;
+        height: 2.0rem;
+    }
+  }
