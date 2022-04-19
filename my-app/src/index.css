@@ -52,7 +52,7 @@ body{
 
 .container{
     width: var(--conteiner-widht-lg);
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 h1, 
@@ -68,7 +68,7 @@ h1{
 }
 
 section{
-    margin-top: 8rem;
+    margin-top: 6rem;
     height: 100vh;
 }
 section > h2, 
@@ -127,6 +127,7 @@ img{
 @media screen and (max-width: 1024px){
     .container{
         width: var(--conteiner-widht-md);
+        height: fit-content;
     }
 
     section{
@@ -139,6 +140,7 @@ img{
 @media screen and (max-width: 600px){
     .container{
         width: var(--conteiner-widht-sm);
+        margin: 2rem auto;
     }
 
     section > h2{

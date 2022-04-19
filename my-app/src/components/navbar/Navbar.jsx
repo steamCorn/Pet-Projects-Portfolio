@@ -15,26 +15,27 @@ const Navbar = () => {
                 className={activNav === '#' ? 'active' : ''}>
                 <AiOutlineHome/>
             </a>
-            <a href='#about' 
+            {/* <a href='#about' 
                 onClick={() => setActivNav('#about')} 
                 className={activNav === 'about' ? '#active' : ''}>
                 <AiOutlineUser/>
-            </a>
-            <a href='#experience' 
+            </a> */}
+            {/* <a href='#experience' 
                 onClick={() => setActivNav('#experience')} 
                 className={activNav === '#experience' ? 'active' : ''}>
                 <MdWorkOutline/>
-            </a>
+            </a> */}
             <a href='#portfolio' 
                 onClick={() => setActivNav('#portfolio')} 
                 className={activNav === '#portfolio' ? 'active' : ''}>
                 <BiBook/>
             </a>
-            <a href='#contact' 
+            {/* <a href='#contact' 
                 onClick={() => setActivNav('#contact')} 
                 className={activNav === '#contact' ? 'active' : ''}>
                 <BiMessageSquareDetail/>
-            </a>
+            </a> */}
+
             {/* <Link 
                 to="/contact"
                 onClick={() => setActivNav('/contact')}
@@ -43,16 +44,6 @@ const Navbar = () => {
             </Link> */}
 
         </nav>
-
-        // <BrowserRouter>
-        //     <nav>
-        //         <Link to="/"> Home </Link>
-        //         <Link to="/about"> About </Link>
-        //         <Link to="/portfolio"> Portfolio </Link>
-        //         <Link to="/contact"> Contact </Link>
-        //     </nav>
-        // </BrowserRouter>
-
     )
 }
 

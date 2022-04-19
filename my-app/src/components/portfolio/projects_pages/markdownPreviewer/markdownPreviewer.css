@@ -5,11 +5,14 @@
     grid-template-columns: 1fr 1fr;
     font-family: 'Barlow', sans-serif;
     justify-content: space-evenly;
+    min-width: 80%;
+    max-width: 90%
 }
 .container__markdownPreviewer{
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
-    /* width: 38rem; */
+    /* min-width: 30rem;
+    max-width: 35rem; */
 }
 .editor-wrap{
     height: 100%;
@@ -41,27 +44,37 @@
 }
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
     .wraper-markdown {
         gap: 1em;
+        margin: 5rem 1.5rem 2rem;
     } 
     
-    #editor{
-        border: 2px solid gray;
-        background-color: rgb(158, 190, 160);
-    } 
     .container__markdownPreviewer{
         background-color: rgb(218, 170, 163);
-        width: 36rem;
-    }
+        /* min-width: 22rem; */
+        min-width: 80%;
+    } 
 }
 
  /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
  @media screen and (max-width: 600px){
-    
+    .wraper-markdown {
+        grid-template-columns: 1fr;
+        margin: 5rem 1rem 1rem;
+    } 
+    #editor{
+        min-height: 20rem;
+        scroll-behavior: smooth;
+        
+    }
+    .container__markdownPreviewer{
+        background-color: rgb(143, 200, 124);
+        color: rgb(55, 55, 55);
+    } 
 }
 
-/*  Preview */
+/* ============= Preview =============== */
 
 #preview blockquote {
     border-left: 6px solid #2b1266;
@@ -98,7 +111,8 @@
 
 #preview img {
     display: block;
-    max-width: 40%;
+    /* max-width: 40%; */
+    width: 40%;
     margin: 1rem auto;
 }
 #preview ul,

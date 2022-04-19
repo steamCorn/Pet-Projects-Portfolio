@@ -1,14 +1,25 @@
 header{
     height: 100vh;
-    padding-top: 5rem;
+    padding-top: 6rem;
     overflow: hidden;
 }
 
 .header__container{
     text-align: center;
-    /* height: 100%; */
-    height: fit-content;
+    height: 22rem;
+    /* height: fit-content; */
     position: relative;
+    display: grid;
+    grid-template-columns: 18rem 55%;
+    grid-gap: 15%;
+    gap: 8%;
+}
+.header__container h1 {
+    color: var(--color-primary);
+}
+.header__container p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
 }
 
 /* ======== CTA ========== */
@@ -26,9 +37,9 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 0.2rem;
-    position: absolute;
-    left: 2em;
-    bottom: 3rem;
+    position: fixed;
+    left: 4em;
+    bottom: 6rem;
 }
 .header__socials::before{
     content: "";
@@ -44,7 +55,7 @@ header{
 }
 
 /* ======== Photo ========== */
-.photo{
+/* .photo{
     background: linear-gradient( var(--color-primary), transparent );
     width: 18rem;
     height: 22rem;
@@ -53,14 +64,21 @@ header{
     margin-top: 3rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
-    /* padding: 5rem 1.5rem 1.5rem 1.5rem;*/
+} */
+.photo {
+    background: linear-gradient( var(--color-primary), transparent );
+    width: 18rem;
+    height: 21rem;
+    border-radius: 11rem 38rem 10rem 34rem;
+    overflow: hidden;
+    padding: 0rem 0rem 0rem 2rem;
 }
 
 /* ======== SCROLL DOWN ========== */
 .scroll__down{
     position: absolute;
     right: -2.3rem;
-    bottom: 5rem;
+    bottom: -10rem;
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
@@ -72,15 +90,47 @@ header{
     header{
         padding-top: 3rem;
     }
+    .header__container{
+        grid-template-columns: 16rem 54%;
+        gap: 1.5rem;
+    }
+    .photo {
+        width: 16rem;
+        height: 18rem;
+        border-radius: 11rem 38rem 10rem 34rem;
+    }
+    .header__container p {
+        margin: 1.5rem 0 2rem;
+    }
+    
 }
 /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
 
 @media screen and (max-width: 600px){
     header{
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
-    .header__socials, 
+    .header__socials,
     .scroll__down{
         display: none;
+    }
+    .header__container{
+        text-align: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .photo {
+        margin: 0 auto;
+        width: 13rem;
+        height: 14rem;
+        border-radius: 61rem 38rem 49rem 41rem;
+    }
+    .header__container p {
+        margin: 1.5rem 0 2rem;
+    }
+    .cta {
+        margin-top: 1.5rem;
     }
 }

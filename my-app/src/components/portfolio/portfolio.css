@@ -22,17 +22,21 @@
     border-color: var(--color-primary);
     background: transparent;
 }
-.portfolio__item-image{
+/* .portfolio__item-image{
     border-radius: 1.2rem;
     overflow: hidden;
+} */
+.portfolio__item-image{
+  transform: scale(0.5);  
 }
 .portfolio__item h3{
-    margin: 1.0rem 0 1.5rem 0;
+    margin: 1rem 0 1.5rem 0;
+    text-align: center;
 }
 .portfolio__item-cta{
     display: flex;
     gap: 1rem;
-    margin: 0 auto 1rem;
+    margin: 1rem auto;
     justify-content: center;
 }
 
@@ -54,6 +58,7 @@
     }
     .portfolio__container{
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2rem;
     }
+    
 }
