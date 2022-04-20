@@ -2,9 +2,9 @@ import React from 'react';
 import './navbar.css';
 import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi';
-import {MdWorkOutline} from 'react-icons/md';
+// import {MdWorkOutline} from 'react-icons/md';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [activNav, setActivNav] = useState('#');

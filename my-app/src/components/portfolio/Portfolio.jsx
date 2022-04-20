@@ -21,7 +21,7 @@ const Portfolio = () => {
                     <div className='portfolio__item'>
                         <h3>Quotes Block</h3>
                         <div className='portfolio__item-image'>
-                            <img src={IMG1} />
+                            <img src={IMG1} alt='Quotes Block'/>
                         </div>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
@@ -38,7 +38,7 @@ const Portfolio = () => {
                     <article className='portfolio__item'>
                         <h3>Drum Machine</h3>
                         <div className='portfolio__item-image'>
-                            <img src={IMG3} />
+                            <img src={IMG3} alt='Drum Machine'/>
                         </div>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a>    */}
@@ -55,7 +55,7 @@ const Portfolio = () => {
                     <article className='portfolio__item'>
                         <h3>Markdown Previewer</h3>
                         <div className='portfolio__item-image'>
-                            <img src={IMG2} />
+                            <img src={IMG2} alt='Markdown Previewer'/>
                             {/* <MarkdownPreviewer preview/> */}
                         </div>
                         <div className='portfolio__item-cta'>
@@ -73,7 +73,7 @@ const Portfolio = () => {
                     {/* <article className='portfolio__item'>
                         <h3>Calculator</h3>
                         <div className='portfolio__item-image'>
-                            <img src={IMG4} />
+                            <img src={IMG4} alt='Calculator'/>
                         </div>
                         <div className='portfolio__item-cta'>
                             <a href='' className='btn' target='_blank'>Github</a>
