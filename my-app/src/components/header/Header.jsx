@@ -16,7 +16,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='header__container__position'>
                     <h4>Hello I'm</h4>
                     <h1>Marina Parinova</h1>
                     <h3>Front-end developer based in Netherland</h3>
@@ -25,6 +25,8 @@ const Header = () => {
                         for the field and the ambition to grow yourself and others around you.
                         Had not been afraid to leave my old profession and learn something new. 
                     </p>
+                </div>    
+                <div className='grid-row-span'>
                     <CTA/>
                     <HeaderSocial />
                 </div>
