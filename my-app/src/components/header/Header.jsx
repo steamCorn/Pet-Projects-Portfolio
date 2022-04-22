@@ -21,9 +21,12 @@ const Header = () => {
                     <h1>Marina Parinova</h1>
                     <h3>Front-end developer based in Netherland</h3>
                     <p>
-                        Curious starting front-end developer with a passion 
-                        for the field and the ambition to grow yourself and others around you.
-                        Had not been afraid to leave my old profession and learn something new. 
+                        I'm a curious junior front-end developer curious about IT and technology 
+                        and the ambition to grow my development skills in an innovative environment.
+                        Had not been afraid to leave my old profession and learn something new.
+                    </p>
+                    <p>
+                        You can find more information about me in my resume.
                     </p>
                 </div>    
                 <div className='grid-row-span'>
