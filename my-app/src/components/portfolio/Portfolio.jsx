@@ -4,7 +4,6 @@ import './portfolio.css';
 import IMG1 from '../../files/portfolio_1.png';
 import IMG2 from '../../files/portfolio_2.png';
 import IMG3 from '../../files/portfolio_3.png';
-// import MarkdownPreviewer from './projects_pages/markdownPreviewer/MarkdownPreviewer';
 
 import { Outlet, Link} from 'react-router-dom';
 
@@ -13,7 +12,7 @@ const Portfolio = () => {
     
     return(
         <section id='portfolio'>
-            <h5>My Recent Work</h5>
+            {/* <h4>My Recent Work</h4> */}
             <h2>Portfolio</h2>
 
             <div className='container portfolio__container'>
@@ -56,7 +55,6 @@ const Portfolio = () => {
                         <h3>Markdown Previewer</h3>
                         <div className='portfolio__item-image'>
                             <img src={IMG2} alt='Markdown Previewer'/>
-                            {/* <MarkdownPreviewer preview/> */}
                         </div>
                         <div className='portfolio__item-cta'>
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
@@ -70,13 +68,13 @@ const Portfolio = () => {
                         </div>
                     </article>
 
-                    {/* <article className='portfolio__item'>
+                    <article className='portfolio__item'>
                         <h3>Calculator</h3>
                         <div className='portfolio__item-image'>
-                            <img src={IMG4} alt='Calculator'/>
+                            <img src={IMG3} alt='Calculator'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            <a href='' className='btn' target='_blank'>Github</a>
+                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn btn-primary' 
@@ -85,7 +83,7 @@ const Portfolio = () => {
                                 Open project
                             </Link>
                         </div>  
-                    </article> */}
+                    </article>
                 
             </div>
             <Outlet />

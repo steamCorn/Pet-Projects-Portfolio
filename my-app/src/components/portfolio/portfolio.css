@@ -1,5 +1,5 @@
 #portfolio{
-    height: 100vh;
+    height: fit-content;
 }
 #portfolio h2{
     margin: 1.2rem 0 2rem;
@@ -42,9 +42,6 @@
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px){
-    #portfolio{
-        height: fit-content;
-    }
     .portfolio__container{
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;

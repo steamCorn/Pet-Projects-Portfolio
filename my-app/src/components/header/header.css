@@ -1,6 +1,6 @@
 header{
     height: 100vh;
-    padding-top: 8rem;
+    padding-top: 5rem;
     overflow: hidden;
 }
 
@@ -8,24 +8,23 @@ header{
     text-align: center;
     position: relative;
     display: grid;
-    grid-template-columns: 36% 60%;
-    grid-gap: 4%;
-    gap: 4%;
-    grid-row-gap: 0rem;
+    grid-template-columns: auto;
+    grid-gap: 3rem;
+    grid-row-gap: 2rem;
 }
 .header__container h1 {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 .header__container h3{
     font-size: 1.6rem;
 }
 .header__container p {
-    margin: 2rem 0 2.6rem;
+    margin: 1rem 0;
     color: var(--color-light);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .header__container__position{
-    margin: 4rem 3rem;
+    margin: 3rem 0.5rem;
 }
 .grid-row-span{
     grid-column: span 2;
@@ -64,25 +63,23 @@ header{
 }
 
 /* ======== Photo ========== */
-/* .photo{
-    background: linear-gradient( var(--color-primary), transparent );
-    width: 18rem;
-    height: 22rem;
-    position: absolute;
-    left: calc(50% - 8.5rem);
-    margin-top: 3rem;
-    border-radius: 12rem 12rem 0 0;
+
+.photo{
+    width: 22rem;
+    height: 26rem;
+    position: relative;
+    left: calc(23% - 5rem);
+    /* margin-top: 3rem; */
     overflow: hidden;
-} */
-.photo {
-    background: linear-gradient( var(--color-primary), transparent );
-    width: 100%;
-    /* height: 100%; */
-    border-radius: 11rem 38rem 10rem 34rem;
-    overflow: hidden;
-    padding-right: 2rem;
-    /* margin: 0 2rem; */
 }
+
+.border-photo{
+    border: 1rem solid #d2efd9;
+    padding: 1.5rem;
+    height: fit-content;
+    width: fit-content;
+}
+
 
 /* ======== SCROLL DOWN ========== */
 .scroll__down{
@@ -94,20 +91,24 @@ header{
     font-size: 0.9rem;
 }
 
+/* =============== MEDIA QUERIES (Medium-Large DEVICES) =========== */
+
+@media screen and (max-width: 1195px){
+    .header__container__position {
+        margin: 2rem 0;
+    }
+    .header__container{
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+}
+
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px){
-    .header__container__position {
-        margin: 2.5rem 1.5rem;
-    }
     .header__container{
-        text-align: center;
-        position: relative;
-        display: grid;
-        grid-template-columns: 36% 60%;
-        grid-gap: 4%;
-        gap: 4%;
-        grid-row-gap: 0rem;
+        grid-row-gap: 2rem;
     }
     /* .header__container{
         text-align: center;
@@ -128,7 +129,6 @@ header{
     .photo {
         width: 21rem;
         height: 23rem;
-        border-radius: 11rem 38rem 10rem 34rem;
         margin: 0;
     }
     
@@ -150,12 +150,8 @@ header{
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    .photo {
-        margin: 0 auto;
-        width: 13rem;
-        height: 14rem;
-        border-radius: 61rem 38rem 49rem 41rem;
-    }
+    /* .photo {
+    } */
     .header__container p {
         margin: 1.5rem 0 2rem;
     }

@@ -18,12 +18,13 @@
 }
 
 :root{
-    --color-bg: #1f1f38;
-    --color-bg-variant: #22227caf;
-    --color-primary: rgb(75, 182, 245);
-    --color-primary-variant: rgba(8, 135, 76, 0.4);
-    --color-white: #c9e4d0;
-    --color-light: rgba(255, 255, 255, 0.5);
+    --color-bg: #25312f;
+    --color-bg-variant: #424f35;
+    --color-primary: #a3c1b4;
+    --color-primary-text: #efb280;
+    --color-primary-variant: rgba(77, 225, 126, 0.4);
+    --color-white: #ffffff;
+    --color-light: #a3c1b4;
 
     --transition: all 400ms easy;
 
@@ -36,17 +37,18 @@ html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    /* background-image: url(); */
+    background-image: url(./files/bg_texture_2.png);
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
 
 /* --------------GENERAL STYLE ------------ */
 
@@ -72,13 +74,14 @@ section{
     height: 100vh;
 }
 section > h2, 
-section > h5{
+section > h4{
     text-align: center;
     color: var(--color-light);
 }
 
 section > h2 {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
+    margin-bottom: 3rem;
 }
 
 .text-light{
