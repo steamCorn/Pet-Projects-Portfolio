@@ -13,7 +13,7 @@ const Portfolio = () => {
     return(
         <section id='portfolio'>
             {/* <h4>My Recent Work</h4> */}
-            <h2>Portfolio</h2>
+            <h1>Portfolio</h1>
 
             <div className='container portfolio__container'>
                 
@@ -26,7 +26,7 @@ const Portfolio = () => {
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
-                                className='btn btn-primary' 
+                                className='btn' 
                                 to="/quotes_block" 
                                 target='_blank' > 
                                 Open project
@@ -43,7 +43,7 @@ const Portfolio = () => {
                             {/* <a href='' className='btn' target='_blank'>Github</a>    */}
                             <Link 
                                 id="RouterQBlock" 
-                                className='btn btn-primary' 
+                                className='btn' 
                                 to="/drum_machine" 
                                 target='_blank' > 
                                 Open project
@@ -60,7 +60,7 @@ const Portfolio = () => {
                             {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
-                                className='btn btn-primary' 
+                                className='btn' 
                                 to="/markdown_previewer" 
                                 target='_blank' > 
                                 Open project
@@ -68,22 +68,22 @@ const Portfolio = () => {
                         </div>
                     </article>
 
-                    <article className='portfolio__item'>
+                    {/* <article className='portfolio__item'>
                         <h3>Calculator</h3>
                         <div className='portfolio__item-image'>
                             <img src={IMG3} alt='Calculator'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
+                             <a href='' className='btn' target='_blank'>Github</a>
                             <Link 
                                 id="RouterQBlock" 
-                                className='btn btn-primary' 
+                                className='btn' 
                                 to="/calculator" 
                                 target='_blank' > 
                                 Open project
                             </Link>
                         </div>  
-                    </article>
+                    </article> */}
                 
             </div>
             <Outlet />

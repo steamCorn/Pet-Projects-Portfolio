@@ -13,7 +13,7 @@ header{
     grid-row-gap: 2rem;
 }
 .header__container h1 {
-    color: var(--color-primary-text);
+    color: var(--color-primary);
 }
 .header__container h3{
     font-size: 1.6rem;
@@ -31,7 +31,7 @@ header{
 }
 /* ======== CTA ========== */
 .cta{
-    /* margin-top: 2.5rem; */
+    margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
@@ -53,13 +53,13 @@ header{
     content: "";
     width: 0.2rem;
     height: 4rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-light);
 }
 .header__socials::after{
     content: "";
     width: 0.2rem;
     height: 4rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-light);
 }
 
 /* ======== Photo ========== */

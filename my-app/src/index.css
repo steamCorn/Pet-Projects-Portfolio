@@ -20,8 +20,7 @@
 :root{
     --color-bg: #25312f;
     --color-bg-variant: #424f35;
-    --color-primary: #a3c1b4;
-    --color-primary-text: #efb280;
+    --color-primary: #fb933d;
     --color-primary-variant: rgba(77, 225, 126, 0.4);
     --color-white: #ffffff;
     --color-light: #a3c1b4;
@@ -46,7 +45,7 @@ body{
     background-color: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(./files/bg_texture_2.png);
+    background-image: url(./files/bg_texture.png);
 }
 
 
@@ -79,8 +78,9 @@ section > h4{
     color: var(--color-light);
 }
 
-section > h2 {
-    color: var(--color-primary-text);
+section > h1 {
+    text-align: center;
+    color: var(--color-primary);
     margin-bottom: 3rem;
 }
 
@@ -89,7 +89,7 @@ section > h2 {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-light);
     transition: var(--transition);
 }
 
@@ -100,16 +100,17 @@ a:hover{
 .btn{
    width: max-content;
    display: inline-block;
-   color: var(--color-primary); 
+   background-color: var(--color-light);
+   color: var(--color-bg); 
    padding: 0.75rem 1.2rem;
    border-radius: 0.4rem;
    cursor: pointer;
-   border: 1px solid var(--color-primary);
+   border: 1px solid var(--color-light);
    transition: var(--transition);
 }
 
 .btn:hover{
-    background: var(--color-white);
+    background: var(--color-primary);
     color: var(--color-bg);
     border-color: transparent;
 }

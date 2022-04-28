@@ -1,14 +1,11 @@
 #portfolio{
-    height: fit-content;
-}
-#portfolio h2{
-    margin: 1.2rem 0 2rem;
+    height: 100vh;
 }
 .portfolio__container{
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 .portfolio__item{
     background: var(--color-bg-variant);
@@ -39,6 +36,13 @@
     justify-content: center;
 }
 
+/* =============== MEDIA QUERIES (Medium-Large DEVICES) =========== */
+
+@media screen and (max-width: 1195px){
+    .portfolio__container{
+        gap: 1.2rem;
+    }
+}
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px){
