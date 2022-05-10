@@ -1,48 +1,96 @@
-import { useState } from "react";
+import React from "react";
 import DisplayCalc from './DisplayCalc';
 import ButtonsCalc from './ButtonsCalc';
+import GoBackToPortfolioButton from "../../../__buttons/GoBackToPortfolioButton";
 import './calculator.css'
 
-function Calculator (){
-    const [calc, setCalc] = useState("");
-    const [result, setResult] = useState("");
-
-    const operators = ["/", "*", "-", "+", "."];
-
-    const updateCalc = value => {
-        //manipulation with operators
-        if(
-            operators.includes(value) && calc === '' ||
-            operators.includes(value) && operators.includes(calc.slice(-1))
-        ){
-            return;
+class Calculator extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            currentNumber : '',
+            currentOperator : '',
+            result : '',
+            operators : ['+', '-', '*', '/']
         }
-        setCalc(calc + value);
-
-        if(!operators.includes(value)){
-            setResult(eval(calc + value).toString());
-        }
+        
+        this.numberPress = this.numberPress.bind(this);
+        this.operatorPress = this.operatorPress.bind(this);
+        // this.calculateResult = this.calculateResult.bind(this);
+        this.clickEquals = this.clickEquals.bind(this);
+        this.deleteLastValue = this.deleteLastValue.bind(this);
+    }
+    
+    numberPress(e){
+        this.setState({
+            currentNumber: this.state.currentNumber + e.target.value
+        });
     }
 
-    const clickEquals = () => {
-        setCalc(eval(calc).toString());
+    operatorPress(e){
+        
+        this.setState({
+            previousNumber : this.state.currentNumber,
+            result: this.state.currentNumber + e.target.value
+        });
+        // setResult(currentNumber + e.target.value)
+        console.log(e.target.value + "   was pressed");
+        
     }
-    const deleteLastValue = () => {
-        setCalc(calc.slice(0, -1))
+
+    // calculateResult(e){
+    //     switch (e.target.value) {
+    //         case '+':
+    //             setResult(result + parseInt(calc, 10));
+    //             break;
+
+    //         case '-':
+    //             setResult(result - parseInt(calc, 10));
+    //             break;
+
+    //         case '*':
+    //             setResult(result * parseInt(calc, 10));
+    //             break;
+
+    //         case '/':
+    //             setResult(result / parseInt(calc, 10));
+    //     }
+    // }
+
+    clickEquals(){
+        console.log(' = was cliked');
     }
-    return(
-        <div className="wrapper-calculator">
-            <DisplayCalc 
-                calc ={calc}
-                result = {result}
-            />
-            <ButtonsCalc 
-                updateCalc = {updateCalc}
-                clickEquals = {clickEquals}
-                deleteLastValue = {deleteLastValue}
-            />
-        </div>
-    )
+
+    deleteLastValue(){
+        this.setState({
+            currentNumber : '',
+            currentOperator : '',
+            result : '',
+        })
+        console.log(' DEL was cliked');
+    }
+
+    render(){
+        return(
+            <div className="wrapper-calculator">
+                <div className="calculator calculator-style">
+                    <GoBackToPortfolioButton />
+                    <DisplayCalc 
+                        currentNumber = {this.state.currentNumber}
+                        previousNumber= {this.state.previousNumber}
+                        calc = {this.state.calc} 
+                        result = {this.state.result}
+                    />
+                    <ButtonsCalc 
+                        numberPress ={this.numberPress}
+                        operatorPress = {this.operatorPress}
+                        clickEquals = {this.clickEquals}
+                        deleteLastValue = {this.deleteLastValue}
+                    />
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Calculator;

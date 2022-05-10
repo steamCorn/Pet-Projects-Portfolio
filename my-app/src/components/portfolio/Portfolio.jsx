@@ -68,13 +68,13 @@ const Portfolio = () => {
                         </div>
                     </article>
 
-                    {/* <article className='portfolio__item'>
+                    <article className='portfolio__item'>
                         <h3>Calculator</h3>
                         <div className='portfolio__item-image'>
                             <img src={IMG3} alt='Calculator'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                             <a href='' className='btn' target='_blank'>Github</a>
+                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn' 
@@ -83,7 +83,7 @@ const Portfolio = () => {
                                 Open project
                             </Link>
                         </div>  
-                    </article> */}
+                    </article>
                 
             </div>
             <Outlet />
