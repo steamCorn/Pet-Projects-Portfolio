@@ -1,4 +1,3 @@
-
 const DefaultText = `
 # Lorem ipsum dolor sit amet!
 

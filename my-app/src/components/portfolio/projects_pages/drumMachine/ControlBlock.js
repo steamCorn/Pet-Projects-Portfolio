@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
-function ControlBlock (props){
-
-    return(
+function ControlBlock(props) {
+    return (
         <div className="controls-block">
             <div className="block">
                 <p>Control Block</p>
@@ -11,57 +10,57 @@ function ControlBlock (props){
 
             <div className="block">
                 <p>Select a instrument:</p>
-                <label htmlFor='firstFile' className="label-button">
+                <label htmlFor="firstFile" className="label-button">
                     <span className="label-text">Guitar</span>
                     <div className="custom-radio-btn">
-                        <input 
+                        <input
                             id="firstFile"
                             name="sound-file"
-                            type="radio" 
-                            value="firstAudioFile" 
-                            checked = {props.soundFileName === 'firstAudioFile'}
+                            type="radio"
+                            value="firstAudioFile"
+                            checked={props.soundFileName === 'firstAudioFile'}
                             onChange={props.changeSoundFile}
                         />
                         <span className="checkmark"></span>
                     </div>
                 </label>
-                <label htmlFor='secondFile' className="label-button">
+                <label htmlFor="secondFile" className="label-button">
                     <span className="label-text">Piano</span>
                     <div className="custom-radio-btn">
-                        <input 
+                        <input
                             id="secondFile"
                             name="sound-file"
-                            type="radio" 
-                            value="secondAudioFile" 
-                            checked = {props.soundFileName === 'secondAudioFile'}
+                            type="radio"
+                            value="secondAudioFile"
+                            checked={props.soundFileName === 'secondAudioFile'}
                             onChange={props.changeSoundFile}
                         />
                         <span className="checkmark"></span>
                     </div>
-                </label>     
+                </label>
             </div>
 
             <div className="block">
                 <div className="display-volume">
                     <span>Volume:</span>
                     <span id="displayVolume">
-                        <span>{props.volumeValue}</span> 
+                        <span>{props.volumeValue}</span>
                     </span>
                 </div>
-                
-                <input 
+
+                <input
                     className="style-range"
-                    type="range" 
-                    id="volume" 
-                    name="volume" 
-                    min="0" 
+                    type="range"
+                    id="volume"
+                    name="volume"
+                    min="0"
                     max="100"
                     value={props.volumeValue}
                     onChange={props.adjustVolume}
-                    />
+                />
             </div>
         </div>
-    )
+    );
 }
 
 export default ControlBlock;

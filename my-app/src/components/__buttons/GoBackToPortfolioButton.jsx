@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import './goBackToPortfolioButton.css';
-import {TiArrowBackOutline} from 'react-icons/ti';
+import { TiArrowBackOutline } from 'react-icons/ti';
 
-function GoBackToPortfolioButton(){
+function GoBackToPortfolioButton() {
     let navigate = useNavigate();
 
     return (
-        <button 
-            
-            type="button" 
+        <button
+            type="button"
             onClick={() => navigate('/#portfolio')}
-            className="btn btn-go-back btn-go-back-style">
-            <TiArrowBackOutline className="icon-style"/> Go back
+            className="btn btn-go-back btn-go-back-style"
+        >
+            <TiArrowBackOutline className="icon-style" /> Go back
         </button>
-    )
+    );
 }
 export default GoBackToPortfolioButton;

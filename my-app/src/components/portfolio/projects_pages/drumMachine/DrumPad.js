@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-class DrumPad extends React.Component{
-    constructor(props){
+class DrumPad extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             activeID: '',
-            isButtonActive: true
-        }
+            isButtonActive: true,
+        };
         this.playAudio = this.playAudio.bind(this);
-        this.makeSoundFunction = this.makeSoundFunction.bind(this)
+        this.makeSoundFunction = this.makeSoundFunction.bind(this);
         this.handlerPressButton = this.handlerPressButton.bind(this);
         this.handlerClickButton = this.handlerClickButton.bind(this);
     }
@@ -21,16 +21,15 @@ class DrumPad extends React.Component{
         document.removeEventListener('keydown', this.handlerPressButton);
     }
 
-    playAudio(id){
-        let audio = document.getElementById(id)
-        audio.currentTime = 0; 
+    playAudio(id) {
+        let audio = document.getElementById(id);
+        audio.currentTime = 0;
         audio.volume = this.props.volumeSound;
         audio.play();
     }
 
-
-    makeSoundFunction(arr, id, trigger, url){
-        if(!arr){
+    makeSoundFunction(arr, id, trigger, url) {
+        if (!arr) {
             return;
         }
 
@@ -39,89 +38,92 @@ class DrumPad extends React.Component{
 
         // Change this component state
         this.setState({
-            activeButton: id
-        })
-        
+            activeButton: id,
+        });
+
         this.playAudio(trigger);
         this.buttonIDsetState(id);
         setTimeout(() => this.buttonIDsetState(''), 100);
     }
 
-    handlerPressButton(event){
-        let currentAudio = this.props.currentSoundFile
-            .find(currentButton => 
-            currentButton.keyCode === event.keyCode);
-        
-        this.makeSoundFunction(currentAudio, 
-            currentAudio.id, 
+    handlerPressButton(event) {
+        let currentAudio = this.props.currentSoundFile.find(
+            (currentButton) => currentButton.keyCode === event.keyCode,
+        );
+
+        this.makeSoundFunction(
+            currentAudio,
+            currentAudio.id,
             currentAudio.keyTrigger,
-            currentAudio.url
-            );
+            currentAudio.url,
+        );
     }
 
     handlerClickButton = (event) => {
-        let currentAudio = this.props.currentSoundFile
-            .find(currentButton => 
-            currentButton.id === event.currentTarget.id);
+        let currentAudio = this.props.currentSoundFile.find(
+            (currentButton) => currentButton.id === event.currentTarget.id,
+        );
 
-        this.makeSoundFunction(currentAudio, 
-            currentAudio.id, 
+        this.makeSoundFunction(
+            currentAudio,
+            currentAudio.id,
             currentAudio.keyTrigger,
-            currentAudio.url
-            );
-    }
+            currentAudio.url,
+        );
+    };
 
-    buttonIDsetState(buttonID){
+    buttonIDsetState(buttonID) {
         this.setState({
-            activeID : buttonID
+            activeID: buttonID,
         });
     }
-    
-    render(){
-        return(
-            <div className="drum-pad-style" id="drumPad"> 
-                {this.props.currentSoundFile.map((sound) => (
 
-                    sound.id === this.state.activeID ?
-
-                    <div 
-                        key={sound.keyCode} 
-                        className={"drum-pad"+" "+"drum_button_active"}
-                        id={sound.id}
-                        onClick={this.handlerClickButton}
-                    >
-                        <audio 
-                            className="clip"
-                            src={sound.url}
-                            id={sound.keyTrigger}
+    render() {
+        return (
+            <div className="drum-pad-style" id="drumPad">
+                {this.props.currentSoundFile.map((sound) =>
+                    sound.id === this.state.activeID ? (
+                        <div
+                            key={sound.keyCode}
+                            className={'drum-pad' + ' ' + 'drum_button_active'}
+                            id={sound.id}
+                            onClick={this.handlerClickButton}
                         >
-                            Sorry, but your browser doesn't support the audio.
-                        </audio>
-                        <div className="letterOnPad">
-                            {sound.keyTrigger}
+                            <audio
+                                className="clip"
+                                src={sound.url}
+                                id={sound.keyTrigger}
+                            >
+                                Sorry, but your browser doesn't support the
+                                audio.
+                            </audio>
+                            <div className="letterOnPad">
+                                {sound.keyTrigger}
+                            </div>
                         </div>
-                    </div>
-                    :
-                    <div 
-                        key={sound.keyCode} 
-                        className={"drum-pad"}
-                        id={sound.id}
-                        onClick={this.handlerClickButton}
-                    >
-                        <audio 
-                            className="clip"
-                            src={sound.url}
-                            id={sound.keyTrigger}
+                    ) : (
+                        <div
+                            key={sound.keyCode}
+                            className={'drum-pad'}
+                            id={sound.id}
+                            onClick={this.handlerClickButton}
                         >
-                            Sorry, but your browser doesn't support the audio.
-                        </audio>
-                        <div className="letterOnPad">
-                            {sound.keyTrigger}
+                            <audio
+                                className="clip"
+                                src={sound.url}
+                                id={sound.keyTrigger}
+                            >
+                                Sorry, but your browser doesn't support the
+                                audio.
+                            </audio>
+                            <div className="letterOnPad">
+                                {sound.keyTrigger}
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div> 
-        )
+                    ),
+                )}
+            </div>
+        );
     }
 }
 

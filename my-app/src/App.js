@@ -4,27 +4,24 @@ import Portfolio from './components/portfolio/Portfolio';
 
 // import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-function App () {
- 
+function App() {
     return (
-      <>
-        <Header />
-        <Navbar />
-        <Portfolio />
-      </>
+        <>
+            <Header />
+            <Navbar />
+            <Portfolio />
+        </>
 
-
-      // <div>
-      // <BrowserRouter>
-      //   <Navbar />
-      //   <Routes>
-      //     <Route path='/' element={<Header />} />
-      //     <Route path='/portfolio' element={<Portfolio />} />
-      //   </Routes>
-      // </BrowserRouter>
-      // </div>
+        // <div>
+        // <BrowserRouter>
+        //   <Navbar />
+        //   <Routes>
+        //     <Route path='/' element={<Header />} />
+        //     <Route path='/portfolio' element={<Portfolio />} />
+        //   </Routes>
+        // </BrowserRouter>
+        // </div>
     );
-     
 }
 
-export default App;  
+export default App;

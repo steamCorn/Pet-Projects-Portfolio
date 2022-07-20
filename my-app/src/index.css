@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -12,13 +11,13 @@
     text-decoration: none;
 }
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --color-bg: #25312f;
     --color-bg-variant: #424f35;
     --color-primary: #fb933d;
@@ -56,15 +55,15 @@
     --dark-calculator-color: #2b374d;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-white);
@@ -72,32 +71,31 @@ body{
     background-image: url(./files/bg_texture.png);
 }
 
-
 /* --------------GENERAL STYLE ------------ */
 
-.container{
+.container {
     width: var(--conteiner-widht-lg);
     margin: 2rem auto;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3,
-h4, 
+h4,
 h5 {
     font-weight: 500;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
 }
 
-section{
+section {
     margin-top: 6rem;
     height: 100vh;
 }
-section > h2, 
-section > h4{
+section > h2,
+section > h4 {
     text-align: center;
     color: var(--color-light);
 }
@@ -108,7 +106,7 @@ section > h1 {
     margin-bottom: 3rem;
 }
 
-.text-light{
+.text-light {
     color: var(--color-light);
 }
 
@@ -117,23 +115,23 @@ a {
     transition: var(--transition);
 }
 
-a:hover{
+a:hover {
     color: var(--color-white);
 }
 
-.btn{
-   width: max-content;
-   display: inline-block;
-   background-color: var(--color-light);
-   color: var(--color-bg); 
-   padding: 0.75rem 1.2rem;
-   border-radius: 0.4rem;
-   cursor: pointer;
-   border: 1px solid var(--color-light);
-   transition: var(--transition);
+.btn {
+    width: max-content;
+    display: inline-block;
+    background-color: var(--color-light);
+    color: var(--color-bg);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-light);
+    transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--color-primary);
     color: var(--color-bg);
     border-color: transparent;
@@ -144,7 +142,7 @@ a:hover{
     color: var(--color-bg);
 }
 
-img{
+img {
     display: block;
     width: 100%;
     object-fit: cover;
@@ -152,26 +150,26 @@ img{
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
-@media screen and (max-width: 1024px){
-    .container{
+@media screen and (max-width: 1024px) {
+    .container {
         width: var(--conteiner-widht-md);
         height: fit-content;
     }
 
-    section{
+    section {
         margin-top: 6rem;
     }
 }
 
 /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
 
-@media screen and (max-width: 600px){
-    .container{
+@media screen and (max-width: 600px) {
+    .container {
         width: var(--conteiner-widht-sm);
         margin: 2rem auto;
     }
 
-    section > h2{
+    section > h2 {
         margin-bottom: 2rem;
     }
 }

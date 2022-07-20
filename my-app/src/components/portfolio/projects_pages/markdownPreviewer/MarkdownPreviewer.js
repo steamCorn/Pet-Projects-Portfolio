@@ -1,41 +1,39 @@
-import React from "react";
+import React from 'react';
 import EditorMarkdown from './EditorMarkdown';
 import PreviewMarkdown from './PreviewMarkdown';
 import DefaultText from './DefaultText';
 import './markdownPreviewer.css';
-import GoBackToPortfolioButton from "../../../__buttons/GoBackToPortfolioButton";
+import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
-
-class MarkdownPreviewer extends React.Component{
-    constructor(props){
+class MarkdownPreviewer extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
-            markdown: DefaultText
-        }
+            markdown: DefaultText,
+        };
         this.handlerChange = this.handlerChange.bind(this);
     }
-    handlerChange(event){
+    handlerChange(event) {
         this.setState({
-            markdown: event.target.value
-        })
+            markdown: event.target.value,
+        });
     }
 
-    render(){
-
-        return(
+    render() {
+        return (
             <div className="wraper-markdown">
                 <GoBackToPortfolioButton />
                 <div className="container__markdownPreviewer">
-                    <EditorMarkdown 
+                    <EditorMarkdown
                         defaultText={this.state.markdown}
                         onChangeEditor={this.handlerChange}
                     />
                 </div>
                 <div className="container__markdownPreviewer previewWrap">
-                    <PreviewMarkdown markdown={this.state.markdown}/>
+                    <PreviewMarkdown markdown={this.state.markdown} />
                 </div>
             </div>
-        )
+        );
     }
 }
 

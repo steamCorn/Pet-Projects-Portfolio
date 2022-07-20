@@ -1,17 +1,19 @@
-import React from "react";
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowMaximize, faWindowMinimize } from '@fortawesome/free-regular-svg-icons'
+import {
+    faWindowMaximize,
+    faWindowMinimize,
+} from '@fortawesome/free-regular-svg-icons';
 
-
-function Buttonbar (props){
-    return(
+function Buttonbar(props) {
+    return (
         <div className="buttonbar">
             <span>{props.nameBar}</span>
-            <input 
+            <input
                 id="windowMinimize"
-                type="checkbox" 
-                name="window" 
-                value={"minimize"}
+                type="checkbox"
+                name="window"
+                value={'minimize'}
                 onClick={props.onClick}
                 onChange={props.onChange}
             />
@@ -22,7 +24,7 @@ function Buttonbar (props){
                 <FontAwesomeIcon icon={faWindowMaximize} />
             </span>
         </div>
-    )
-};
+    );
+}
 
 //export default Buttonbar;

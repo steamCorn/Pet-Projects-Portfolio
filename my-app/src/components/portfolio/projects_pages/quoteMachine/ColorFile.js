@@ -15,8 +15,7 @@ const ColorFile = [
     '#fa448c',
     '#fec859',
     '#43b5a0',
-    '#491d88'
+    '#491d88',
 ];
-
 
 export default ColorFile;

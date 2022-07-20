@@ -1,28 +1,28 @@
-.wraper-markdown{
-    margin: 6.5em ;
+.wraper-markdown {
+    margin: 6.5em;
     display: grid;
     gap: 2em;
     grid-template-columns: 1fr 1fr;
     font-family: 'Barlow', sans-serif;
     justify-content: space-evenly;
     min-width: 80%;
-    max-width: 90%
+    max-width: 90%;
 }
-.container__markdownPreviewer{
+.container__markdownPreviewer {
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
     /* min-width: 30rem;
     max-width: 35rem; */
 }
-.editor-wrap{
+.editor-wrap {
     height: 100%;
 }
 
-.previewWrap{
+.previewWrap {
     padding: 1.25rem;
 }
 
-#editor{ 
+#editor {
     width: 100%;
     height: inherit;
     margin-bottom: -5px;
@@ -33,7 +33,7 @@
     font-size: 0.875rem;
 }
 
-#preview{
+#preview {
     width: 100%;
     border: 2px solid gray;
     padding: 1em;
@@ -44,34 +44,33 @@
 }
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .wraper-markdown {
         gap: 1em;
         margin: 5rem 1.5rem 2rem;
-    } 
-    
-    .container__markdownPreviewer{
+    }
+
+    .container__markdownPreviewer {
         background-color: rgb(218, 170, 163);
         /* min-width: 22rem; */
         min-width: 80%;
-    } 
+    }
 }
 
- /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
- @media screen and (max-width: 600px){
+/* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+@media screen and (max-width: 600px) {
     .wraper-markdown {
         grid-template-columns: 1fr;
         margin: 5rem 1rem 1rem;
-    } 
-    #editor{
+    }
+    #editor {
         min-height: 20rem;
         scroll-behavior: smooth;
-        
     }
-    .container__markdownPreviewer{
+    .container__markdownPreviewer {
         background-color: rgb(143, 200, 124);
         color: rgb(55, 55, 55);
-    } 
+    }
 }
 
 /* ============= Preview =============== */
@@ -83,25 +82,25 @@
     margin: 8px 0 8px 25px;
 }
 
-#preview h1, 
+#preview h1,
 #preview h2,
 #preview h3 {
     margin: 10px 0;
 }
-#preview  p{
+#preview p {
     margin: 5px 0;
 }
-#preview  p  code {
+#preview p code {
     padding: 3px;
 }
 
-#preview  code {
+#preview code {
     font-size: 1rem;
     font-weight: bold;
     color: rgb(117, 21, 21);
 }
 
-#preview  pre {
+#preview pre {
     margin: 1em auto;
     display: block;
     width: fit-content;
@@ -116,6 +115,6 @@
     margin: 1rem auto;
 }
 #preview ul,
-#preview ol{
+#preview ol {
     margin-left: 30px;
 }

@@ -29,27 +29,27 @@
   }
   */
 
-  /*Style for FOOTER*/
+/*Style for FOOTER*/
 
 .sharing-buttons {
-  margin: 0 10px;
+    margin: 0 10px;
 }
-#tweet, 
-#git, 
+#tweet,
+#git,
 #linkedin {
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  float: left;
-  width: 36px;
-  margin-right: 3px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    float: left;
+    width: 36px;
+    margin-right: 3px;
 }
 .one-social-button {
-  outline: none;
-  cursor: pointer;
+    outline: none;
+    cursor: pointer;
 }
 #tweet:hover,
 #git:hover,
-#linkedin:hover{
-  opacity: 0.8;
+#linkedin:hover {
+    opacity: 0.8;
 }

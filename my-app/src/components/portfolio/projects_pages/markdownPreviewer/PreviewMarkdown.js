@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { marked } from 'marked';
 
 //How conect MARKED to app
@@ -7,20 +7,19 @@ import { marked } from 'marked';
 
 //Markdown previewer interprets carriage returns and renders them as <br> (line break) elements
 marked.setOptions({
-    breaks: true
-})
+    breaks: true,
+});
 const renderer = new marked.Renderer();
 
-function PreviewMarkdown(props){
-    return(
-        <div 
+function PreviewMarkdown(props) {
+    return (
+        <div
             dangerouslySetInnerHTML={{
-                __html: marked(props.markdown, { renderer: renderer })
+                __html: marked(props.markdown, { renderer: renderer }),
             }}
             id="preview"
-        >   
-        </div>
-    )
+        ></div>
+    );
 }
 
 export default PreviewMarkdown;

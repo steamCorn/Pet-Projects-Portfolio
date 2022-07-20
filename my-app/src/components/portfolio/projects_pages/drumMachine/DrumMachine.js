@@ -1,70 +1,73 @@
-import React from "react";
+import React from 'react';
 import DrumPad from './DrumPad';
 import ControlBlock from './ControlBlock';
-import {firstAudioFile , secondAudioFile } from './sounds-file';
+import { firstAudioFile, secondAudioFile } from './sounds-file';
 import './drumMachine.css';
-import GoBackToPortfolioButton from "../../../__buttons/GoBackToPortfolioButton";
+import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
-class DrumMachine extends React.Component{
-    constructor(props){
+class DrumMachine extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             displayHandler: '',
-            currentSoundFile : firstAudioFile,
+            currentSoundFile: firstAudioFile,
             soundFileName: 'firstAudioFile',
-            volumeValue : 30
-        }
+            volumeValue: 30,
+        };
         this.setDisplay = this.setDisplay.bind(this);
         this.changeSoundFile = this.changeSoundFile.bind(this);
-        this.adjustVolume=this.adjustVolume.bind(this);
+        this.adjustVolume = this.adjustVolume.bind(this);
     }
 
-    changeSoundFile(e){
-        if(e.currentTarget.value === 'firstAudioFile'){
+    changeSoundFile(e) {
+        if (e.currentTarget.value === 'firstAudioFile') {
             this.setState({
                 soundFileName: e.currentTarget.value,
-                currentSoundFile: firstAudioFile
-            })
+                currentSoundFile: firstAudioFile,
+            });
         } else {
             this.setState({
                 soundFileName: e.currentTarget.value,
-                currentSoundFile: secondAudioFile
-            })
+                currentSoundFile: secondAudioFile,
+            });
         }
     }
 
     // Changing state from child component
-    setDisplay(display){
+    setDisplay(display) {
         this.setState({
-            displayHandler: display
+            displayHandler: display,
         });
     }
 
-    adjustVolume(e){
+    adjustVolume(e) {
         this.setState({
-            volumeValue: e.target.value
-        })
+            volumeValue: e.target.value,
+        });
     }
 
-    render(){
-        return(
-            <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
+    render() {
+        return (
+            <div
+                id="drum-machine"
+                className="wrapper-drum-machine style-wrapper"
+            >
                 <GoBackToPortfolioButton />
-                <DrumPad 
+                <DrumPad
                     currentSoundFile={this.state.currentSoundFile}
-                    setDisplay = {this.setDisplay}
-                    setVolume = {this.setVolume}
-                    volumeSound={this.state.volumeValue /100}
+                    setDisplay={this.setDisplay}
+                    setVolume={this.setVolume}
+                    volumeSound={this.state.volumeValue / 100}
                 />
-                <ControlBlock 
+                <ControlBlock
                     display={this.state.displayHandler}
                     changeSoundFile={this.changeSoundFile}
                     adjustVolume={this.adjustVolume}
                     volumeValue={this.state.volumeValue}
                     soundFileName={this.state.soundFileName}
-                /> 
+                />
             </div>
-        )
+        );
     }
 }
 export default DrumMachine;

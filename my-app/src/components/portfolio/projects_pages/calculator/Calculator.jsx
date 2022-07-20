@@ -148,7 +148,7 @@ function Calculator() {
     };
 
     return (
-        <div className='wrapper-calculator'>
+        <div className="wrapper-calculator">
             <div className="calculator" id={theme}>
                 <div className="top-section">
                     <div>

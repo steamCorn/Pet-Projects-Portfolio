@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-:root{
- --main-bg-color: rgb(49, 51, 82);
- --inside-border: 2px solid #ff69b4;
- --main-color-object: #aaa;
- --hotpink: #ff69b4;
- --border-slider-range: 2px solid var(--hotpink);
- --yellow: #ffe94e;
- --hotpurple: #d72df7;
- --purple: #5016f1;
- --amazing-colors: linear-gradient(217deg, var(--yellow), var(--hotpurple), var(--purple));
+:root {
+    --main-bg-color: rgb(49, 51, 82);
+    --inside-border: 2px solid #ff69b4;
+    --main-color-object: #aaa;
+    --hotpink: #ff69b4;
+    --border-slider-range: 2px solid var(--hotpink);
+    --yellow: #ffe94e;
+    --hotpurple: #d72df7;
+    --purple: #5016f1;
+    --amazing-colors: linear-gradient(
+        217deg,
+        var(--yellow),
+        var(--hotpurple),
+        var(--purple)
+    );
 
- --conteiner-widht-lg: 75%;
- --conteiner-widht-md: 86%;
- --conteiner-widht-sm: 90%;
+    --conteiner-widht-lg: 75%;
+    --conteiner-widht-md: 86%;
+    --conteiner-widht-sm: 90%;
 }
 
-.wrapper-drum-machine{
+.wrapper-drum-machine {
     margin: 9rem auto;
     display: grid;
     gap: 0.8em;
@@ -25,7 +30,7 @@
     align-content: stretch;
     justify-content: space-evenly;
 }
-.style-wrapper{
+.style-wrapper {
     font-family: 'Lato', sans-serif;
     border: 3px solid #333;
     background-color: var(--main-bg-color);
@@ -34,26 +39,26 @@
 
 /*    Style for tests   */
 
-#drumPad, 
-.controls-block{
+#drumPad,
+.controls-block {
     border: 2px solid hotpink;
     width: 100%;
     height: 100%;
 }
-#drumPad{
+#drumPad {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
     padding: 1em;
 }
-.drum-pad{
+.drum-pad {
     text-align: center;
     border: 2px solid rgb(190, 190, 190);
     justify-content: center;
     display: table-row-group;
     font-size: 28px;
 }
-.letterOnPad{
+.letterOnPad {
     display: block;
     margin-top: 2rem;
     cursor: default;
@@ -62,11 +67,17 @@
 /* Style for pressed button */
 
 @keyframes shine {
-    0%  {background-color: var(--purple);}
-    80% {background-color: var(--hotpurple);}
-    100% {background-color: var(--yellow);}
+    0% {
+        background-color: var(--purple);
+    }
+    80% {
+        background-color: var(--hotpurple);
+    }
+    100% {
+        background-color: var(--yellow);
+    }
 }
-.drum_button_active{
+.drum_button_active {
     animation-name: shine;
     animation-timing-function: linear;
     animation-duration: 0.1s;
@@ -74,7 +85,7 @@
 }
 
 /* Style for control block */
-.controls-block{
+.controls-block {
     display: grid;
     justify-content: space-evenly;
     justify-items: center;
@@ -82,25 +93,25 @@
     padding: 20px 10px;
     font-size: 1.2rem;
 }
-#display-drum{
+#display-drum {
     border: var(--inside-border);
     margin: 10px auto;
     text-align: center;
     width: 160px;
     height: 37px;
 }
-.block{
+.block {
     display: block;
     width: 100%;
 }
-.block p{
+.block p {
     margin-bottom: 7px;
     display: inline-block;
 }
 
 /* Style for radio button */
 
-.custom-radio-btn{
+.custom-radio-btn {
     width: 31px;
     height: 31px;
     border: 2px solid var(--hotpink);
@@ -111,7 +122,7 @@
     align-items: center;
     margin-bottom: 7px;
 }
-.custom-radio-btn .checkmark{
+.custom-radio-btn .checkmark {
     width: calc(100% - 8px);
     height: calc(100% - 8px);
     border-radius: 50%;
@@ -120,29 +131,29 @@
     opacity: 0;
     transition: opacity 0.35s;
 }
-.custom-radio-btn input{
+.custom-radio-btn input {
     display: none;
 }
-.custom-radio-btn input:checked + .checkmark{
+.custom-radio-btn input:checked + .checkmark {
     opacity: 1;
 }
-.label-button{
+.label-button {
     display: flex;
     color: var(--main-color-object);
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
 }
-.label-text{
+.label-text {
     margin-left: 15px;
 }
 
 /* ================== Style input range and sound volume ===============*/
-.display-volume{
+.display-volume {
     display: block;
     margin: 0.4rem 1rem;
 }
-#displayVolume{
+#displayVolume {
     border: var(--inside-border);
     display: inline-block;
     margin: 0 1rem;
@@ -152,7 +163,7 @@
     height: 2.2rem;
 }
 
-.style-range{
+.style-range {
     -webkit-appearance: none;
     width: 100%;
     height: 14px;
@@ -183,11 +194,11 @@
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     /* #drum-machine{
         
     } */
-    .wrapper-drum-machine{
+    .wrapper-drum-machine {
         display: flex;
         flex-direction: column-reverse;
         min-width: 480px;
@@ -195,14 +206,14 @@
         min-height: 600px;
         max-height: 755px;
     }
-    .controls-block{
+    .controls-block {
         display: flex;
         padding: 20px 10px;
-        font-size: 1.0rem;
+        font-size: 1rem;
         height: 200px;
         align-items: center;
     }
-    #drumPad{
+    #drumPad {
         min-height: 36rem;
     }
     #display-drum {
@@ -215,29 +226,28 @@
     #displayVolume {
         display: inline-block;
         margin: 0 0 0 1rem;
-        font-size: 1.0rem;
+        font-size: 1rem;
         width: 2rem;
-        height: 2.0rem;
+        height: 2rem;
     }
-   
-  }
-  /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
-  @media screen and (max-width: 600px){
-    .wrapper-drum-machine{
+}
+/* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+@media screen and (max-width: 600px) {
+    .wrapper-drum-machine {
         margin: 3.5rem auto;
         min-width: 355px;
         width: 66%;
         height: 300px;
         max-height: 400px;
     }
-    .controls-block{
+    .controls-block {
         display: flex;
         padding: 20px 10px;
-        font-size: 1.0rem;
+        font-size: 1rem;
         height: 200px;
         align-items: center;
     }
-    #drumPad{
+    #drumPad {
         min-height: 22rem;
     }
     #display-drum {
@@ -250,8 +260,8 @@
     #displayVolume {
         display: inline-block;
         margin: 0 0 0 1rem;
-        font-size: 1.0rem;
+        font-size: 1rem;
         width: 2rem;
-        height: 2.0rem;
+        height: 2rem;
     }
-  }
+}
