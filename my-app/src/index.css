@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
 *{
     margin: 0;
@@ -30,6 +31,29 @@
     --conteiner-widht-lg: 75%;
     --conteiner-widht-md: 86%;
     --conteiner-widht-sm: 90%;
+
+    --background-calculator-color: rgb(243, 236, 236);
+
+    --background-light-mode: #fff4ac;
+    --main-light-mode: #f6da73;
+    --buttons-light-mode: #ffe482;
+    --display-light-mode: #feffe1;
+    --shadow-light-mode: #6c6c6c;
+    --text-light-mode: #292929;
+
+    --background-dark-mode: #2d2e34;
+    --main-dark-mode: #252627;
+    --buttons-dark-mode: #6d6d6d;
+    --display-dark-mode: #3c3d3e;
+    --shadow-dark-mode: #101010b3;
+    --text-dark-mode: #ffffff;
+
+    --border-radius-main: 1.2rem;
+    --formula-color: rgb(142, 142, 142);
+
+    --main-calculator-color: #7bc3d4;
+    --secondary-calculator-color: #d49c90;
+    --dark-calculator-color: #2b374d;
 }
 
 html{

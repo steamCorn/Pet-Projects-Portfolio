@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './portfolio.css';
 import IMG1 from '../../files/portfolio_1.png';
@@ -8,11 +7,9 @@ import IMG3 from '../../files/portfolio_3.png';
 import { Outlet, Link} from 'react-router-dom';
 
 const Portfolio = () => {
-
     
     return(
         <section id='portfolio'>
-            {/* <h4>My Recent Work</h4> */}
             <h1>Portfolio</h1>
 
             <div className='container portfolio__container'>
@@ -23,7 +20,6 @@ const Portfolio = () => {
                             <img src={IMG1} alt='Quotes Block'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn' 
@@ -40,7 +36,6 @@ const Portfolio = () => {
                             <img src={IMG3} alt='Drum Machine'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            {/* <a href='' className='btn' target='_blank'>Github</a>    */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn' 
@@ -57,7 +52,6 @@ const Portfolio = () => {
                             <img src={IMG2} alt='Markdown Previewer'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn' 
@@ -74,7 +68,6 @@ const Portfolio = () => {
                             <img src={IMG3} alt='Calculator'/>
                         </div>
                         <div className='portfolio__item-cta'>
-                            {/* <a href='' className='btn' target='_blank'>Github</a> */}
                             <Link 
                                 id="RouterQBlock" 
                                 className='btn' 

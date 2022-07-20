@@ -4,9 +4,6 @@ import './index.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Header from './components/header/Header';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Experience from './components/experience/Experience';
 
 import Portfolio from './components/portfolio/Portfolio';
 import QuotesBlock from './components/portfolio/projects_pages/quoteMachine/QuotesBlock';
@@ -19,9 +16,6 @@ ReactDOM.render(
         <Routes>
             <Route path='/' element={<App />}/>
             <Route path='/home' element={<Header />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/experience' element={<Experience />} />
-            <Route path='/contact' element={<Contact />} />
             <Route path='/portfolio' element={<Portfolio />} />
             <Route path='/quotes_block' element={<QuotesBlock />} />
             <Route path='/markdown_previewer' element={<MarkdownPreviewer />} />
