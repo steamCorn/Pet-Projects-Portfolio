@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +10,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    vertical-align: baseline;
 }
 *::after,
 *::before {
@@ -68,7 +70,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(./files/bg_texture.png);
+    /* background-image: url(./files/bg_texture.png); */
 }
 
 /* --------------GENERAL STYLE ------------ */

@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Barlow', sans-serif;
-    list-style: none;
-    vertical-align: baseline;
-}
 :root {
     --border-radius-qb: 0.5rem;
     --margin-context-qb: 1.5rem auto;
@@ -19,6 +12,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    font-family: 'Barlow', sans-serif;
 }
 
 #titel,

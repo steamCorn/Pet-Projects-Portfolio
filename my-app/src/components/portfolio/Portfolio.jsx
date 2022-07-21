@@ -3,6 +3,7 @@ import './portfolio.css';
 import IMG1 from '../../files/portfolio_1.png';
 import IMG2 from '../../files/portfolio_2.png';
 import IMG3 from '../../files/portfolio_3.png';
+import IMG4 from '../../files/portfolio_4.png';
 
 import { Outlet, Link } from 'react-router-dom';
 
@@ -66,7 +67,7 @@ const Portfolio = () => {
                 <article className="portfolio__item">
                     <h3>Calculator</h3>
                     <div className="portfolio__item-image">
-                        <img src={IMG3} alt="Calculator" />
+                        <img src={IMG4} alt="Calculator" />
                     </div>
                     <div className="portfolio__item-cta">
                         <Link
