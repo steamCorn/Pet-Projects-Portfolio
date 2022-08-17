@@ -1,5 +1,5 @@
 import React from 'react';
-import { getMinutesFromSeconds } from '../utils/utilGetSeconds';
+import { getMinutesFromSeconds } from './utils/utilGetSeconds';
 
 export default function DisplayTimer(props) {
     const seconds = props.seconds;
@@ -14,7 +14,8 @@ export default function DisplayTimer(props) {
         const element = document.getElementById('time-left');
         if (element) {
             if (seconds < 60) {
-                element.style.color = '#b10d0d';
+                // element.style.color = '#b10d0d';
+                element.style.color = '#ffe94e';
                 element.style.textShadow = '1px 1px 2px #210707';
             } else element.style.color = '#ffffff';
         }

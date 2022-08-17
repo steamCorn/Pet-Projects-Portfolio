@@ -24,12 +24,6 @@
     --yellow: #ffe94e;
     --hotpurple: #d72df7;
     --purple: #5016f1;
-    --amazing-colors: linear-gradient(
-        217deg,
-        var(--yellow),
-        var(--hotpurple),
-        var(--purple)
-    );
 
     --conteiner-widht-lg: 75%;
     --conteiner-widht-md: 86%;
@@ -55,6 +49,17 @@
     text-align: center;
     align-items: stretch;
 }
+.timer-control-panel h2{
+    background: -webkit-linear-gradient(
+        90deg, 
+        var(--yellow),
+        var(--hotpurple),
+        var(--purple)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* =========Control panel ========= */
 
@@ -68,7 +73,10 @@
 .control-bar {
     width: 20rem;
     padding: 1rem;
+    font-size: 32px;
+    color: var(--font-color);
 }
+
 .grid-control-bar {
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -77,25 +85,55 @@
     padding: 1rem;
     margin-top: 1rem;
 }
-
+.grid-control-bar-style{
+    font-size: 40px;
+    
+} 
 /* ======= Buttons ======== */
 .button-with-icon {
     width: 6rem;
     background: var(--timer-bg-color);
     cursor: pointer;
 }
-.icon-style {
+.timer-icon-style,
+.timer-pause-icon,
+.timer-play-icon{
     width: 2.5rem;
     height: 2.5rem;
+}
+.timer-icon-style {
     color: var(--font-color);
 }
+.timer-icon-style:hover{
+    color: var(--yellow);
+}
 
+.timer-pause-icon{
+    color: var(--purple);
+}
+
+.timer-play-icon{
+    color: green;
+    color: var(--hotpink);
+}
 /* ======= Display Timer ======== */
 
 #timer-label,
 #time-left {
     margin: 1rem auto;
 }
+#timer-label {
+    background: -webkit-linear-gradient(
+        90deg, 
+        var(--yellow),
+        var(--hotpurple)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 #time-left {
     border: var(--display-border);
     padding: 1.5rem;

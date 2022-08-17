@@ -21,7 +21,7 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio__item-cta">
                         <Link
-                            id="RouterQBlock"
+                            id="routerQuotesBlock"
                             className="btn"
                             to="/quotes_block"
                             target="_blank"
@@ -38,7 +38,7 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio__item-cta">
                         <Link
-                            id="RouterQBlock"
+                            id="routerDrumMachine"
                             className="btn"
                             to="/drum_machine"
                             target="_blank"
@@ -55,7 +55,7 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio__item-cta">
                         <Link
-                            id="RouterQBlock"
+                            id="routerMarkdownPreviewer"
                             className="btn"
                             to="/markdown_previewer"
                             target="_blank"
@@ -72,7 +72,7 @@ const Portfolio = () => {
                     </div>
                     <div className="portfolio__item-cta">
                         <Link
-                            id="RouterQBlock"
+                            id="routerCalculator"
                             className="btn"
                             to="/calculator"
                             target="_blank"
@@ -81,6 +81,24 @@ const Portfolio = () => {
                         </Link>
                     </div>
                 </article>
+
+                <article className="portfolio__item">
+                    <h3>Countdown Timer</h3>
+                    <div className="portfolio__item-image">
+                        <img src={IMG5} alt="Timer" />
+                    </div>
+                    <div className="portfolio__item-cta">
+                        <Link
+                            id="routerTimer"
+                            className="btn"
+                            to="/timer"
+                            target="_blank"
+                        >
+                            Open project
+                        </Link>
+                    </div>
+                </article>
+
             </div>
             <Outlet />
         </section>

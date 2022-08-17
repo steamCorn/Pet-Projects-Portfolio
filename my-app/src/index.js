@@ -10,6 +10,7 @@ import QuotesBlock from './components/portfolio/projects_pages/quoteMachine/Quot
 import MarkdownPreviewer from './components/portfolio/projects_pages/markdownPreviewer/MarkdownPreviewer';
 import DrumMachine from './components/portfolio/projects_pages/drumMachine/DrumMachine';
 import Calculator from './components/portfolio/projects_pages/calculator/Calculator';
+import Timer from './components/portfolio/projects_pages/countdown/Timer';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
             <Route path="/markdown_previewer" element={<MarkdownPreviewer />} />
             <Route path="/drum_machine" element={<DrumMachine />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/timer" element={<Timer />} />
         </Routes>
     </BrowserRouter>,
     document.getElementById('root'),

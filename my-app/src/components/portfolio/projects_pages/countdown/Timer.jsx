@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import TimerControl from './TimerControl';
 import DisplayTimer from './DisplayTimer';
-import './timer-style.css';
+import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { TbRefresh } from 'react-icons/tb';
 
-import { getSeconds } from '../utils/utilGetSeconds';
+import { getSeconds } from './utils/utilGetSeconds';
+
+import './timer-style.css';
 
 export default function Timer() {
     const initialParameters = {
@@ -61,7 +63,7 @@ export default function Timer() {
     };
 
     const playAudio = () => {
-        audioSound.loop = true;
+        // audioSound.loop = true;
         audioSound.current.play();
         setTimeout(() => stopAudioPlaying(), 3200);
     };
@@ -99,6 +101,7 @@ export default function Timer() {
 
     return (
         <div className="wrapper-timer wrapper-timer-style">
+            <GoBackToPortfolioButton />
             <div className="timer-control-panel">
                 <h2>25+5 Clok</h2>
                 <div className="control-panel">
@@ -141,9 +144,9 @@ export default function Timer() {
                         onClick={handlerPlayButtonClick}
                     >
                         {!playIsPressed ? (
-                            <FaPlay className="icon-style" />
+                            <FaPlay className="timer-play-icon" />
                         ) : (
-                            <FaPause className="icon-style" />
+                            <FaPause className="timer-pause-icon" />
                         )}
                     </button>
 
@@ -154,7 +157,7 @@ export default function Timer() {
                     >
                         <TbRefresh
                             id="reset-animation"
-                            className="icon-style"
+                            className="timer-icon-style"
                         />
                     </button>
                 </div>
