@@ -15,7 +15,7 @@ export default function DisplayTimer(props) {
         if (element) {
             if (seconds < 60) {
                 // element.style.color = '#b10d0d';
-                element.style.color = '#ffe94e';
+                element.style.color = '#5BA0BF';
                 element.style.textShadow = '1px 1px 2px #210707';
             } else element.style.color = '#ffffff';
         }

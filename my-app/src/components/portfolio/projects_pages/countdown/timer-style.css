@@ -14,16 +14,16 @@
     box-sizing: border-box;
 }
 :root {
-    --timer-bg-color: rgb(49, 51, 82);
-    --outside-border: 2px solid var(--purple);
-    --inside-border: 2px solid var(--hotpink);
-    --display-border: 6px solid var(--hotpurple);
-    --font-color: #aaa;
+    --outside-border: 2px solid var(--color-secondary-dark);
+    --inside-border: 2px solid var(--color-primary-dark);
+    --display-border: 6px solid var(--color-secondary-light);
 
-    --hotpink: #ff69b4;
-    --yellow: #ffe94e;
-    --hotpurple: #d72df7;
-    --purple: #5016f1;
+    --timer-bg-color: #012442;
+    --font-color: #aaa;
+    --color-primary-dark: #E38664;
+    --color-primary-light: #FFA566;
+    --color-secondary-light: #7E627B;
+    --color-secondary-dark: #5BA0BF;
 
     --conteiner-widht-lg: 75%;
     --conteiner-widht-md: 86%;
@@ -52,9 +52,9 @@
 .timer-control-panel h2{
     background: -webkit-linear-gradient(
         90deg, 
-        var(--yellow),
-        var(--hotpurple),
-        var(--purple)
+        var(--color-primary-light),
+        var(--color-secondary-light),
+        var(--color-secondary-dark)
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -105,16 +105,15 @@
     color: var(--font-color);
 }
 .timer-icon-style:hover{
-    color: var(--yellow);
+    color: var(--color-primary-light);
 }
 
 .timer-pause-icon{
-    color: var(--purple);
+    color: var(--color-primary-light);
 }
 
 .timer-play-icon{
-    color: green;
-    color: var(--hotpink);
+    color: var(--color-primary-dark);
 }
 /* ======= Display Timer ======== */
 
@@ -125,8 +124,8 @@
 #timer-label {
     background: -webkit-linear-gradient(
         90deg, 
-        var(--yellow),
-        var(--hotpurple)
+        var(--color-primary-light),
+        var(--color-secondary-light)
     );
     -webkit-background-clip: text;
     background-clip: text;
