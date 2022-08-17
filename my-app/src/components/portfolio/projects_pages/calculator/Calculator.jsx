@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DisplayCalc from './DisplayCalc';
 import ButtonsPad from './ButtonsPad';
-import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton'
+import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
 import { CgSun } from 'react-icons/cg';
 import { HiOutlineMoon, HiOutlineMenuAlt4 } from 'react-icons/hi';
@@ -149,7 +149,7 @@ function Calculator() {
     };
 
     return (
-        <div className="wrapper-calculator"  id={theme}>
+        <div className="wrapper-calculator" id={theme}>
             <GoBackToPortfolioButton />
             <div className="calculator">
                 <div className="top-section">

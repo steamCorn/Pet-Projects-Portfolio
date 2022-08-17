@@ -4,6 +4,7 @@ import IMG1 from '../../files/portfolio_1.png';
 import IMG2 from '../../files/portfolio_2.png';
 import IMG3 from '../../files/portfolio_3.png';
 import IMG4 from '../../files/portfolio_4.png';
+import IMG5 from '../../files/portfolio_5.png';
 
 import { Outlet, Link } from 'react-router-dom';
 

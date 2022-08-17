@@ -24,14 +24,14 @@
     overflow: hidden;
 }
 
-.portfolio__item-image img{
+.portfolio__item-image img {
     display: block;
     /* width: 18rem; */
     height: 13rem;
     object-fit: cover;
 }
 .portfolio__item h3 {
-    margin: 1rem 0 1.5rem 0;
+    margin: 0.5rem 0 1rem 0;
     text-align: center;
 }
 .portfolio__item-cta {

@@ -105,7 +105,7 @@ section > h4 {
 section > h1 {
     text-align: center;
     color: var(--color-primary);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .text-light {
