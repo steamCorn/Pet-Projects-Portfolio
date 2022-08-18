@@ -2,8 +2,7 @@ import React from 'react';
 import ColorFile from './ColorFile';
 import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 import './quotesBlock.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {FaTwitter} from 'react-icons/fa';
 
 class QuotesBlock extends React.Component {
     constructor(props) {
@@ -78,7 +77,7 @@ class QuotesBlock extends React.Component {
                                 style={{ background: this.state.color }}
                             >
                                 <span id="twitt-icon">
-                                    <FontAwesomeIcon icon={faTwitter} />
+                                    <FaTwitter />
                                 </span>
                                 Tweet this quote!
                             </a>
@@ -92,11 +91,6 @@ class QuotesBlock extends React.Component {
                             </button>
                         </div>
                     </div>
-                    {/* <footer>
-                        <div className="footer">by Marina
-                            <SocialFollow style={{background : this.state.color}}/>
-                        </div>
-                    </footer>       */}
                 </div>
             </div>
         );

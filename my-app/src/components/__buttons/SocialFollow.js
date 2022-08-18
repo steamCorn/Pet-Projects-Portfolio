@@ -1,11 +1,6 @@
 import React from 'react';
 import './socialFollow.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faTwitter,
-    faGithub,
-    faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
+import {FaLinkedinIn, FaTwitter, FaGithub} from 'react-icons/fa';
 
 function SocialFollow(props) {
     return (
@@ -18,7 +13,7 @@ function SocialFollow(props) {
                 target="_blank"
                 style={{ background: props.color }}
             >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FaTwitter />
             </a>
             <a
                 id="git"
@@ -28,7 +23,7 @@ function SocialFollow(props) {
                 target="_blank"
                 style={{ background: props.color }}
             >
-                <FontAwesomeIcon icon={faGithub} />
+                <FaGithub />
             </a>
             <a
                 id="linkedin"
@@ -38,7 +33,7 @@ function SocialFollow(props) {
                 target="_blank"
                 style={{ background: props.color }}
             >
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <FaLinkedinIn />
             </a>
         </div>
     );

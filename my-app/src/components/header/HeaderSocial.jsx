@@ -1,10 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faTwitter,
-    faGithub,
-    faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
+
+import {FaLinkedinIn, FaTwitter, FaGithub} from 'react-icons/fa';
 
 function HeaderSocial() {
     return (
@@ -15,7 +11,7 @@ function HeaderSocial() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <FontAwesomeIcon icon={faTwitter} />
+                <FaTwitter />
             </a>
             <a
                 title="This is my Git!"
@@ -23,7 +19,7 @@ function HeaderSocial() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <FontAwesomeIcon icon={faGithub} />
+                <FaGithub />
             </a>
             <a
                 title="You can find me on LinkedIn!"
@@ -31,7 +27,7 @@ function HeaderSocial() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <FaLinkedinIn />
             </a>
         </div>
     );

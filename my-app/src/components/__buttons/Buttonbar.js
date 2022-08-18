@@ -1,9 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faWindowMaximize,
-    faWindowMinimize,
-} from '@fortawesome/free-regular-svg-icons';
+import {FaWindowMaximize, FaWindowMinimize } from 'react-icons/fa';
 
 function Buttonbar(props) {
     return (
@@ -18,10 +14,10 @@ function Buttonbar(props) {
                 onChange={props.onChange}
             />
             <span className="icon-window" id="minimize">
-                <FontAwesomeIcon icon={faWindowMinimize} />
+                <FaWindowMaximize />
             </span>
             <span className="icon-window" id="maximize">
-                <FontAwesomeIcon icon={faWindowMaximize} />
+                <FaWindowMinimize />
             </span>
         </div>
     );
