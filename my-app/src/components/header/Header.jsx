@@ -15,7 +15,7 @@ const Header = () => {
                 </div>
 
                 <div className="header__container__position">
-                    <div class="flex-content">
+                    <div className="flex-content">
                         <h4>Hello I'm</h4>
                         <h1>Marina Parinova</h1>
                         <h3>Front-end developer based in Netherland</h3>

@@ -11,8 +11,6 @@
 .container__markdownPreviewer {
     background-color: rgb(123, 168, 207);
     border: 3px solid rgb(5, 152, 250);
-    /* min-width: 30rem;
-    max-width: 35rem; */
 }
 .editor-wrap {
     height: 100%;
@@ -52,7 +50,6 @@
 
     .container__markdownPreviewer {
         background-color: rgb(218, 170, 163);
-        /* min-width: 22rem; */
         min-width: 80%;
     }
 }
@@ -110,7 +107,6 @@
 
 #preview img {
     display: block;
-    /* max-width: 40%; */
     width: 40%;
     margin: 1rem auto;
 }

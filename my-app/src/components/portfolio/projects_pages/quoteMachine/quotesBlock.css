@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
-
-:root {
-    --border-radius-qb: 0.5rem;
-    --margin-context-qb: 1.5rem auto;
-    --font-size-qb: 1.5em;
-}
-
 .pageQuote {
     display: grid;
     min-height: 100vh;
@@ -100,15 +92,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
-/*  This style will needed if sharing-buttons inside block  */
-/*
-.footer a{
-  text-decoration: none;
-  color: white;
-  margin-left: 5px;
-}
-*/
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 

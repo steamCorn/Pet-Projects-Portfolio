@@ -1,25 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-:root {
-    --main-bg-color: rgb(49, 51, 82);
-    --inside-border: 2px solid #ff69b4;
-    --main-color-object: #aaa;
-    --hotpink: #ff69b4;
-    --border-slider-range: 2px solid var(--hotpink);
-    --yellow: #ffe94e;
-    --hotpurple: #d72df7;
-    --purple: #5016f1;
-    --amazing-colors: linear-gradient(
-        217deg,
-        var(--yellow),
-        var(--hotpurple),
-        var(--purple)
-    );
-
-    --conteiner-widht-lg: 75%;
-    --conteiner-widht-md: 86%;
-    --conteiner-widht-sm: 90%;
-}
-
 .wrapper-drum-machine {
     margin: 9rem auto;
     display: grid;
@@ -33,11 +11,9 @@
 .style-wrapper {
     font-family: 'Lato', sans-serif;
     border: 3px solid #333;
-    background-color: var(--main-bg-color);
-    color: var(--main-color-object);
+    background-color: var(--main-bg-color-drumpad);
+    color: var(--main-color-object-drumpad);
 }
-
-/*    Style for tests   */
 
 #drumPad,
 .controls-block {
@@ -64,7 +40,7 @@
     cursor: default;
 }
 
-/* Style for pressed button */
+/* ======== Style for pressed button ======== */
 
 @keyframes shine {
     0% {
@@ -84,7 +60,7 @@
     color: transparent;
 }
 
-/* Style for control block */
+/* ====== Style for control block ======= */
 .controls-block {
     display: grid;
     justify-content: space-evenly;
@@ -94,7 +70,7 @@
     font-size: 1.2rem;
 }
 #display-drum {
-    border: var(--inside-border);
+    border: var(--inside-border-drumpad);
     margin: 10px auto;
     text-align: center;
     width: 160px;
@@ -109,7 +85,7 @@
     display: inline-block;
 }
 
-/* Style for radio button */
+/* ====== Style for radio button ====== */
 
 .custom-radio-btn {
     width: 31px;
@@ -139,7 +115,7 @@
 }
 .label-button {
     display: flex;
-    color: var(--main-color-object);
+    color: var(--main-color-object-drumpad);
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
@@ -154,7 +130,7 @@
     margin: 0.4rem 1rem;
 }
 #displayVolume {
-    border: var(--inside-border);
+    border: var(--inside-border-drumpad);
     display: inline-block;
     margin: 0 1rem;
     font-size: 1.2rem;
@@ -169,7 +145,7 @@
     height: 14px;
     background: var(--amazing-colors);
     outline: none;
-    border: var(--border-slider-range);
+    border: var(--border-slider-range-drumpad);
     border-radius: 8px;
     margin-top: 10px;
 }
@@ -178,17 +154,17 @@
     appearance: none;
     width: 14px;
     height: 30px;
-    background: var(--main-bg-color);
+    background: var(--main-bg-color-drumpad);
     cursor: default;
-    border: var(--border-slider-range);
+    border: var(--border-slider-range-drumpad);
     border-radius: 4px;
 }
 .style-range::-moz-range-thumb {
     width: 14px;
     height: 30px;
-    background: var(--main-bg-color);
+    background: var(--main-bg-color-drumpad);
     cursor: default;
-    border: var(--border-slider-range);
+    border: var(--border-slider-range-drumpad);
     border-radius: 4px;
 }
 
@@ -217,7 +193,7 @@
         min-height: 36rem;
     }
     #display-drum {
-        border: var(--inside-border);
+        border: var(--inside-border-drumpad);
         margin: 21px 0;
         text-align: center;
         width: 125px;
@@ -251,7 +227,7 @@
         min-height: 22rem;
     }
     #display-drum {
-        border: var(--inside-border);
+        border: var(--inside-border-drumpad);
         margin: 21px 0;
         text-align: center;
         width: 125px;

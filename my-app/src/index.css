@@ -33,6 +33,25 @@
     --conteiner-widht-md: 86%;
     --conteiner-widht-sm: 90%;
 
+    /* ==== Drum Pad ==== */
+
+    --main-bg-color-drumpad: rgb(49, 51, 82);
+    --inside-border-drumpad: 2px solid #ff69b4;
+    --main-color-object-drumpad: #aaa;
+    --hotpink: #ff69b4;
+    --border-slider-range-drumpad: 2px solid var(--hotpink);
+    --yellow: #ffe94e;
+    --hotpurple: #d72df7;
+    --purple: #5016f1;
+    --amazing-colors: linear-gradient(
+        217deg,
+        var(--yellow),
+        var(--hotpurple),
+        var(--purple)
+    );
+
+    /* ====== Calculator ====== */
+
     --background-calculator-color: rgb(243, 236, 236);
 
     --background-light-mode: #fff4ac;
@@ -55,6 +74,25 @@
     --main-calculator-color: #7bc3d4;
     --secondary-calculator-color: #d49c90;
     --dark-calculator-color: #2b374d;
+
+
+    /* ==== Quote Block ==== */
+    --border-radius-qb: 0.5rem;
+    --margin-context-qb: 1.5rem auto;
+    --font-size-qb: 1.5em;
+
+
+    /* ==== Timer Countdown ==== */
+    --outside-border: 2px solid var(--color-secondary-dark);
+    --inside-border: 2px solid var(--color-primary-dark);
+    --display-border: 6px solid var(--color-secondary-light);
+
+    --timer-bg-color: #012442;
+    --font-color: #aaa;
+    --color-primary-dark: #E38664;
+    --color-primary-light: #FFA566;
+    --color-secondary-light: #7E627B;
+    --color-secondary-dark: #5BA0BF;
 }
 
 html {
