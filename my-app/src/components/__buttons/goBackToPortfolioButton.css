@@ -1,49 +1,49 @@
 .btn-go-back {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
 }
 
 .btn-go-back-style {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
 }
 .icon-style {
-    margin-right: 0.5rem;
-    width: 1.2rem;
-    height: 1.2rem;
+  margin-right: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px) {
-    .btn-go-back {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        font-weight: 400;
-        padding: 0.3rem 0.5rem;
-    }
-    .icon-style {
-        margin-right: 0.25rem;
-        width: 1rem;
-        height: 1rem;
-    }
+  .btn-go-back {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-weight: 400;
+    padding: 0.3rem 0.5rem;
+  }
+  .icon-style {
+    margin-right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+  }
 }
 /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
 @media screen and (max-width: 600px) {
-    .btn-go-back {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-size: 0.8rem;
-        font-weight: 400;
-        padding: 0.3rem 0.5rem;
-    }
-    .icon-style {
-        margin-right: 0.25rem;
-        width: 0.8rem;
-        height: 0.8rem;
-    }
+  .btn-go-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.3rem 0.5rem;
+  }
+  .icon-style {
+    margin-right: 0.25rem;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }

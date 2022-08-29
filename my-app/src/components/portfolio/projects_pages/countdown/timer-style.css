@@ -1,140 +1,138 @@
 .wrapper-timer {
-    display: flex;
-    min-height: 100vh;
-    margin: auto;
-    font-family: 'Orbitron', sans-serif;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  margin: auto;
+  font-family: 'Orbitron', sans-serif;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 .wrapper-timer-style {
-    background: var(--timer-bg-color);
-    color: var(--font-color);
+  background: var(--timer-bg-color);
+  color: var(--font-color);
 }
 .timer-control-panel {
-    display: grid;
-    text-align: center;
-    align-items: stretch;
+  display: grid;
+  text-align: center;
+  align-items: stretch;
 }
-.timer-control-panel h2{
-    background: -webkit-linear-gradient(
-        90deg, 
-        var(--color-primary-light),
-        var(--color-secondary-light),
-        var(--color-secondary-dark)
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.timer-control-panel h2 {
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--color-primary-light),
+    var(--color-secondary-light),
+    var(--color-secondary-dark)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* =========Control panel ========= */
 
 .control-panel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    text-align: center;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  text-align: center;
+  align-items: stretch;
 }
 .control-bar {
-    width: 20rem;
-    padding: 1rem;
-    font-size: 32px;
-    color: var(--font-color);
+  width: 20rem;
+  padding: 1rem;
+  font-size: 32px;
+  color: var(--font-color);
 }
 
 .grid-control-bar {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    align-items: center;
-    justify-items: center;
-    padding: 1rem;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
 }
-.grid-control-bar-style{
-    font-size: 40px;
-    
-} 
+.grid-control-bar-style {
+  font-size: 40px;
+}
 /* ======= Buttons ======== */
 .button-with-icon {
-    width: 6rem;
-    background: var(--timer-bg-color);
-    cursor: pointer;
+  width: 6rem;
+  background: var(--timer-bg-color);
+  cursor: pointer;
 }
 .timer-icon-style,
 .timer-pause-icon,
-.timer-play-icon{
-    width: 2.5rem;
-    height: 2.5rem;
+.timer-play-icon {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .timer-icon-style {
-    color: var(--font-color);
+  color: var(--font-color);
 }
-.timer-icon-style:hover{
-    color: var(--color-primary-light);
-}
-
-.timer-pause-icon{
-    color: var(--color-primary-light);
+.timer-icon-style:hover {
+  color: var(--color-primary-light);
 }
 
-.timer-play-icon{
-    color: var(--color-primary-dark);
+.timer-pause-icon {
+  color: var(--color-primary-light);
+}
+
+.timer-play-icon {
+  color: var(--color-primary-dark);
 }
 /* ======= Display Timer ======== */
 
 #timer-label,
 #time-left {
-    margin: 1rem auto;
+  margin: 1rem auto;
 }
 #timer-label {
-    background: -webkit-linear-gradient(
-        90deg, 
-        var(--color-primary-light),
-        var(--color-secondary-light)
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--color-primary-light),
+    var(--color-secondary-light)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-
 #time-left {
-    border: var(--display-border);
-    padding: 1.5rem;
-    width: 15rem;
-    color: white;
+  border: var(--display-border);
+  padding: 1.5rem;
+  width: 15rem;
+  color: white;
 }
 
 /* ======= Timer Control Bar ======== */
 .timer-control button {
-    background-color: var(--timer-bg-color);
-    margin: 1rem 1rem;
+  background-color: var(--timer-bg-color);
+  margin: 1rem 1rem;
 }
 
 /* ======= Animation for refresf icon ======== */
 @keyframes rotateIcon {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 #reset-animation:hover {
-    animation-name: rotateIcon;
-    animation-duration: 1s;
+  animation-name: rotateIcon;
+  animation-duration: 1s;
 }
 
 /* ============= MEDIA ============= */
 
 @media screen and (max-width: 740px) {
-    .control-panel {
-        grid-template-columns: none;
-        gap: 1rem;
-        text-align: center;
-        align-items: stretch;
-    }
+  .control-panel {
+    grid-template-columns: none;
+    gap: 1rem;
+    text-align: center;
+    align-items: stretch;
+  }
 }

@@ -1,68 +1,99 @@
 #portfolio {
-    height: 100vh;
+  height: 100vh;
 }
 .portfolio__container {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 .portfolio__item {
-    background: var(--color-bg-variant);
-    padding: 1.2rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-    cursor: pointer;
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
 }
-.portfolio__item:hover {
-    border-color: var(--color-primary);
-    background: transparent;
+
+.hide-span {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  width: max-content;
+  background-color: blueviolet;
+  border: 2px solid black;
+  padding: 3px 7px;
 }
+.hide-block{
+  display: none;
+}
+.portfolio__item:hover .hide-block{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #4f515196;
+  width: 100%;
+  height: 75%;
+  animation: showStack 1s;
+}
+@keyframes showStack {
+  from{
+    height: 0%;
+    visibility: 0;
+  }
+  to{
+    height: 75%;
+    visibility: 1;
+  }
+}
+
 .portfolio__item-image {
-    border-radius: 1.2rem;
-    overflow: hidden;
+  border-radius: 1.2rem;
+  overflow: hidden;
 }
 
 .portfolio__item-image img {
-    display: block;
-    /* width: 18rem; */
-    height: 13rem;
-    object-fit: cover;
+  display: block;
+  /* width: 18rem; */
+  height: 13rem;
+  object-fit: cover;
 }
 .portfolio__item h3 {
-    margin: 0.5rem 0 1rem 0;
-    text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
 }
 .portfolio__item-cta {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem auto;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+  justify-content: center;
 }
 
 /* =============== MEDIA QUERIES (Medium-Large DEVICES) =========== */
 
 @media screen and (max-width: 1195px) {
-    .portfolio__container {
-        gap: 1.2rem;
-    }
+  .portfolio__container {
+    gap: 1.2rem;
+  }
 }
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
 @media screen and (max-width: 1024px) {
-    .portfolio__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-    }
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
 }
 /* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
 @media screen and (max-width: 600px) {
-    #portfolio {
-        height: fit-content;
-    }
-    .portfolio__container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+  #portfolio {
+    height: fit-content;
+  }
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

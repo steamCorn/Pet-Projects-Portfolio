@@ -13,17 +13,17 @@ import Calculator from './components/portfolio/projects_pages/calculator/Calcula
 import Timer from './components/portfolio/projects_pages/countdown/Timer';
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/home" element={<Header />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/quotes_block" element={<QuotesBlock />} />
-            <Route path="/markdown_previewer" element={<MarkdownPreviewer />} />
-            <Route path="/drum_machine" element={<DrumMachine />} />
-            <Route path="/calculator" element={<Calculator />} />
-            <Route path="/timer" element={<Timer />} />
-        </Routes>
-    </BrowserRouter>,
-    document.getElementById('root'),
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/home" element={<Header />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/quotes_block" element={<QuotesBlock />} />
+      <Route path="/markdown_previewer" element={<MarkdownPreviewer />} />
+      <Route path="/drum_machine" element={<DrumMachine />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/timer" element={<Timer />} />
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById('root'),
 );

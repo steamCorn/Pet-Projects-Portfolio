@@ -3,13 +3,13 @@ import Navbar from './components/navbar/Navbar';
 import Portfolio from './components/portfolio/Portfolio';
 
 function App() {
-    return (
-        <>
-            <Header />
-            <Navbar />
-            <Portfolio />
-        </>
-    );
+  return (
+    <>
+      {/* <Header /> */}
+      <Navbar />
+      <Portfolio />
+    </>
+  );
 }
 
 export default App;
