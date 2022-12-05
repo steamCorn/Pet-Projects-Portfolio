@@ -1,5 +1,3 @@
-// A call to action
-
 import React from 'react';
 import CV from '../../files/CV_Marina_Parinova.pdf';
 

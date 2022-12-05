@@ -9,7 +9,7 @@ const DefaultText = `
 
 ### elit laoreet id donec ultrices tincidunt arcu non sodales. 
 
-Heres some code, \`<span>My span</span>\`, between 2 backticks.
+Here's some code, \`<span>My span</span>\`, between 2 backticks.
 \`\`\`
 // this is multi-line code:
 

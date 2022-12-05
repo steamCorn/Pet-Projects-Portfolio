@@ -26,25 +26,27 @@
   border: 2px solid black;
   padding: 3px 7px;
 }
-.hide-block{
+.hide-block {
   display: none;
 }
-.portfolio__item:hover .hide-block{
+.portfolio__item:hover .hide-block {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  background: #4f515196;
+  background: #6c6c6c6b;
   width: 100%;
   height: 75%;
   animation: showStack 1s;
+  padding: 20px;
+  border-radius: 2rem 2rem 0 0;
 }
 @keyframes showStack {
-  from{
+  from {
     height: 0%;
     visibility: 0;
   }
-  to{
+  to {
     height: 75%;
     visibility: 1;
   }
