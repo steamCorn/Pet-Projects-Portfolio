@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/Pet-Projects-Portfolio/static/css/main.b40a9f0a.css",
-    "main.js": "/Pet-Projects-Portfolio/static/js/main.5a16e9b8.js",
-    "static/media/CV_Marina_Parinova.pdf": "/Pet-Projects-Portfolio/static/media/CV_Marina_Parinova.78a80957eafc89458bc1.pdf",
-    "static/media/my_photo_bg.jpg": "/Pet-Projects-Portfolio/static/media/my_photo_bg.08c5caad08c8b21e7390.jpg",
+    "main.css": "/Pet-Projects-Portfolio/static/css/main.a6e13d9e.css",
+    "main.js": "/Pet-Projects-Portfolio/static/js/main.2f3a0b4e.js",
     "static/media/portfolio_2.png": "/Pet-Projects-Portfolio/static/media/portfolio_2.89cc9556fae9f143fdaf.png",
     "static/media/portfolio_4.png": "/Pet-Projects-Portfolio/static/media/portfolio_4.3a0e7df915adc538beb6.png",
     "static/media/portfolio_1.png": "/Pet-Projects-Portfolio/static/media/portfolio_1.e8be931d256d1c9494f6.png",
     "static/media/portfolio_3.png": "/Pet-Projects-Portfolio/static/media/portfolio_3.1826e4baa0fc8c6eeac5.png",
     "static/media/portfolio_5.png": "/Pet-Projects-Portfolio/static/media/portfolio_5.eb9c23a4d75b48e3ac3b.png",
     "index.html": "/Pet-Projects-Portfolio/index.html",
-    "main.b40a9f0a.css.map": "/Pet-Projects-Portfolio/static/css/main.b40a9f0a.css.map",
-    "main.5a16e9b8.js.map": "/Pet-Projects-Portfolio/static/js/main.5a16e9b8.js.map"
+    "main.a6e13d9e.css.map": "/Pet-Projects-Portfolio/static/css/main.a6e13d9e.css.map",
+    "main.2f3a0b4e.js.map": "/Pet-Projects-Portfolio/static/js/main.2f3a0b4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b40a9f0a.css",
-    "static/js/main.5a16e9b8.js"
+    "static/css/main.a6e13d9e.css",
+    "static/js/main.2f3a0b4e.js"
   ]
 }
