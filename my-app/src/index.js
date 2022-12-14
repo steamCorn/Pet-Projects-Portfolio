@@ -17,24 +17,27 @@ ReactDOM.render(
     <Routes>
       <Route path="/Pet-Projects-Portfolio" element={<App />} />
       {/* <Route path="/home" element={<Header />} /> */}
-      <Route path="/Pet-Projects-Portfolio/portfolio" element={<Portfolio />} />
+      <Route path="Pet-Projects-Portfolio/portfolio" element={<Portfolio />} />
       <Route
-        path="/Pet-Projects-Portfolio/quotes_block"
+        path="Pet-Projects-Portfolio/portfolio/quotes_block"
         element={<QuotesBlock />}
       />
       <Route
-        path="/Pet-Projects-Portfolio/markdown_previewer"
+        path="Pet-Projects-Portfolio/portfolio/markdown_previewer"
         element={<MarkdownPreviewer />}
       />
       <Route
-        path="/Pet-Projects-Portfolio/drum_machine"
+        path="Pet-Projects-Portfolio/portfolio/drum_machine"
         element={<DrumMachine />}
       />
       <Route
-        path="/Pet-Projects-Portfolio/calculator"
+        path="Pet-Projects-Portfolio/portfolio/calculator"
         element={<Calculator />}
       />
-      <Route path="/Pet-Projects-Portfolio/timer" element={<Timer />} />
+      <Route
+        path="Pet-Projects-Portfolio/portfolio/timer"
+        element={<Timer />}
+      />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),

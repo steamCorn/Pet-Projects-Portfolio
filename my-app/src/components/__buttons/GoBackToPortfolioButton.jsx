@@ -8,9 +8,8 @@ function GoBackToPortfolioButton() {
   return (
     <button
       type="button"
-      onClick={() => navigate('/#portfolio')}
-      className="btn btn-go-back btn-go-back-style"
-    >
+      onClick={() => navigate('/Pet-Projects-Portfolio')}
+      className="btn btn-go-back btn-go-back-style">
       <TiArrowBackOutline className="icon-style" /> Go back
     </button>
   );

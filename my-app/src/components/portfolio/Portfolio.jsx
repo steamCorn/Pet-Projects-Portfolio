@@ -9,8 +9,6 @@ import IMG5 from '../../files/portfolio_5.png';
 import { Outlet, Link } from 'react-router-dom';
 
 const Portfolio = () => {
-  const stack = ['HTML5', 'CSS', 'JavaScript', 'React.js', 'GIT'];
-
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
@@ -25,9 +23,8 @@ const Portfolio = () => {
             <Link
               id="routerQuotesBlock"
               className="btn"
-              to="/quotes_block"
-              target="_blank"
-            >
+              to="portfolio/quotes_block"
+              target="_blank">
               Open project
             </Link>
           </div>
@@ -48,9 +45,8 @@ const Portfolio = () => {
             <Link
               id="routerDrumMachine"
               className="btn"
-              to="/drum_machine"
-              target="_blank"
-            >
+              to="portfolio/drum_machine"
+              target="_blank">
               Open project
             </Link>
           </div>
@@ -71,9 +67,8 @@ const Portfolio = () => {
             <Link
               id="routerMarkdownPreviewer"
               className="btn"
-              to="/markdown_previewer"
-              target="_blank"
-            >
+              to="portfolio/markdown_previewer"
+              target="_blank">
               Open project
             </Link>
           </div>
@@ -94,9 +89,8 @@ const Portfolio = () => {
             <Link
               id="routerCalculator"
               className="btn"
-              to="/calculator"
-              target="_blank"
-            >
+              to="portfolio/calculator"
+              target="_blank">
               Open project
             </Link>
           </div>
@@ -114,7 +108,11 @@ const Portfolio = () => {
             <img src={IMG5} alt="Timer" />
           </div>
           <div className="portfolio__item-cta">
-            <Link id="routerTimer" className="btn" to="/timer" target="_blank">
+            <Link
+              id="routerTimer"
+              className="btn"
+              to="portfolio/timer"
+              target="_blank">
               Open project
             </Link>
           </div>
