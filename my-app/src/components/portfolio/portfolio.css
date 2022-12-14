@@ -25,9 +25,9 @@
   transition: var(--transition);
   cursor: pointer;
   position: relative;
-  /* -webkit-box-shadow: 7px 10px 20px 7px var(---box-shadow);
-  -moz-box-shadow: 7px 10px 20px 7px var(---box-shadow);
-  box-shadow: 7px 10px 20px 7px var(---box-shadow); */
+  -webkit-box-shadow: 1px 2px 10px 1px var(---box-shadow);
+  -moz-box-shadow: 1px 2px 10px 1px var(---box-shadow);
+  box-shadow: 1px 2px 10px 1px var(---box-shadow);
 }
 
 .hide-span {
@@ -43,6 +43,7 @@
   display: none;
 }
 .portfolio__item:hover {
+  animation: showShadow 1.5s;
   -webkit-box-shadow: 7px 10px 20px 7px var(---box-shadow);
   -moz-box-shadow: 7px 10px 20px 7px var(---box-shadow);
   box-shadow: 7px 10px 20px 7px var(---box-shadow);
@@ -59,13 +60,25 @@
   padding: 20px;
 }
 @keyframes showStack {
-  from {
+  /* from {
     height: 0%;
     visibility: 0;
   }
   to {
-    height: 75%;
+    height: 70%;
     visibility: 1;
+  } */
+}
+@keyframes showShadow {
+  from {
+    -webkit-box-shadow: 1px 2px 10px 1px var(---box-shadow);
+    -moz-box-shadow: 1px 2px 10px 1px var(---box-shadow);
+    box-shadow: 1px 2px 10px 1px var(---box-shadow);
+  }
+  to {
+    -webkit-box-shadow: 7px 10px 20px 7px var(---box-shadow);
+    -moz-box-shadow: 7px 10px 20px 7px var(---box-shadow);
+    box-shadow: 7px 10px 20px 7px var(---box-shadow);
   }
 }
 
