@@ -3,7 +3,7 @@ import App from './App';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './components/header/Header';
+// import Header from './components/header/Header';
 
 import Portfolio from './components/portfolio/Portfolio';
 import QuotesBlock from './components/portfolio/projects_pages/quoteMachine/QuotesBlock';
@@ -15,14 +15,26 @@ import Timer from './components/portfolio/projects_pages/countdown/Timer';
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/home" element={<Header />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/quotes_block" element={<QuotesBlock />} />
-      <Route path="/markdown_previewer" element={<MarkdownPreviewer />} />
-      <Route path="/drum_machine" element={<DrumMachine />} />
-      <Route path="/calculator" element={<Calculator />} />
-      <Route path="/timer" element={<Timer />} />
+      <Route path="/Pet-Projects-Portfolio" element={<App />} />
+      {/* <Route path="/home" element={<Header />} /> */}
+      <Route path="/Pet-Projects-Portfolio/portfolio" element={<Portfolio />} />
+      <Route
+        path="/Pet-Projects-Portfolio/quotes_block"
+        element={<QuotesBlock />}
+      />
+      <Route
+        path="/Pet-Projects-Portfolio/markdown_previewer"
+        element={<MarkdownPreviewer />}
+      />
+      <Route
+        path="/Pet-Projects-Portfolio/drum_machine"
+        element={<DrumMachine />}
+      />
+      <Route
+        path="/Pet-Projects-Portfolio/calculator"
+        element={<Calculator />}
+      />
+      <Route path="/Pet-Projects-Portfolio/timer" element={<Timer />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),
