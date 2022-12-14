@@ -6,12 +6,38 @@ import IMG3 from '../../files/portfolio_3.png';
 import IMG4 from '../../files/portfolio_4.png';
 import IMG5 from '../../files/portfolio_5.png';
 
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import ProjectLayout from './ProjectLayout';
+import QuotesBlock from './projects_pages/quoteMachine/QuotesBlock';
+import DrumMachine from './projects_pages/drumMachine/DrumMachine';
+import MarkdownPreviewer from './projects_pages/markdownPreviewer/MarkdownPreviewer';
+import Calculator from './projects_pages/calculator/Calculator';
+import Timer from './projects_pages/countdown/Timer';
 
 const Portfolio = () => {
+  const [visibility, setVisibility] = useState(false);
+  const [projectName, setProjectName] = useState();
+
+  function openProject() {
+    console.log('open');
+    setVisibility(true);
+  }
+  function closeProject() {
+    console.log('close');
+    setVisibility(false);
+  }
+
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
+
+      <ProjectLayout
+        onClose={closeProject}
+        show={visibility}
+        name={'routerQuotesBlock'}
+        project={projectName}
+      />
 
       <div className="container portfolio__container">
         <article className="portfolio__item">
@@ -20,13 +46,14 @@ const Portfolio = () => {
             <img src={IMG1} alt="Quotes Block" />
           </div>
           <div className="portfolio__item-cta">
-            <Link
-              id="routerQuotesBlock"
+            <button
               className="btn"
-              to="portfolio/quotes_block"
-              target="_blank">
+              onClick={() => {
+                openProject();
+                setProjectName(<QuotesBlock />);
+              }}>
               Open project
-            </Link>
+            </button>
           </div>
           <div className="hide-block">
             <span className="react hide-span">React.js</span>
@@ -42,13 +69,14 @@ const Portfolio = () => {
             <img src={IMG3} alt="Drum Machine" />
           </div>
           <div className="portfolio__item-cta">
-            <Link
-              id="routerDrumMachine"
+            <button
               className="btn"
-              to="portfolio/drum_machine"
-              target="_blank">
+              onClick={() => {
+                openProject();
+                setProjectName(<DrumMachine />);
+              }}>
               Open project
-            </Link>
+            </button>
           </div>
           <div className="hide-block">
             <span className="react hide-span">React.js</span>
@@ -64,13 +92,14 @@ const Portfolio = () => {
             <img src={IMG2} alt="Markdown Previewer" />
           </div>
           <div className="portfolio__item-cta">
-            <Link
-              id="routerMarkdownPreviewer"
+            <button
               className="btn"
-              to="portfolio/markdown_previewer"
-              target="_blank">
+              onClick={() => {
+                openProject();
+                setProjectName(<MarkdownPreviewer />);
+              }}>
               Open project
-            </Link>
+            </button>
           </div>
           <div className="hide-block">
             <span className="react hide-span">React.js</span>
@@ -86,13 +115,14 @@ const Portfolio = () => {
             <img src={IMG4} alt="Calculator" />
           </div>
           <div className="portfolio__item-cta">
-            <Link
-              id="routerCalculator"
+            <button
               className="btn"
-              to="portfolio/calculator"
-              target="_blank">
+              onClick={() => {
+                openProject();
+                setProjectName(<Calculator />);
+              }}>
               Open project
-            </Link>
+            </button>
           </div>
           <div className="hide-block">
             <span className="react hide-span">React.js</span>
@@ -108,13 +138,14 @@ const Portfolio = () => {
             <img src={IMG5} alt="Timer" />
           </div>
           <div className="portfolio__item-cta">
-            <Link
-              id="routerTimer"
+            <button
               className="btn"
-              to="portfolio/timer"
-              target="_blank">
+              onClick={() => {
+                openProject();
+                setProjectName(<Timer />);
+              }}>
               Open project
-            </Link>
+            </button>
           </div>
           <div className="hide-block">
             <span className="react hide-span">React.js</span>
@@ -124,7 +155,6 @@ const Portfolio = () => {
           </div>
         </article>
       </div>
-      <Outlet />
     </section>
   );
 };

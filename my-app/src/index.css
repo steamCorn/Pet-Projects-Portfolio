@@ -122,6 +122,8 @@ body {
 /* --------------GENERAL STYLE ------------ */
 
 .container {
+  z-index: 1;
+  position: relative;
   width: var(--conteiner-widht-lg);
   margin: 2rem auto;
 }
@@ -159,14 +161,14 @@ section > h1 {
   color: var(--color-light);
 }
 
-a {
+/* a {
   color: var(--color-light);
   transition: var(--transition);
 }
 
 a:hover {
   color: var(--color-white);
-}
+} */
 
 .btn {
   width: max-content;

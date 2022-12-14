@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Button = ({ buttonDisplay, clickHandler }) => (
-  <button onClick={clickHandler}>{buttonDisplay}</button>
+  <button className="portfolio__item-cta btn" onClick={clickHandler}>
+    {buttonDisplay}
+  </button>
 );
 
 export default Button;

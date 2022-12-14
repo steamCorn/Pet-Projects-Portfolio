@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import TimerControl from './TimerControl';
 import DisplayTimer from './DisplayTimer';
-import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { TbRefresh } from 'react-icons/tb';
@@ -99,9 +98,8 @@ export default function Timer() {
 
   return (
     <div className="wrapper-timer wrapper-timer-style">
-      <GoBackToPortfolioButton />
       <div className="timer-control-panel">
-        <h2>25+5 Clok</h2>
+        <h2>25+5 Clock</h2>
         <div className="control-panel">
           <TimerControl
             labelID={'break-label'}
@@ -139,8 +137,7 @@ export default function Timer() {
           <button
             id="start_stop"
             className="button-with-icon"
-            onClick={handlerPlayButtonClick}
-          >
+            onClick={handlerPlayButtonClick}>
             {!playIsPressed ? (
               <FaPlay className="timer-play-icon" />
             ) : (

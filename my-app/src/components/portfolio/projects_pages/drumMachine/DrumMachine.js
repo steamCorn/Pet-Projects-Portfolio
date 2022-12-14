@@ -3,7 +3,6 @@ import DrumPad from './DrumPad';
 import ControlBlock from './ControlBlock';
 import { firstAudioFile, secondAudioFile } from './sounds-file';
 import './drumMachine.css';
-import GoBackToPortfolioButton from '../../../__buttons/GoBackToPortfolioButton';
 
 class DrumMachine extends React.Component {
   constructor(props) {
@@ -49,7 +48,6 @@ class DrumMachine extends React.Component {
   render() {
     return (
       <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
-        <GoBackToPortfolioButton />
         <DrumPad
           currentSoundFile={this.state.currentSoundFile}
           setDisplay={this.setDisplay}

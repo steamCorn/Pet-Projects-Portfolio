@@ -12,6 +12,8 @@
   -webkit-text-fill-color: transparent;
 }
 .portfolio__container {
+  z-index: 1;
+  position: relative;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
