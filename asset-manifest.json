@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Pet-Projects-Portfolio/static/css/main.a6e13d9e.css",
-    "main.js": "/Pet-Projects-Portfolio/static/js/main.46940857.js",
+    "main.css": "/Pet-Projects-Portfolio/static/css/main.f8b8ef37.css",
+    "main.js": "/Pet-Projects-Portfolio/static/js/main.0c9a80da.js",
     "static/media/portfolio_2.png": "/Pet-Projects-Portfolio/static/media/portfolio_2.89cc9556fae9f143fdaf.png",
     "static/media/portfolio_4.png": "/Pet-Projects-Portfolio/static/media/portfolio_4.3a0e7df915adc538beb6.png",
     "static/media/portfolio_1.png": "/Pet-Projects-Portfolio/static/media/portfolio_1.e8be931d256d1c9494f6.png",
     "static/media/portfolio_3.png": "/Pet-Projects-Portfolio/static/media/portfolio_3.1826e4baa0fc8c6eeac5.png",
     "static/media/portfolio_5.png": "/Pet-Projects-Portfolio/static/media/portfolio_5.eb9c23a4d75b48e3ac3b.png",
     "index.html": "/Pet-Projects-Portfolio/index.html",
-    "main.a6e13d9e.css.map": "/Pet-Projects-Portfolio/static/css/main.a6e13d9e.css.map",
-    "main.46940857.js.map": "/Pet-Projects-Portfolio/static/js/main.46940857.js.map"
+    "main.f8b8ef37.css.map": "/Pet-Projects-Portfolio/static/css/main.f8b8ef37.css.map",
+    "main.0c9a80da.js.map": "/Pet-Projects-Portfolio/static/js/main.0c9a80da.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6e13d9e.css",
-    "static/js/main.46940857.js"
+    "static/css/main.f8b8ef37.css",
+    "static/js/main.0c9a80da.js"
   ]
 }
