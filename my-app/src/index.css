@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 /* font-family: 'Silkscreen', cursive; */
 
@@ -23,20 +24,21 @@
 }
 
 :root {
-  --color-bg: #25312f;
-  --color-bg-variant: #424f35;
-  --color-primary: #fb933d;
-  --color-primary-variant: rgba(77, 225, 126, 0.4);
-  --color-white: #ffffff;
-  --color-light: #a3c1b4;
+  --color-bg: #c1c2c2;
+  --color-bg-variant: #2e1f3f;
+  --color-primary: #4d5697;
+  --color-primary-variant: rgb(74 67 74 / 67%);
+  --color-white: #fffdfd;
+  --color-light: #53406a;
+  ---box-shadow: #52485e;
 
   --transition: all 400ms easy;
 
-  --stack-item-color-react: #24edfe;
+  /* --stack-item-color-react: #24edfe;
   --stack-item-color-html: #ff6e00;
   --stack-item-color-css: #1847dc;
   --stack-item-color-js: #fff803;
-  --stack-item-color-git: #000000;
+  --stack-item-color-git: #000000; */
 
   --conteiner-widht-lg: 75%;
   --conteiner-widht-md: 86%;
@@ -149,7 +151,8 @@ section > h4 {
 section > h1 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  font-family: 'Rubik Mono One', sans-serif;
+  /* margin-bottom: 2rem; */
 }
 
 .text-light {
