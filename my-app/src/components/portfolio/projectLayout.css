@@ -1,31 +1,21 @@
 .overlay {
-  visibility: hidden;
-  opacity: 0;
-  /* display: none; */
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  z-index: 100;
+  transition: visibility 0s, opacity 200ms;
 }
 .popup {
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: var(--color-bg);
   border-radius: 5px;
   width: 90%;
   height: 95vh;
   position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  transition: all 2s ease-in-out;
 }
 .popup .close {
   position: absolute;
@@ -33,7 +23,7 @@
   right: 30px;
   transition: all 200ms;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 900;
   text-decoration: none;
   color: #333;
   z-index: 110;
@@ -51,9 +41,3 @@
   max-height: 100%;
   overflow: auto;
 }
-
-/* @media screen and (max-width: 700px) {
-  .popup {
-    width: 90%;
-  }
-} */

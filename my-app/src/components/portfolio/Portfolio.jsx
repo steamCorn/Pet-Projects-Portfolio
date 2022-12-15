@@ -1,13 +1,6 @@
 import React from 'react';
-import './portfolio.css';
-import IMG1 from '../../files/portfolio_1.png';
-import IMG2 from '../../files/portfolio_2.png';
-import IMG3 from '../../files/portfolio_3.png';
-import IMG4 from '../../files/portfolio_4.png';
-import IMG5 from '../../files/portfolio_5.png';
-
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
 import ProjectLayout from './ProjectLayout';
 import QuotesBlock from './projects_pages/quoteMachine/QuotesBlock';
 import DrumMachine from './projects_pages/drumMachine/DrumMachine';
@@ -15,16 +8,22 @@ import MarkdownPreviewer from './projects_pages/markdownPreviewer/MarkdownPrevie
 import Calculator from './projects_pages/calculator/Calculator';
 import Timer from './projects_pages/countdown/Timer';
 
+import IMG1 from '../../files/portfolio_1.png';
+import IMG2 from '../../files/portfolio_2.png';
+import IMG3 from '../../files/portfolio_3.png';
+import IMG4 from '../../files/portfolio_4.png';
+import IMG5 from '../../files/portfolio_5.png';
+
+import './portfolio.css';
+
 const Portfolio = () => {
   const [visibility, setVisibility] = useState(false);
   const [projectName, setProjectName] = useState();
 
   function openProject() {
-    console.log('open');
     setVisibility(true);
   }
   function closeProject() {
-    console.log('close');
     setVisibility(false);
   }
 

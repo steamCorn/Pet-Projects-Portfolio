@@ -1,12 +1,11 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './projectLayout.css';
 
 const ProjectLayout = (props) => {
   const [show, setShow] = useState(false);
 
-  const closeHandler = (e) => {
+  const closeHandler = () => {
     setShow(false);
     props.onClose(false);
   };
@@ -19,7 +18,7 @@ const ProjectLayout = (props) => {
       style={{
         visibility: props.show ? 'visible' : 'hidden',
         opacity: props.show ? '1' : '0',
-        // display: props.show ? 'block' : 'none',
+        'z-index': props.show ? '100' : '0',
       }}
       className="overlay">
       <div className="popup">
