@@ -18,7 +18,7 @@ const ProjectLayout = (props) => {
       style={{
         visibility: props.show ? 'visible' : 'hidden',
         opacity: props.show ? '1' : '0',
-        'z-index': props.show ? '100' : '0',
+        zIndex: props.show ? '100' : '0',
       }}
       className="overlay">
       <div className="popup">

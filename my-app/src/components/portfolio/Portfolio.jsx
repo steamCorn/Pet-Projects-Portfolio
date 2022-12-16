@@ -15,13 +15,15 @@ import IMG4 from '../../files/portfolio_4.png';
 import IMG5 from '../../files/portfolio_5.png';
 
 import './portfolio.css';
+import ItemPortfolio from './ItemPortfolio';
 
 const Portfolio = () => {
   const [visibility, setVisibility] = useState(false);
-  const [projectName, setProjectName] = useState();
+  const [project, setProject] = useState();
 
-  function openProject() {
+  function openProject(value) {
     setVisibility(true);
+    setProject(value);
   }
   function closeProject() {
     setVisibility(false);
@@ -35,124 +37,50 @@ const Portfolio = () => {
         onClose={closeProject}
         show={visibility}
         name={'routerQuotesBlock'}
-        project={projectName}
+        project={project}
       />
 
-      <div className="container portfolio__container">
-        <article className="portfolio__item">
-          <h3>Quotes Block</h3>
-          <div className="portfolio__item-image">
-            <img src={IMG1} alt="Quotes Block" />
-          </div>
-          <div className="portfolio__item-cta">
-            <button
-              className="btn"
-              onClick={() => {
-                openProject();
-                setProjectName(<QuotesBlock />);
-              }}>
-              Open project
-            </button>
-          </div>
-          <div className="hide-block">
-            <span className="react hide-span">React.js</span>
-            <span className="css hide-span">CSS</span>
-            <span className="js hide-span">JavaScript</span>
-            <span className="git hide-span">GIT</span>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <h3>Drum Machine</h3>
-          <div className="portfolio__item-image">
-            <img src={IMG3} alt="Drum Machine" />
-          </div>
-          <div className="portfolio__item-cta">
-            <button
-              className="btn"
-              onClick={() => {
-                openProject();
-                setProjectName(<DrumMachine />);
-              }}>
-              Open project
-            </button>
-          </div>
-          <div className="hide-block">
-            <span className="react hide-span">React.js</span>
-            <span className="css hide-span">CSS</span>
-            <span className="js hide-span">JavaScript</span>
-            <span className="git hide-span">GIT</span>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <h3>Markdown Previewer</h3>
-          <div className="portfolio__item-image">
-            <img src={IMG2} alt="Markdown Previewer" />
-          </div>
-          <div className="portfolio__item-cta">
-            <button
-              className="btn"
-              onClick={() => {
-                openProject();
-                setProjectName(<MarkdownPreviewer />);
-              }}>
-              Open project
-            </button>
-          </div>
-          <div className="hide-block">
-            <span className="react hide-span">React.js</span>
-            <span className="css hide-span">CSS</span>
-            <span className="js hide-span">JavaScript</span>
-            <span className="git hide-span">GIT</span>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <h3>Calculator</h3>
-          <div className="portfolio__item-image">
-            <img src={IMG4} alt="Calculator" />
-          </div>
-          <div className="portfolio__item-cta">
-            <button
-              className="btn"
-              onClick={() => {
-                openProject();
-                setProjectName(<Calculator />);
-              }}>
-              Open project
-            </button>
-          </div>
-          <div className="hide-block">
-            <span className="react hide-span">React.js</span>
-            <span className="css hide-span">CSS</span>
-            <span className="js hide-span">JavaScript</span>
-            <span className="git hide-span">GIT</span>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <h3>Countdown Timer</h3>
-          <div className="portfolio__item-image">
-            <img src={IMG5} alt="Timer" />
-          </div>
-          <div className="portfolio__item-cta">
-            <button
-              className="btn"
-              onClick={() => {
-                openProject();
-                setProjectName(<Timer />);
-              }}>
-              Open project
-            </button>
-          </div>
-          <div className="hide-block">
-            <span className="react hide-span">React.js</span>
-            <span className="css hide-span">CSS</span>
-            <span className="js hide-span">JavaScript</span>
-            <span className="git hide-span">GIT</span>
-          </div>
-        </article>
+      <div className="container">
+        <ItemPortfolio
+          projectName={'Countdown Timer'}
+          onOpen={() => {
+            openProject(<Timer />);
+          }}
+          image={IMG5}
+          techStack={['React.js', 'JavaScript', 'CSS', 'GIT']}
+        />
+        <ItemPortfolio
+          projectName={'Calculator'}
+          onOpen={() => {
+            openProject(<Calculator />);
+          }}
+          image={IMG4}
+          techStack={['React.js', 'JavaScript', 'CSS', 'GIT']}
+        />
+        <ItemPortfolio
+          projectName={'Drum Machine'}
+          onOpen={() => {
+            openProject(<DrumMachine />);
+          }}
+          image={IMG3}
+          techStack={['JavaScript', 'CSS', 'GIT']}
+        />
+        <ItemPortfolio
+          projectName={'Quotes Block'}
+          onOpen={() => {
+            openProject(<QuotesBlock />);
+          }}
+          image={IMG1}
+          techStack={['JavaScript', 'CSS', 'GIT']}
+        />
+        <ItemPortfolio
+          projectName={'Markdown Previewer'}
+          onOpen={() => {
+            openProject(<MarkdownPreviewer />);
+          }}
+          image={IMG2}
+          techStack={['JavaScript', 'CSS', 'GIT']}
+        />
       </div>
     </section>
   );
