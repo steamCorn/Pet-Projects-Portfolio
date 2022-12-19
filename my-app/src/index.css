@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
@@ -38,64 +38,10 @@
   --container-width-md: 86%;
   --container-width-sm: 90%;
 
-  /* ==== Drum Pad ==== */
-
-  --main-bg-color-drumpad: rgb(49, 51, 82);
-  --inside-border-drumpad: 2px solid #ff69b4;
-  --main-color-object-drumpad: #aaa;
-  --hotpink: #ff69b4;
-  --border-slider-range-drumpad: 2px solid var(--hotpink);
-  --yellow: #ffe94e;
-  --hotpurple: #d72df7;
-  --purple: #5016f1;
-  --amazing-colors: linear-gradient(
-    217deg,
-    var(--yellow),
-    var(--hotpurple),
-    var(--purple)
-  );
-
-  /* ====== Calculator ====== */
-
-  --background-calculator-color: rgb(243, 236, 236);
-
-  --background-light-mode: #fff4ac;
-  --main-light-mode: #f6da73;
-  --buttons-light-mode: #ffe482;
-  --display-light-mode: #feffe1;
-  --shadow-light-mode: #6c6c6c;
-  --text-light-mode: #292929;
-
-  --background-dark-mode: #2d2e34;
-  --main-dark-mode: #252627;
-  --buttons-dark-mode: #6d6d6d;
-  --display-dark-mode: #3c3d3e;
-  --shadow-dark-mode: #101010b3;
-  --text-dark-mode: #ffffff;
-
-  --border-radius-main: 1.2rem;
-  --formula-color: rgb(142, 142, 142);
-
-  --main-calculator-color: #7bc3d4;
-  --secondary-calculator-color: #d49c90;
-  --dark-calculator-color: #2b374d;
-
   /* ==== Quote Block ==== */
   --border-radius-qb: 0.5rem;
   --margin-context-qb: 1.5rem auto;
   --font-size-qb: 1.5em;
-
-  /* ==== Timer Countdown ==== */
-  --outside-border: 2px solid var(--color-secondary-dark);
-  --inside-border: 2px solid var(--color-primary-dark);
-  --display-border: 6px solid var(--color-secondary-light);
-
-  --timer-bg-color: #012442;
-  --font-color: #aaa;
-  --color-primary-dark: #e38664;
-  --color-primary-light: #ffa566;
-  --color-secondary-light: #7e627b;
-  --color-secondary-dark: #5ba0bf;
 }
 
 html {

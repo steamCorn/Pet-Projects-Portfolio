@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+:root {
+  /* ==== Timer Countdown ==== */
+  --outside-border: 2px solid var(--color-secondary-dark);
+  --inside-border: 2px solid var(--color-primary-dark);
+  --display-border: 6px solid var(--color-secondary-light);
+
+  --timer-bg-color: #012442;
+  --font-color: #aaa;
+  --color-primary-dark: #e38664;
+  --color-primary-light: #ffa566;
+  --color-secondary-light: #7e627b;
+  --color-secondary-dark: #5ba0bf;
+}
+
 .wrapper-timer {
   display: flex;
   min-height: 100vh;
@@ -5,17 +20,16 @@
   font-family: 'Orbitron', sans-serif;
   align-items: center;
   justify-content: center;
-
-  font-size: 2.5rem;
-}
-.wrapper-timer-style {
+  text-align: center;
+  font-size: 40px;
   background: var(--timer-bg-color);
   color: var(--font-color);
 }
 .timer-control-panel {
-  display: grid;
+  display: flex;
   text-align: center;
-  align-items: stretch;
+  flex-direction: column;
+  gap: 32px;
 }
 .timer-control-panel h2 {
   background: -webkit-linear-gradient(
@@ -32,28 +46,23 @@
 /* =========Control panel ========= */
 
 .control-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
   gap: 6rem;
-  text-align: center;
-  align-items: stretch;
 }
 .control-bar {
-  width: 20rem;
-  padding: 1rem;
+  width: 320px;
+  padding: 16px;
   font-size: 32px;
   color: var(--font-color);
 }
-
 .grid-control-bar {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   align-items: center;
   justify-items: center;
-  padding: 1rem;
-  margin-top: 1rem;
-}
-.grid-control-bar-style {
+  padding: 16px;
+  margin-top: 16px;
   font-size: 40px;
 }
 /* ======= Buttons ======== */
@@ -82,11 +91,14 @@
 .timer-play-icon {
   color: var(--color-primary-dark);
 }
+
 /* ======= Display Timer ======== */
 
-#timer-label,
-#time-left {
-  margin: 1rem auto;
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 #timer-label {
   background: -webkit-linear-gradient(
@@ -107,12 +119,11 @@
 }
 
 /* ======= Timer Control Bar ======== */
-.timer-control button {
-  background-color: var(--timer-bg-color);
-  margin: 1rem 1rem;
-}
 
-/* ======= Animation for refresf icon ======== */
+.control-btn {
+  background-color: var(--timer-bg-color);
+  margin: 16px;
+}
 @keyframes rotateIcon {
   from {
     transform: rotate(0deg);
@@ -126,13 +137,38 @@
   animation-duration: 1s;
 }
 
-/* ============= MEDIA ============= */
+/* =============  (MEDIUM DEVICES) ============= */
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 850px) {
   .control-panel {
-    grid-template-columns: none;
-    gap: 1rem;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .timer-control-panel {
+    gap: 25px;
+  }
+  .control-bar {
+    padding: 10px;
+  }
+}
+
+/* =============== (SMALL DEVICES) =========== */
+
+@media screen and (max-width: 600px) {
+  .wrapper-timer {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
     text-align: center;
-    align-items: stretch;
+  }
+  .timer-control-panel {
+    gap: 16px;
+  }
+  .grid-control-bar {
+    padding: 10px;
+    margin-top: 0;
+    font-size: 35px;
   }
 }

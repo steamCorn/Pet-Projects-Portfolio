@@ -60,7 +60,6 @@ export default function Timer() {
   };
 
   const playAudio = () => {
-    // audioSound.loop = true;
     audioSound.current.play();
     setTimeout(() => stopAudioPlaying(), 3200);
   };
@@ -97,7 +96,7 @@ export default function Timer() {
   };
 
   return (
-    <div className="wrapper-timer wrapper-timer-style">
+    <div className="wrapper-timer">
       <div className="timer-control-panel">
         <h2>25+5 Clock</h2>
         <div className="control-panel">
@@ -133,10 +132,10 @@ export default function Timer() {
             />
           </audio>
         </div>
-        <div className="timer-control">
+        <div>
           <button
             id="start_stop"
-            className="button-with-icon"
+            className="button-with-icon control-btn"
             onClick={handlerPlayButtonClick}>
             {!playIsPressed ? (
               <FaPlay className="timer-play-icon" />
@@ -145,7 +144,10 @@ export default function Timer() {
             )}
           </button>
 
-          <button id="reset" className="button-with-icon" onClick={resetTimer}>
+          <button
+            id="reset"
+            className="button-with-icon control-btn"
+            onClick={resetTimer}>
             <TbRefresh id="reset-animation" className="timer-icon-style" />
           </button>
         </div>

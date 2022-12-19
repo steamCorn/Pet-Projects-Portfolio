@@ -6,7 +6,7 @@ function ButtonsPad(props) {
       <button id="clear" value="C" onClick={props.clearAll}>
         C
       </button>
-      <button id="clear-element" value="CE" onClick={props.clearCurrentNumer}>
+      <button id="clear-element" value="CE" onClick={props.clearCurrentNumber}>
         CE
       </button>
       <button id="percent" value="negative" onClick={props.handleNegativeSign}>
@@ -53,8 +53,7 @@ function ButtonsPad(props) {
         className="grid-row-span-2"
         id="add"
         value="+"
-        onClick={props.handlerOperands}
-      >
+        onClick={props.handlerOperands}>
         +
       </button>
       <button id="zero" value="0" onClick={props.handlerPressButton}>

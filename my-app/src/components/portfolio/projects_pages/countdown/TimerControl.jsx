@@ -5,12 +5,11 @@ export default function TimerControl(props) {
   return (
     <div className="control-bar">
       <div id={props.labelID}>{props.labelName}</div>
-      <div className="grid-control-bar grid-control-bar-style">
+      <div className="grid-control-bar">
         <button
           className="button-with-icon"
           id={props.decrementIdLabel}
-          onClick={props.decrementValue}
-        >
+          onClick={props.decrementValue}>
           <FaArrowDown className="timer-icon-style" />
         </button>
 
@@ -19,8 +18,7 @@ export default function TimerControl(props) {
         <button
           className="button-with-icon"
           id={props.incrementIdLabel}
-          onClick={props.incrementValue}
-        >
+          onClick={props.incrementValue}>
           <FaArrowUp className="timer-icon-style" />
         </button>
       </div>

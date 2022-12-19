@@ -28,7 +28,7 @@ function Calculator() {
     setIsOperatorPressed(false);
   };
 
-  const clearCurrentNumer = () => {
+  const clearCurrentNumber = () => {
     if (isEqualPressed) {
       clearAll();
     } else setCurrentNum(0);
@@ -57,7 +57,7 @@ function Calculator() {
 
   const handlerPressButton = (e) => {
     const digit = e.target.value;
-    const maxDisplaylength = 11; //for font-size 2rem
+    const maxDisplayLength = 11; //for font-size 2rem
 
     if (isEqualPressed) {
       clearAll();
@@ -65,7 +65,7 @@ function Calculator() {
     } else if (isOperatorPressed) {
       setIsOperatorPressed(false);
       setCurrentNum(digit);
-    } else if (currentNum.toString().length <= maxDisplaylength) {
+    } else if (currentNum.toString().length <= maxDisplayLength) {
       if (digit === '0') {
         zeroButtonClickHandler(digit);
       } else if (currentNum === 0 || currentNum === '0') {
@@ -143,7 +143,7 @@ function Calculator() {
     }
   };
 
-  const toggelTheme = () => {
+  const toggleTheme = () => {
     setTheme((currTheme) => (currTheme === 'light' ? 'dark' : 'light'));
   };
 
@@ -155,7 +155,7 @@ function Calculator() {
             <HiOutlineMenuAlt4 />
           </div>
           <h3>Calculator</h3>
-          <div onClick={toggelTheme}>
+          <div onClick={toggleTheme}>
             {theme === 'light' ? <HiOutlineMoon /> : <CgSun />}
           </div>
         </div>
@@ -172,7 +172,7 @@ function Calculator() {
           handlerOperands={handlerOperands}
           handlerEqual={handlerEqual}
           clearAll={clearAll}
-          clearCurrentNumer={clearCurrentNumer}
+          clearCurrentNumber={clearCurrentNumber}
           handlerDot={handlerDot}
           handleNegativeSign={handleNegativeSign}
         />
