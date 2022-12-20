@@ -66,7 +66,7 @@ const Portfolio = () => {
           techStack={['JavaScript', 'CSS', 'GIT']}
         />
         <ItemPortfolio
-          projectName={'Markdown Previewer'}
+          projectName={'Previewer'}
           onOpen={() => {
             openProject(<MarkdownPreviewer />);
           }}
