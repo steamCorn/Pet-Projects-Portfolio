@@ -1,43 +1,57 @@
-.wrapper-drum-machine {
-  margin: 9rem auto;
-  display: grid;
-  gap: 0.8em;
-  grid-template-columns: 480px 200px;
-  width: 700px;
-  height: 400px;
-  align-content: stretch;
-  justify-content: space-evenly;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+:root {
+  /* ==== Drum Pad ==== */
+
+  --main-bg-color-drumpad: rgb(49, 51, 82);
+  --inside-border-drumpad: 2px solid #ff69b4;
+  --main-color-object-drumpad: #aaa;
+  --hotpink: #ff69b4;
+  --border-slider-range-drumpad: 2px solid var(--hotpink);
+  --yellow: #ffe94e;
+  --hotpurple: #d72df7;
+  --purple: #5016f1;
+  --amazing-colors: linear-gradient(
+    217deg,
+    var(--yellow),
+    var(--hotpurple),
+    var(--purple)
+  );
 }
-.style-wrapper {
+#drum-machine {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-drum-machine {
+  display: flex;
   font-family: 'Lato', sans-serif;
-  border: 3px solid #333;
+  border: 7px solid var(--main-bg-color-drumpad);
+  gap: 7px;
   background-color: var(--main-bg-color-drumpad);
   color: var(--main-color-object-drumpad);
 }
-
 #drumPad,
 .controls-block {
-  border: 2px solid hotpink;
-  width: 100%;
-  height: 100%;
+  border: 3px solid hotpink;
 }
 #drumPad {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-  padding: 1em;
+  gap: 16px;
+  padding: 16px;
 }
 .drum-pad {
-  text-align: center;
   border: 2px solid rgb(190, 190, 190);
-  justify-content: center;
-  display: table-row-group;
   font-size: 28px;
-}
-.letterOnPad {
-  display: block;
-  margin-top: 2rem;
-  cursor: default;
+  width: 140px;
+  height: 140px;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ======== Style for pressed button ======== */
@@ -62,41 +76,58 @@
 
 /* ====== Style for control block ======= */
 .controls-block {
-  display: grid;
+  display: flex;
+  padding: 16px;
+  font-size: 20px;
+  flex-direction: column;
   justify-content: space-evenly;
-  justify-items: center;
-  align-items: center;
-  padding: 20px 10px;
-  font-size: 1.2rem;
 }
+#displayVolume,
 #display-drum {
   border: var(--inside-border-drumpad);
-  margin: 10px auto;
   text-align: center;
+  padding: 10px;
+  font-weight: 300;
+}
+#display-drum {
   width: 160px;
-  height: 37px;
+  height: 48px;
 }
-.block {
-  display: block;
-  width: 100%;
+.controls-block > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
-.block p {
-  margin-bottom: 7px;
-  display: inline-block;
+.instrument {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.instrument > * {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: var(--main-color-object-drumpad);
 }
 
 /* ====== Style for radio button ====== */
-
+.label-button {
+  display: flex;
+  gap: 20px;
+  color: var(--main-color-object-drumpad);
+  align-items: center;
+  font-weight: 300;
+}
 .custom-radio-btn {
   width: 31px;
   height: 31px;
   border: 2px solid var(--hotpink);
   border-radius: 50%;
-  margin-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 7px;
 }
 .custom-radio-btn .checkmark {
   width: calc(100% - 8px);
@@ -113,32 +144,17 @@
 .custom-radio-btn input:checked + .checkmark {
   opacity: 1;
 }
-.label-button {
-  display: flex;
-  color: var(--main-color-object-drumpad);
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: baseline;
-}
-.label-text {
-  margin-left: 15px;
-}
 
-/* ================== Style input range and sound volume ===============*/
+/* ===== Input range and sound volume ======*/
 .display-volume {
-  display: block;
-  margin: 0.4rem 1rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row;
 }
 #displayVolume {
-  border: var(--inside-border-drumpad);
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-  width: 2.4rem;
-  height: 2.2rem;
+  width: 75px;
 }
-
 .style-range {
   -webkit-appearance: none;
   width: 100%;
@@ -170,74 +186,69 @@
 
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 
-@media screen and (max-width: 1024px) {
-  /* #drum-machine{
-        
-    } */
+@media screen and (max-width: 831px) {
+  #drum-machine {
+    padding: 20px;
+  }
   .wrapper-drum-machine {
+    width: 90%;
     display: flex;
     flex-direction: column-reverse;
-    min-width: 480px;
-    max-width: 86%;
-    min-height: 600px;
-    max-height: 755px;
   }
   .controls-block {
-    display: flex;
-    padding: 20px 10px;
-    font-size: 1rem;
-    height: 200px;
-    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+    flex-flow: row wrap;
+    gap: 4%;
   }
-  #drumPad {
-    min-height: 36rem;
+  .controls_display {
+    order: 1;
+    width: 48%;
+  }
+  .controls_sets {
+    order: 3;
+    width: 100%;
+  }
+  .controls_volume {
+    order: 2;
+    width: 48%;
   }
   #display-drum {
-    border: var(--inside-border-drumpad);
-    margin: 21px 0;
-    text-align: center;
-    width: 125px;
-    height: 31px;
+    padding: 5px;
   }
   #displayVolume {
-    display: inline-block;
-    margin: 0 0 0 1rem;
-    font-size: 1rem;
-    width: 2rem;
-    height: 2rem;
+    display: none;
+  }
+  #display-drum {
+    height: 38px;
+    width: 80%;
+  }
+  .display-volume {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .instrument {
+    flex-direction: row;
+    gap: 35px;
+  }
+  .controls-block > *,
+  #drumPad {
+    grid-gap: 8px;
+    gap: 8px;
+    padding: 8px;
+  }
+  .drum-pad {
+    font-size: 18px;
+    width: calc(100%);
+    height: calc(100%);
+    aspect-ratio: 1 / 1;
   }
 }
-/* =============== MEDIA QUERIES (SMALL DEVICES) =========== */
+/* =============== (SMALL DEVICES) =========== */
 @media screen and (max-width: 600px) {
   .wrapper-drum-machine {
-    margin: 3.5rem auto;
-    min-width: 355px;
-    width: 66%;
-    height: 300px;
-    max-height: 400px;
-  }
-  .controls-block {
-    display: flex;
-    padding: 20px 10px;
-    font-size: 1rem;
-    height: 200px;
-    align-items: center;
-  }
-  #drumPad {
-    min-height: 22rem;
-  }
-  #display-drum {
-    border: var(--inside-border-drumpad);
-    margin: 21px 0;
-    text-align: center;
-    width: 125px;
-    height: 31px;
-  }
-  #displayVolume {
-    display: inline-block;
-    margin: 0 0 0 1rem;
-    font-size: 1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 100%;
   }
 }

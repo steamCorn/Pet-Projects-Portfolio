@@ -47,20 +47,22 @@ class DrumMachine extends React.Component {
 
   render() {
     return (
-      <div id="drum-machine" className="wrapper-drum-machine style-wrapper">
-        <DrumPad
-          currentSoundFile={this.state.currentSoundFile}
-          setDisplay={this.setDisplay}
-          setVolume={this.setVolume}
-          volumeSound={this.state.volumeValue / 100}
-        />
-        <ControlBlock
-          display={this.state.displayHandler}
-          changeSoundFile={this.changeSoundFile}
-          adjustVolume={this.adjustVolume}
-          volumeValue={this.state.volumeValue}
-          soundFileName={this.state.soundFileName}
-        />
+      <div id="drum-machine">
+        <div className="wrapper-drum-machine">
+          <DrumPad
+            currentSoundFile={this.state.currentSoundFile}
+            setDisplay={this.setDisplay}
+            setVolume={this.setVolume}
+            volumeSound={this.state.volumeValue / 100}
+          />
+          <ControlBlock
+            display={this.state.displayHandler}
+            changeSoundFile={this.changeSoundFile}
+            adjustVolume={this.adjustVolume}
+            volumeValue={this.state.volumeValue}
+            soundFileName={this.state.soundFileName}
+          />
+        </div>
       </div>
     );
   }

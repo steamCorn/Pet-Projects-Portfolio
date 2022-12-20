@@ -1,5 +1,3 @@
-//https://soundscrate.com/search/#!/drum&type=&tabs=1
-
 const firstAudioFile = [
   {
     keyCode: 81,

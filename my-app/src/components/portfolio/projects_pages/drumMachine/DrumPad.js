@@ -32,15 +32,12 @@ class DrumPad extends React.Component {
     if (!arr) {
       return;
     }
-
     // Change parent state
     this.props.setDisplay(id);
-
     // Change this component state
     this.setState({
       activeButton: id,
     });
-
     this.playAudio(trigger);
     this.buttonIDsetState(id);
     setTimeout(() => this.buttonIDsetState(''), 100);
@@ -85,26 +82,24 @@ class DrumPad extends React.Component {
           sound.id === this.state.activeID ? (
             <div
               key={sound.keyCode}
-              className={'drum-pad' + ' ' + 'drum_button_active'}
+              className={`drum-pad drum_button_active`}
               id={sound.id}
-              onClick={this.handlerClickButton}
-            >
+              onClick={this.handlerClickButton}>
               <audio className="clip" src={sound.url} id={sound.keyTrigger}>
                 Sorry, but your browser doesn't support the audio.
               </audio>
-              <div className="letterOnPad">{sound.keyTrigger}</div>
+              <div>{sound.keyTrigger}</div>
             </div>
           ) : (
             <div
               key={sound.keyCode}
               className={'drum-pad'}
               id={sound.id}
-              onClick={this.handlerClickButton}
-            >
+              onClick={this.handlerClickButton}>
               <audio className="clip" src={sound.url} id={sound.keyTrigger}>
                 Sorry, but your browser doesn't support the audio.
               </audio>
-              <div className="letterOnPad">{sound.keyTrigger}</div>
+              <div>{sound.keyTrigger}</div>
             </div>
           ),
         )}

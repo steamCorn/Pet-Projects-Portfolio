@@ -32,14 +32,6 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
-
-      <ProjectLayout
-        onClose={closeProject}
-        show={visibility}
-        name={'routerQuotesBlock'}
-        project={project}
-      />
-
       <div className="container">
         <ItemPortfolio
           projectName={'Countdown Timer'}
@@ -82,6 +74,12 @@ const Portfolio = () => {
           techStack={['JavaScript', 'CSS', 'GIT']}
         />
       </div>
+      <ProjectLayout
+        onClose={closeProject}
+        show={visibility}
+        name={'routerQuotesBlock'}
+        project={project}
+      />
     </section>
   );
 };
