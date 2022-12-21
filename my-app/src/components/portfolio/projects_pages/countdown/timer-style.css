@@ -48,7 +48,7 @@
 .control-panel {
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 96px;
 }
 .control-bar {
   width: 320px;
@@ -67,15 +67,15 @@
 }
 /* ======= Buttons ======== */
 .button-with-icon {
-  width: 6rem;
+  width: 96px;
   background: var(--timer-bg-color);
   cursor: pointer;
 }
 .timer-icon-style,
 .timer-pause-icon,
 .timer-play-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
 }
 .timer-icon-style {
   color: var(--font-color);
@@ -113,8 +113,8 @@
 
 #time-left {
   border: var(--display-border);
-  padding: 1.5rem;
-  width: 15rem;
+  padding: 24px;
+  width: 240px;
   color: white;
 }
 

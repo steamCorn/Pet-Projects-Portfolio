@@ -1,7 +1,7 @@
 .wraper-markdown {
-  margin: 6.5em;
+  margin: 104px;
   display: grid;
-  gap: 2em;
+  gap: 32px;
   grid-template-columns: 1fr 1fr;
   font-family: 'Barlow', sans-serif;
   justify-content: space-evenly;
@@ -17,7 +17,7 @@
 }
 
 .previewWrap {
-  padding: 1.25rem;
+  padding: 20px;
 }
 
 #editor {
@@ -28,13 +28,13 @@
   outline: none;
   padding-left: 5px;
   padding-top: 5px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 #preview {
   width: 100%;
   border: 2px solid gray;
-  padding: 1em;
+  padding: 16px;
   display: contents;
   font-size: 15px;
   font-weight: 400;
@@ -44,8 +44,8 @@
 /* =============== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 @media screen and (max-width: 1024px) {
   .wraper-markdown {
-    gap: 1em;
-    margin: 5rem 1.5rem 2rem;
+    gap: 16px;
+    margin: 80px 24px 32px;
   }
 
   .container__markdownPreviewer {
@@ -58,10 +58,10 @@
 @media screen and (max-width: 600px) {
   .wraper-markdown {
     grid-template-columns: 1fr;
-    margin: 5rem 1rem 1rem;
+    margin: 80px 16px 16px;
   }
   #editor {
-    min-height: 20rem;
+    min-height: 320px;
     scroll-behavior: smooth;
   }
   .container__markdownPreviewer {
@@ -92,23 +92,23 @@
 }
 
 #preview code {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   color: rgb(117, 21, 21);
 }
 
 #preview pre {
-  margin: 1em auto;
+  margin: 16px auto;
   display: block;
   width: fit-content;
   background-color: rgb(247, 247, 247);
-  padding: 1em;
+  padding: 16px;
 }
 
 #preview img {
   display: block;
   width: 40%;
-  margin: 1rem auto;
+  margin: 16px auto;
 }
 #preview ul,
 #preview ol {

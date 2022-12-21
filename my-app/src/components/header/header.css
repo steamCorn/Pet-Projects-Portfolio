@@ -1,6 +1,6 @@
 header {
   height: 100vh;
-  padding-top: 5rem;
+  padding-top: 80px;
   overflow: hidden;
 }
 
@@ -9,32 +9,32 @@ header {
   position: relative;
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 3rem;
-  grid-row-gap: 2rem;
+  grid-gap: 48px;
+  grid-row-gap: 32px;
   font-family: 'Poppins', sans-serif;
 }
 .header__container h1 {
   color: var(--color-primary);
 }
 .header__container h3 {
-  font-size: 1.6rem;
+  font-size: 26px;
 }
 .header__container p {
-  margin: 1rem 0;
+  margin: 16px 0;
   color: var(--color-light);
-  font-size: 1.1rem;
+  font-size: 18px;
 }
 .header__container__position {
-  margin: 3rem 0.5rem;
+  margin: 48px 8px;
 }
 .grid-row-span {
   grid-column: span 2;
 }
 /* ======== CTA ========== */
 .cta {
-  margin-top: 2.5rem;
+  margin-top: 40px;
   display: flex;
-  gap: 1.2rem;
+  gap: 19px;
   justify-content: center;
 }
 
@@ -44,39 +44,39 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
+  gap: 3px;
   position: fixed;
-  left: 2em;
-  bottom: 3rem;
-  font-size: 1.3rem;
+  left: 32px;
+  bottom: 48px;
+  font-size: 21px;
 }
 .header__socials::before {
   content: '';
-  width: 0.2rem;
-  height: 4rem;
+  width: 3px;
+  height: 64px;
   background-color: var(--color-light);
 }
 .header__socials::after {
   content: '';
-  width: 0.2rem;
-  height: 4rem;
+  width: 3px;
+  height: 64px;
   background-color: var(--color-light);
 }
 
 /* ======== Photo ========== */
 
 .photo {
-  width: 22rem;
-  height: 26rem;
+  width: 352px;
+  height: 416px;
   position: relative;
-  left: calc(23% - 5rem);
-  /* margin-top: 3rem; */
+  left: calc(23% - 80px);
+  /* margin-top: 48px; */
   overflow: hidden;
 }
 
 .border-photo {
-  border: 1rem solid #d2efd9;
-  padding: 1.5rem;
+  border: 16px solid #d2efd9;
+  padding: 24px;
   height: fit-content;
   width: fit-content;
 }
@@ -84,23 +84,23 @@ header {
 /* ======== SCROLL DOWN ========== */
 .scroll__down {
   position: absolute;
-  right: -2.3rem;
-  bottom: -10rem;
+  right: -37px;
+  bottom: -160px;
   transform: rotate(90deg);
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
 /* =============== MEDIA QUERIES (Medium-Large DEVICES) =========== */
 
 @media screen and (max-width: 1195px) {
   .header__container__position {
-    margin: 2rem 0;
+    margin: 32px 0;
   }
   .header__container {
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    grid-row-gap: 2rem;
+    grid-gap: 16px;
+    grid-row-gap: 32px;
   }
 }
 
@@ -108,7 +108,7 @@ header {
 
 @media screen and (max-width: 1100px) {
   .header__container {
-    grid-row-gap: 2rem;
+    grid-row-gap: 32px;
   }
   /* .header__container{
         text-align: center;
@@ -120,15 +120,15 @@ header {
         gap: 8%;
     } */
   .header__container h3 {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .header__container p {
-    margin: 1.5rem 0 2rem;
-    font-size: 1rem;
+    margin: 24px 0 32px;
+    font-size: 16px;
   }
   .photo {
-    width: 21rem;
-    height: 23rem;
+    width: 336px;
+    height: 368px;
     margin: 0;
   }
 }
@@ -136,7 +136,7 @@ header {
 
 @media screen and (max-width: 600px) {
   header {
-    padding-top: 1rem;
+    padding-top: 16px;
   }
   .header__socials,
   .scroll__down {
@@ -147,14 +147,14 @@ header {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 16px;
   }
   /* .photo {
     } */
   .header__container p {
-    margin: 1.5rem 0 2rem;
+    margin: 24px 0 32px;
   }
   .cta {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
 }

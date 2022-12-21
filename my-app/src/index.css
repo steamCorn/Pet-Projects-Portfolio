@@ -38,9 +38,9 @@
   --container-width-sm: 90%;
 
   /* ==== Quote Block ==== */
-  --border-radius-qb: 0.5rem;
-  --margin-context-qb: 1.5rem auto;
-  --font-size-qb: 1.5em;
+  --border-radius-qb: 8px;
+  --margin-context-qb: 24px auto;
+  --font-size-qb: 24px;
 }
 
 html {
@@ -58,7 +58,7 @@ body {
 /* --------------GENERAL STYLE ------------ */
 
 section {
-  margin-top: 3rem;
+  margin-top: 48px;
   height: 100vh;
 }
 .container {

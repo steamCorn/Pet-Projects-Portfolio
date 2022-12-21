@@ -57,7 +57,7 @@ function Calculator() {
 
   const handlerPressButton = (e) => {
     const digit = e.target.value;
-    const maxDisplayLength = 11; //for font-size 2rem
+    const maxDisplayLength = 11; //for font-size 32px
 
     if (isEqualPressed) {
       clearAll();
